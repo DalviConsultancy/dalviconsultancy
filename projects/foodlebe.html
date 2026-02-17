@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="overflow-x-hidden" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodle Be | Dalvi Consultancy Creations</title>
+    <meta name="description" content="Foodle Be - A comprehensive food delivery and management platform.">
+    <link rel="canonical" href="https://consultancy.dalvigroup.co.in/projects/foodlebe.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@DalviConsultancy">
+    <meta name="twitter:creator" content="@DalviConsultancy">
+    <meta name="twitter:title" content="Foodle Be | Dalvi Consultancy Creations">
+    <meta name="twitter:description" content="Foodle Be - A comprehensive food delivery and management platform.">
+    <meta name="twitter:image" content="https://consultancy.dalvigroup.co.in/Logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Dalvi Consultancy">
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Pune">
+    <meta name="geo.position" content="18.5912;73.7389">
+    <meta name="ICBM" content="18.5912, 73.7389">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../Logo.png" type="image/png">
+    <style>
+        .project-hero {
+            padding-top: 120px;
+            text-align: center;
+        }
+
+        .project-img-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#0EA5E9",
+                    "background-dark": "#030712"
+                },
+                fontFamily: {
+                    display: ["Plus Jakarta Sans", "sans-serif"],
+                    sans: ["Inter", "sans-serif"]
+                }
+            }
+        }
+    };
+</script>
+</head>
+
+<body class="overflow-x-hidden">
+    <nav class="glass-nav"
+        style="position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 0; backdrop-filter: blur(10px); background: rgba(0,0,0,0.5); border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="container px-6 mx-auto" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="../index.html"
+                style="color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem;">Dalvi
+                Consultancy</a>
+
+            <a href="../index.html#projects" class="cta-button hidden md:block"
+                style="padding: 0.5rem 1rem; font-size: 0.9rem;">Back to Projects</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Open Menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 z-[60] bg-background-dark/95 backdrop-blur-xl transition-transform duration-300 translate-x-full md:hidden flex flex-col items-center justify-center gap-8">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-slate-400 p-2 hover:text-white"
+            aria-label="Close Menu">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <nav class="flex flex-col items-center gap-8 text-xl font-display font-medium text-slate-300">
+            <a class="hover:text-primary transition-colors" href="../index.html#services">Our Services</a>
+            <a class="hover:text-primary transition-colors" href="../index.html#our-products">Our Products</a>
+            <a class="hover:text-primary transition-colors" href="../index.html#client-projects">Client Work</a>
+            <a class="hover:text-primary transition-colors" href="../index.html#tech-stack">Technologies</a>
+            <a class="px-8 py-4 bg-primary text-white rounded-none shadow-lg shadow-primary/20 hover:scale-105 transition-transform mt-4"
+                href="../index.html#contact">Start a Project</a>
+        </nav>
+    </div>
+
+    <header class="project-hero container reveal">
+        <h1>Foodle Be</h1>
+        <p style="max-width: 600px; margin: 1rem auto; color: #a1a1aa;">Food delivery and management platform.</p>
+        <div class="project-img-container glass-card">
+            <div
+                style="height: 400px; background: linear-gradient(45deg, #1a1a1a, #2a2a2a); display: flex; align-items: center; justify-content: center;">
+                <span style="color: rgba(255,255,255,0.2); font-size: 1.5rem;">Foodle Be Preview</span>
+            </div>
+        </div>
+        <div class="glass-card" style="max-width: 800px; margin: 3rem auto; text-align: left;">
+            <h2>About the Project</h2>
+            <p>Foodle Be is an innovative food delivery solution designed to connect hungry customers with their
+                favorite local restaurants. It features real-time tracking, seamless payments, and an intuitive user
+                interface.</p><br>
+            <h3>Key Features</h3>
+            <ul>
+                <li>Real-time order tracking</li>
+                <li>Multiple payment options</li>
+                <li>Restaurant management dashboard</li>
+                <li>User reviews and ratings</li>
+            </ul><br>
+            <div style="text-align: center; margin-top: 2rem;"><a href="https://client.dalvigroup.co.in/foodlebe"
+                    target="_blank" class="cta-button">Visit Live Site</a></div>
+        </div>
+    </header>
+    <footer style="text-align: center; padding: 2rem; color: #52525b; font-size: 0.875rem;"> Made by Us </footer>
+    <script src='../scripts.js'></script>
+</body>
+
+</html>

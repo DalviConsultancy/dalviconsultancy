@@ -1,0 +1,77 @@
+<!DOCTYPE html><html class="dark overflow-x-hidden" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+        html,
+        body {
+            background-color: #030712;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            color: white;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
+            position: relative;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(to right, #EF4444, #F87171);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+            line-height: 1;
+            filter: drop-shadow(0 0 30px rgba(239, 68, 68, 0.2));
+        }
+
+        .error-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            color: #F8FAFC;
+        }
+
+        .error-message {
+            font-size: 1.125rem;
+            color: #94A3B8;
+            max-width: 500px;
+            margin-bottom: 2.5rem;
+        }
+
+        .home-button {
+            background: #1e293b;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .home-button:hover {
+            background: #334155;
+            transform: translateY(-2px);
+        }
+
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+            z-index: -1;
+        }
+    </style><title>Error | Dalvi Consultancy</title><link rel="icon" href="logo.svg" type="image/png"></head><body><div class="error-container"><div class="bg-grid"></div><h1 class="error-code">Error</h1><h2 class="error-title">System Interruption</h2><p class="error-message">
+            We encountered an unexpected error while processing your request. Our engineers have been notified.
+        </p><a href="/" class="home-button">Return to Safety</a></div></body></html>

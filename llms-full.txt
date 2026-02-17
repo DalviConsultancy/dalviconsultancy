@@ -1,0 +1,171 @@
+# Dalvi Consultancy - Complete Technical Documentation
+
+> AI-optimized documentation for LLM consumption. Last updated: 2026-02-07.
+
+---
+
+## Company Overview
+
+**Dalvi Consultancy** is a full-service software development agency and digital consultancy based in Pune, India.
+
+### What We Are
+- Software Development Company
+- AI Solutions Provider
+- Web & Mobile App Developer
+- Digital Agency & Tech Consultancy
+- Automation Specialists
+
+### What We Build
+- Custom Software Solutions
+- AI & Machine Learning Applications
+- Websites & Web Applications
+- Mobile Apps (iOS, Android, Cross-platform)
+- SaaS Platforms & Enterprise Software
+- E-commerce Stores
+- Workflow Automation Systems
+
+### Mission
+Transform complex business challenges into elegant, scalable digital solutions through custom engineering.
+
+### Service Areas
+T10-703, Unit B, Blueridge Township, Phase-1, Hinjewadi, Pune - 410057, Maharashtra, India. Serving clients globally.
+
+
+---
+
+## Services
+
+### 1. Web & App Engineering
+Full-stack development using modern frameworks. We build progressive web apps, SaaS platforms, e-commerce stores, and custom business tools.
+
+**Technologies:** Next.js 14, React 18, TypeScript, Node.js, Express, Firebase (Auth, Firestore, Functions, Hosting), Tailwind CSS, Prisma, PostgreSQL, MongoDB.
+
+**Deliverables:** Responsive web applications, admin dashboards, customer portals, API development.
+
+### 2. AI Chatbots
+Intelligent conversational agents for customer support, lead qualification, and sales automation. Integrates with WhatsApp, Telegram, and web interfaces.
+
+**Technologies:** Dialogflow, OpenAI GPT, Google Genkit, LangChain, Python, Node.js.
+
+**Capabilities:** 24/7 automated support, multi-language, CRM integration, escalation to human agents.
+
+### 3. Workflow Automation
+Eliminate manual tasks with custom automation pipelines. Connect disparate systems, automate data entry, and streamline operations.
+
+**Technologies:** n8n, Zapier, Make (Integromat), custom Python scripts, Google Apps Script.
+
+**Use Cases:** Invoice processing, lead nurturing sequences, inventory sync, reporting dashboards.
+
+### 4. Creative Design
+UI/UX design, brand identity, marketing collateral, and professional imagery that resonates with target audiences.
+
+**Deliverables:** Figma prototypes, design systems, logos, social media assets, pitch decks.
+
+---
+
+## Products (Internal)
+
+### RTO Buddy
+**Category:** SaaS / Business Application
+**URL:** https://rtobuddy.dalvigroup.co.in
+**Description:** Comprehensive RTO management solution for vehicle registration agents. Digitizes compliance workflows, automates form filling, provides real-time application tracking, and manages documentation.
+
+**Key Features:**
+- Automated form pre-filling from vehicle data
+- Real-time status tracking dashboard
+- Document upload and management
+- Multi-agent support with role-based access
+
+### SMPG (Social Media Post Generator)
+**Category:** Web Tool
+**URL:** https://smpg.dalvigroup.co.in
+**Description:** Browser-based tool for creating branded social media posts. Supports custom backgrounds, text overlays, profile integration, and export to PNG/JPEG.
+
+**Key Features:**
+- Dynamic background colors and gradients
+- Username and verification badge support
+- Client-side processing (no server upload)
+- Preset color palettes
+
+### VPTC (Virtual Public Transport Card)
+**Category:** System / Proof of Concept
+**Description:** Digital ticketing system for public transport. Replaces physical smart cards with QR-based mobile passes.
+
+**Key Features:**
+- QR code generation and validation
+- Balance top-up via UPI/cards
+- Trip history and analytics
+
+### Dirt Shack
+**Category:** E-commerce
+**Description:** Premium off-road gear and accessories store. Built on modern e-commerce stack with inventory management.
+
+---
+
+## Client Projects
+
+### Playverse
+**Industry:** Gaming / Entertainment
+**Description:** Gaming community and events platform for esports tournaments and casual gaming meetups.
+
+### Buon Cibo
+**Industry:** Food & Hospitality
+**Description:** Website for authentic Italian restaurant featuring menu, reservations, and location.
+
+### Berrybash
+**Industry:** Food & Beverage
+**Description:** Franchise website for fruit-based dessert brand with location finder and menu.
+
+### Millet Bee
+**Industry:** E-commerce / Health Foods
+**Description:** Online store for organic millet products with product catalog and checkout.
+
+### Boundless Generosity
+**Industry:** Non-Profit
+**Description:** Charity and donation platform enabling transparent giving and impact tracking.
+
+---
+
+## FAQ
+
+### What services does Dalvi Consultancy offer?
+We provide custom software development, AI chatbot integration, web application engineering using Next.js and React, and workflow automation for businesses in Pune and globally.
+
+### Where is Dalvi Consultancy located?
+We are based in Pune, Maharashtra, India, serving clients in tech hubs like Hinjewadi, Magarpatta, Wakad, and Aundh, as well as remote clients worldwide.
+
+### What technologies do you specialize in?
+Our core stack includes Next.js, React, TypeScript, Node.js, Firebase, Python, n8n, and Tailwind CSS. We also work with WordPress, PHP, and mobile development tools.
+
+### How can I start a project with you?
+Email us at support@dalvigroup.co.in to discuss your project.
+
+### Do you offer maintenance and support?
+Yes, we provide ongoing maintenance, feature updates, and technical support packages for all projects we deliver.
+
+---
+
+## Contact Information
+
+- **Email:** support@dalvigroup.co.in
+- **Website:** https://consultancy.dalvigroup.co.in
+- **LinkedIn:** https://www.linkedin.com/company/dalviconsultancy
+- **App Portal:** https://app.dalvigroup.co.in
+- **Client Portal:** https://client.dalvigroup.co.in
+
+---
+
+## Sitemap
+
+- `/` - Homepage
+- `/projects/rtobuddy.html` - RTO Buddy product page
+- `/projects/smpg.html` - SMPG tool page
+- `/projects/vptc.html` - VPTC system page
+- `/projects/dirtshack.html` - Dirt Shack store page
+- `/projects/playverse.html` - Playverse client project
+- `/projects/buoncibo.html` - Buon Cibo client project
+- `/projects/berrybash.html` - Berrybash client project
+- `/projects/milletbee.html` - Millet Bee client project
+- `/projects/boundlessgenerosity.html` - Boundless Generosity client project
+- `/llms.txt` - This file (minimal)
+- `/llms-full.txt` - Extended documentation (you are here)
