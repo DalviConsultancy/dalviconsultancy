@@ -2,30 +2,61 @@ import os
 import shutil
 import re
 import sys
+import subprocess
+import hashlib
 from datetime import datetime
+
+# Try to import Pillow for image processing
+try:
+    from PIL import Image
+except ImportError:
+    Image = None
+
+# Try to import BeautifulSoup for HTML processing
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    BeautifulSoup = None
 
 # Configuration
 SOURCE_DIR = '.'
 DEST_DIR = 'live'
-BASE_URL = 'https://consultancy.dalvigroup.co.in'
+BASE_URL = 'https://consult.dalvigroup.co.in'
 
-# Extensions to minify
-HTML_EXT = {'.html', '.htm'}
-CSS_EXT = {'.css'}
-JS_EXT = {'.js'}
-
-# Directories to exclude
+# Build system exclusions
 EXCLUDE_DIRS = {
-    'live', '.git', '.vscode', '__pycache__', 'venv', 'env', '.idea', 'node_modules', '.gemini'
+    '.git', 'dist', 'node_modules', '.tmp', '.gemini', '__pycache__', 
+    '.vscode', '.idea', 'live', 'skill-assets'
 }
 
-# Files to exclude from processing (but maybe not copying if handled by else)
+# Source files to exclude from the production build
 EXCLUDE_FILES = {
-    'build.py', 'deploy.py', 'minify_assets.py', 'package.json', 'package-lock.json', '.gitignore'
+    '.gitignore', 'package-lock.json', 'README.md', 'requirements.txt', 
+    '.DS_Store', 'build.py', 'build_archive.py', 'package.json', 
+    'tailwind.config.js', 'task.md', 'AGENTS.md', 'SKILL.md', 
+    'DEPLOYMENT.md', 'analyze_report.py', 'apply_mobile_nav.py', 
+    'apply_mobile_nav_v2.py', 'apply_project_styles.py', 'check_score.py',
+    'download_fonts.py', 'fix_hover_scale.py', 'update_corners.py'
 }
+
+def minify_css(content):
+    content = re.sub(r'/\*[\s\S]*?\*/', '', content)
+    content = re.sub(r'\s*([:;{}])\s*', r'\1', content)
+    content = re.sub(r'\s+', ' ', content)
+    return content.strip()
+
+def minify_js(content):
+    content = re.sub(r'//.*', '', content)
+    content = re.sub(r'/\*[\s\S]*?\*/', '', content)
+    content = re.sub(r'\s+', ' ', content)
+    return content.strip()
+
+def minify_html(content):
+    content = re.sub(r'<!--(?!\[if).*?-->', '', content, flags=re.DOTALL)
+    content = re.sub(r'>\s+<', '><', content)
+    return content.strip()
 
 def clean_dest():
-    """Removes the destination directory if it exists and recreates it."""
     if os.path.exists(DEST_DIR):
         print(f"Cleaning {DEST_DIR}...")
         try:
@@ -34,261 +65,184 @@ def clean_dest():
             print(f"Warning: Could not fully clean {DEST_DIR}: {e}")
     os.makedirs(DEST_DIR, exist_ok=True)
 
-def generate_sitemap(files):
+def copy_files():
+    print("Copying files...")
+    for root, dirs, files in os.walk(SOURCE_DIR):
+        # Filter directories
+        dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]
+        
+        rel_path = os.path.relpath(root, SOURCE_DIR)
+        if rel_path == '.':
+            rel_path = ''
+            
+        dest_root = os.path.join(DEST_DIR, rel_path)
+        if not os.path.exists(dest_root):
+            os.makedirs(dest_root)
+            
+        for file in files:
+            # Filter files
+            if file in EXCLUDE_FILES or file.endswith('.py'):
+                continue
+            
+            src_file = os.path.join(root, file)
+            dest_file = os.path.join(dest_root, file)
+            try:
+                shutil.copy2(src_file, dest_file)
+            except Exception as e:
+                print(f"Error copying {file}: {e}")
+
+def optimize_images():
+    if not Image:
+        print("Pillow not available, skipping image optimization.")
+        return
+
+    print("Optimizing images...")
+    MAX_WIDTH = 1200
+    
+    for root, _, files in os.walk(DEST_DIR):
+        for file in files:
+            file_path = os.path.join(root, file)
+            filename, ext = os.path.splitext(file)
+            ext = ext.lower()
+            
+            if ext in ['.jpg', '.jpeg', '.png', '.webp']:
+                try:
+                    with Image.open(file_path) as img:
+                        if img.width > MAX_WIDTH:
+                            img.thumbnail((MAX_WIDTH, MAX_WIDTH))
+                            img.save(file_path, quality=85)
+                except Exception as e:
+                    print(f"Failed to process {file}: {e}")
+
+def calculate_md5(file_path):
+    hash_md5 = hashlib.md5()
+    with open(file_path, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_md5.update(chunk)
+    return hash_md5.hexdigest()[:8]
+
+def version_assets():
+    print("Versioning assets...")
+    renames = {} 
+    target_files = ['styles.css', 'scripts.js']
+    
+    for root, _, files in os.walk(DEST_DIR):
+        for file in files:
+            if file in target_files:
+                file_path = os.path.join(root, file)
+                try:
+                    file_hash = calculate_md5(file_path)
+                    filename, ext = os.path.splitext(file)
+                    new_filename = f"{filename}.{file_hash}{ext}"
+                    new_file_path = os.path.join(root, new_filename)
+                    
+                    os.rename(file_path, new_file_path)
+                    print(f"Versioned {file} -> {new_filename}")
+                    renames[file] = new_filename
+                except Exception as e:
+                    print(f"Error versioning {file}: {e}")
+
+    if renames:
+        for root, _, files in os.walk(DEST_DIR):
+            for file in files:
+                if file.endswith('.html'):
+                    file_path = os.path.join(root, file)
+                    try:
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                        for original, new in renames.items():
+                            content = content.replace(f'"{original}"', f'"{new}"')
+                            content = content.replace(f"'{original}'", f"'{new}'")
+                        with open(file_path, 'w', encoding='utf-8') as f:
+                            f.write(content)
+                    except Exception as e:
+                        print(f"Error updating HTML {file}: {e}")
+
+def process_minification():
+    print("Minifying files in dist...")
+    for root, _, files in os.walk(DEST_DIR):
+        for file in files:
+            file_path = os.path.join(root, file)
+            ext = os.path.splitext(file)[1].lower()
+            
+            try:
+                if ext == '.html':
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    minified = minify_html(content)
+                    with open(file_path, 'w', encoding='utf-8') as f:
+                        f.write(minified)
+                elif ext == '.css':
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    minified = minify_css(content)
+                    with open(file_path, 'w', encoding='utf-8') as f:
+                        f.write(minified)
+                elif ext == '.js':
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    minified = minify_js(content)
+                    with open(file_path, 'w', encoding='utf-8') as f:
+                        f.write(minified)
+            except Exception as e:
+                print(f"Error minifying {file}: {e}")
+
+def generate_sitemap():
     """Generates sitemap.xml in the destination directory."""
     print("Generating sitemap.xml...")
     sitemap_content = ['<?xml version="1.0" encoding="UTF-8"?>']
     sitemap_content.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
     
-    for relative_path in files:
-        # Convert file path to URL
+    # Collect all HTML files
+    html_files = []
+    for root, _, files in os.walk(DEST_DIR):
+        for file in files:
+            if file.endswith('.html'):
+                rel_path = os.path.relpath(os.path.join(root, file), DEST_DIR)
+                html_files.append(rel_path)
+    
+    for relative_path in html_files:
         url_path = relative_path.replace(os.path.sep, '/')
-        if url_path.endswith('index.html'):
+        if url_path == 'index.html':
+            url_path = ''
+        elif url_path.endswith('index.html'):
             url_path = url_path.replace('index.html', '')
         
         url = f"{BASE_URL}/{url_path}"
-        
-        # Get last modified time
-        try:
-            mtime = os.path.getmtime(relative_path)
-            lastmod = datetime.fromtimestamp(mtime).strftime('%Y-%m-%d')
-        except:
-            lastmod = datetime.now().strftime('%Y-%m-%d')
-            
-        sitemap_content.append(f'  <url>')
-        sitemap_content.append(f'    <loc>{url}</loc>')
-        sitemap_content.append(f'    <lastmod>{lastmod}</lastmod>')
-        sitemap_content.append(f'    <changefreq>weekly</changefreq>')
-        sitemap_content.append(f'    <priority>{1.0 if url_path == "" else 0.8}</priority>')
-        sitemap_content.append(f'  </url>')
-        
+        sitemap_content.append(f'  <url><loc>{url}</loc><lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod></url>')
+    
     sitemap_content.append('</urlset>')
     
     with open(os.path.join(DEST_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('\n'.join(sitemap_content))
 
-def generate_robots():
-    """Generates robots.txt in the destination directory."""
-    print("Generating robots.txt...")
-    robots_content = [
-        "User-agent: *",
-        "Allow: /",
-        f"Sitemap: {BASE_URL}/sitemap.xml"
-    ]
-    with open(os.path.join(DEST_DIR, 'robots.txt'), 'w', encoding='utf-8') as f:
-        f.write('\n'.join(robots_content))
-
-def minify_html(content):
-    """Minifies HTML content."""
-    # Remove HTML comments <!-- ... -->
-    content = re.sub(r'<!--(.*?)-->', '', content, flags=re.DOTALL)
-    
-    # Collapse whitespace between tags: >   <  becomes ><
-    content = re.sub(r'>\s+<', '><', content)
-    
-    # Conservative whitespace reduction:
-    # We CANNOT blindly replace all \s+ with ' ' because that merges lines
-    # and breaks inline JS with // comments or missing semicolons.
-    # Instead, we will strip leading/trailing whitespace from each line
-    # and remove empty lines. We keep \n to be safe for inline JS.
-    lines = content.split('\n')
-    cleaned_lines = []
-    for line in lines:
-        stripped = line.strip()
-        if stripped:
-            cleaned_lines.append(stripped)
-            
-    return '\n'.join(cleaned_lines)
-
-def minify_css(content):
-    """Minifies CSS content."""
-    # Remove comments /* ... */
-    content = re.sub(r'/\*.*?\*/', '', content, flags=re.DOTALL)
-    
-    # Remove whitespace around delimiters { } ; : ,
-    content = re.sub(r'\s*([\{\};:,])\s*', r'\1', content)
-    
-    # Collapse multiple spaces to one
-    content = re.sub(r'\s+', ' ', content)
-    
-    # Remove last semicolon in block (optional optimization)
-    content = re.sub(r';\}', '}', content)
-    
-    return content.strip()
-
-def minify_js(content):
-    """
-    Minifies JS content.
-    SAFE MODE:
-    1. Remove single-line comments // (only if they start the line or follow typical patterns)
-    2. Remove multi-line comments /* ... */
-    3. Remove empty lines
-    4. Trim lines
-    We DO NOT collapse newlines to avoid breaking ASI (Automatic Semicolon Insertion).
-    """
-    lines = content.split('\n')
-    minified_lines = []
-    
-    in_multiline = False
-    
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-            
-        # Handle multi-line comments
-        if in_multiline:
-            if '*/' in line:
-                in_multiline = False
-                line = line.split('*/', 1)[1].strip()
-                if not line: continue
-            else:
-                continue
-                
-        if '/*' in line:
-            if '*/' in line:
-                # Single line block comment
-                line = re.sub(r'/\*.*?\*/', '', line).strip()
-                if not line: continue
-            else:
-                in_multiline = True
-                line = line.split('/*', 1)[0].strip()
-                if not line: continue
-
-        # Handle single-line comments using regex to avoid matching inside strings (simple heuristic)
-        # We only strip // if it's likely not part of a url "http://"
-        # A simple robust check for // at start of line
-        if line.startswith('//'):
-            continue
-            
-        # For inline comments, it's risky without a parser. 
-        # We will skip inline comment removal to be safe against "http://..." strings
-        
-        minified_lines.append(line)
-        
-    return '\n'.join(minified_lines)
-
-def process_file(root, filename):
-    src_path = os.path.join(root, filename)
-    
-    # Skip if file is in exclusion list
-    if filename in EXCLUDE_FILES or filename.startswith('.'):
-        return
-
-    # Compute relative path to maintain structure
-    rel_path = os.path.relpath(src_path, SOURCE_DIR)
-    dest_path = os.path.join(DEST_DIR, rel_path)
-    
-    # Create dest directory if needed
-    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-    
-    ext = os.path.splitext(filename)[1].lower()
-    
-    try:
-        content = ""
-        encoding = 'utf-8'
-        
-        # Determine if we should attempt minification
-        if ext in HTML_EXT or ext in CSS_EXT or ext in JS_EXT:
-             try:
-                with open(src_path, 'r', encoding=encoding) as f:
-                    content = f.read()
-             except UnicodeDecodeError:
-                # Fallback for binary files masquerading as text or bad encoding
-                shutil.copy2(src_path, dest_path)
-                return
-
-        if ext in HTML_EXT:
-            minified = minify_html(content)
-            with open(dest_path, 'w', encoding=encoding) as f:
-                f.write(minified)
-            print(f"Minified HTML: {rel_path} ({len(content)} -> {len(minified)} bytes)")
-            
-        elif ext in CSS_EXT:
-            minified = minify_css(content)
-            with open(dest_path, 'w', encoding=encoding) as f:
-                f.write(minified)
-            print(f"Minified CSS : {rel_path} ({len(content)} -> {len(minified)} bytes)")
-            
-        elif ext in JS_EXT:
-            minified = minify_js(content)
-            with open(dest_path, 'w', encoding=encoding) as f:
-                f.write(minified)
-            print(f"Minified JS  : {rel_path} ({len(content)} -> {len(minified)} bytes)")
-            
-        else:
-            # Copy all other files (images, fonts, etc.)
-            shutil.copy2(src_path, dest_path)
-            # print(f"Copied       : {rel_path}") # kept silent for cleanliness
-            
-    except Exception as e:
-        print(f"FAILED {rel_path}: {e}")
-
-
-def generate_llms_txt(files):
-    llms_content = ["# Dalvi Consultancy Website Content\n"]
-    llms_content.append(f"Base URL: {BASE_URL}\n\n")
-    
-    for relative_path in files:
-        file_path = os.path.join(DEST_DIR, relative_path)
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                
-            title_match = re.search(r'<title>(.*?)</title>', content, re.IGNORECASE | re.DOTALL)
-            desc_match = re.search(r'<meta\s+name="description"\s+content="(.*?)"', content, re.IGNORECASE | re.DOTALL)
-            
-            title = title_match.group(1).strip() if title_match else relative_path
-            desc = desc_match.group(1).strip() if desc_match else "No description available."
-            # Clean up newlines in description
-            desc = ' '.join(desc.split())
-            
-            url_path = relative_path.replace(os.path.sep, '/')
-            if url_path.endswith('index.html'):
-                url_path = url_path.replace('index.html', '')
-            
-            full_url = f"{BASE_URL}/{url_path}"
-            
-            llms_content.append(f"## {title}\n")
-            llms_content.append(f"URL: {full_url}\n")
-            llms_content.append(f"Description: {desc}\n\n")
-            
-        except Exception as e:
-            print(f"Error processing {relative_path} for llms.txt: {e}")
-
-    with open(os.path.join(DEST_DIR, 'llms.txt'), 'w', encoding='utf-8') as f:
-        f.writelines(llms_content)
-    print("Generated llms.txt")
-
 def main():
-    print(f"Source: {os.path.abspath(SOURCE_DIR)}")
-    print(f"Dest  : {os.path.abspath(DEST_DIR)}")
+    print(f"Starting build process: {SOURCE_DIR} -> {DEST_DIR}")
     
+    # 1. Run Tailwind
+    print("Running Tailwind CSS build...")
+    try:
+        npx_cmd = "npx.cmd" if os.name == 'nt' else "npx"
+        subprocess.run(
+            [npx_cmd, "tailwindcss", "-i", "input.css", "-o", "styles.css", "--minify"], 
+            check=True, shell=True
+        )
+    except Exception as e:
+        print(f"Tailwind build failed: {e}")
+    
+    # 2. Prepare Dest
     clean_dest()
     
-    print("Starting build process...")
+    # 3. Copy Files
+    copy_files()
     
-    processed_files = []
-    count = 0
-    for root, dirs, files in os.walk(SOURCE_DIR):
-        # Filter excluded directories in-place
-        dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]
-        
-        for filename in files:
-            process_file(root, filename)
-            
-            # Track HTML files for sitemap
-            if filename.endswith('.html') and filename not in EXCLUDE_FILES:
-                rel_path = os.path.relpath(os.path.join(root, filename), SOURCE_DIR)
-                processed_files.append(rel_path)
-            
-            count += 1
-            
-    generate_sitemap(processed_files)
-    generate_robots()
-    generate_llms_txt(processed_files)
+    # 4. Cleanup/Optimize
+    optimize_images()
+    version_assets()
+    process_minification()
+    generate_sitemap()
     
-    print(f"\nBuild complete! Processed {count} files. Output available in '{DEST_DIR}/'")
+    print("Build complete.")
 
 if __name__ == "__main__":
     main()

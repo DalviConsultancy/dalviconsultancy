@@ -4,9 +4,9 @@
   "description": "![Dalvi Consultancy Banner](assets/service_web_bg.webp)",
   "main": "scripts.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./styles.css --watch",
-    "css:build": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
-    "build": "npm run css:build && python build.py"
+    "dev": "tailwindcss -i ./input.css -o ./styles.css --watch",
+    "css:build": "tailwindcss -i ./input.css -o ./styles.css --minify",
+    "build": "python build.py"
   },
   "repository": {
     "type": "git",

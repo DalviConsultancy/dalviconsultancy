@@ -1308,13 +1308,76 @@
             });
         }
 
-        // Run on animation frame for smooth updates
+    <script>
+        // High-frequency branding removal
+        const hideBranding = () => {
+            const selectors = [
+                '.bpComposerFooter',
+                '.bpw-powered-by',
+                'div[class*="powered-by"]',
+                'div[viewBox="0 0 71 16"]', // Common Botpress SVG logo
+                'a[href*="botpress.com"]'
+            ];
+            
+            selectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.style.opacity = '0';
+                    el.style.height = '0';
+                });
+            });
+            
+            // If it's in an iframe, we try to hide the iframe's wrapper branding if possible
+            const iframes = document.querySelectorAll('iframe[id*="bp-webchat"]');
+            iframes.forEach(iframe => {
+                try {
+                    const doc = iframe.contentDocument || iframe.contentWindow.document;
+                    selectors.forEach(selector => {
+                        doc.querySelectorAll(selector).forEach(el => {
+                            el.style.display = 'none';
+                            el.style.visibility = 'hidden';
+                        });
+                    });
+                } catch (e) {
+                    // cross-origin iframe - we can't touch it directly, 
+                    // but we can try to obscure it or use the parent styles
+                }
+            });
+        };
+
+        // Run every 500ms
+        setInterval(hideBranding, 500);
+
+        // Tech highlight loop
+        function highlightCenterTech() {
+            const marquee = document.querySelector('.marquee');
+            if (!marquee) return;
+
+            const items = marquee.querySelectorAll('.tech-item');
+            const centerX = window.innerWidth / 2;
+
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                const itemCenterX = rect.left + rect.width / 2;
+                const distance = Math.abs(centerX - itemCenterX);
+
+                if (distance < 80) {
+                    item.classList.add('tech-center');
+                } else {
+                    item.classList.remove('tech-center');
+                }
+            });
+        }
+
         function loop() {
             highlightCenterTech();
             requestAnimationFrame(loop);
         }
         loop();
     </script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/12/07/20260412070425-T4MK00JJ.js" defer></script>
 </body>
 
 </html>
