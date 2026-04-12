@@ -20,7 +20,7 @@ except ImportError:
 
 # Configuration
 SOURCE_DIR = '.'
-DEST_DIR = 'live'
+DEST_DIR = 'dist'
 BASE_URL = 'https://consult.dalvigroup.co.in'
 
 # Build system exclusions
