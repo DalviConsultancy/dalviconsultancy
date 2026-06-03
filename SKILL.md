@@ -6,7 +6,7 @@ license: See individual LICENSE.txt files in subdirectories
 
 # Unified Agent Skills
 
-This document consolidates five specialized skill sets into a single operational guide.
+This document consolidates six specialized skill sets into a single operational guide.
 
 ## Table of Contents
 1. [Brand Guidelines](#brand-guidelines) - Official Anthropic branding
@@ -14,6 +14,7 @@ This document consolidates five specialized skill sets into a single operational
 3. [Frontend Design](#frontend-design) - Distinctive web interface design
 4. [Skill Creator](#skill-creator) - Guide for creating new skills
 5. [Web Application Testing](#web-application-testing) - Local testing with Playwright
+6. [UI/UX Pro Max](#uiux-pro-max) - Data-driven design intelligence
 
 ---
 
@@ -305,3 +306,62 @@ with sync_playwright() as p:
 - Wait for `networkidle` before inspection.
 - Use descriptive selectors.
 - `skill-assets/webapp-testing/` contains patterns for element discovery, static HTML, and console logging.
+
+---
+
+# UI/UX Pro Max
+*Located in: `skill-assets/ui-ux-pro-max/`*
+
+The Antigravity Architect's design intelligence layer. Use this skill to make data-driven, structurally indestructible design decisions across 67 UI styles, 161 color palettes, and 99 UX guidelines.
+
+## Operational Mandate
+Never "guess" a design direction. Always query the design database to justify every pixel, color, and interaction.
+
+## Search Commands
+
+### Generate Design System (REQUIRED FIRST STEP)
+Always start by generating a comprehensive design system recommendation:
+```bash
+python skill-assets/ui-ux-pro-max/scripts/search.py "<product_type> <industry> <keywords>" --design-system [-p "Project Name"]
+```
+
+### Persistence (Master + Overrides Pattern)
+To maintain a global Source of Truth and handle page-specific deviations:
+```bash
+python skill-assets/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persist -p "Project Name" [--page "page-name"]
+```
+- **MASTER.md**: Global design rules.
+- **pages/*.md**: Page-specific overrides.
+
+### Domain Deep-Dives
+Supplement the design system with targeted searches:
+```bash
+python skill-assets/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain>
+```
+**Available Domains:**
+- `product`: Industry-specific patterns (SaaS, Fintech, Healthcare)
+- `style`: UI styles (Glassmorphism, Minimalism, Brutalism)
+- `typography`: Font pairings and Google Fonts imports
+- `color`: Accessibility-tested palettes
+- `chart`: Data viz recommendations
+- `ux`: Anti-patterns and best practices
+- `landing`: Page structure and conversion strategies
+
+### Stack Best Practices
+Get implementation-specific guidelines:
+```bash
+python skill-assets/ui-ux-pro-max/scripts/search.py "<keyword>" --stack <stack_name>
+```
+**Supported Stacks:** `react`, `nextjs`, `vue`, `svelte`, `astro`, `swiftui`, `react-native`, `flutter`, `html-tailwind`, `shadcn`, `jetpack-compose`, `threejs`.
+
+## Design Principles
+- **Functional Inevitability**: Design must follow function with surgical precision.
+- **Aesthetic Authority**: Every visual choice must be backed by the UI/UX Pro Max database.
+- **Structural Integrity**: Prioritize safe areas, touch targets (≥44pt), and WCAG contrast (≥4.5:1).
+
+## Workflow Integration
+1. **Analyze**: Identify product type and audience.
+2. **Query**: Run `--design-system --persist` to establish the architectural foundation.
+3. **Refine**: Deep-dive into specific domains (UX, Color, Typography) for edge cases.
+4. **Implement**: Use stack-specific guidelines to build the interface.
+5. **Validate**: Run a final UX audit pass using `--domain ux`.

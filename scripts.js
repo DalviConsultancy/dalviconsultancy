@@ -38,6 +38,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+    const themeToggleIconMobile = document.getElementById('theme-toggle-icon-mobile');
+
+    // Retrieve active theme, default to 'light' to align with MASTER.md
+    const activeTheme = localStorage.getItem('theme') || 'light';
+    if (activeTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        if (themeToggleIcon) themeToggleIcon.textContent = 'light_mode';
+        if (themeToggleIconMobile) themeToggleIconMobile.textContent = 'light_mode';
+    } else {
+        document.documentElement.classList.remove('dark');
+        if (themeToggleIcon) themeToggleIcon.textContent = 'dark_mode';
+        if (themeToggleIconMobile) themeToggleIconMobile.textContent = 'dark_mode';
+    }
+
+    function toggleTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            if (themeToggleIcon) themeToggleIcon.textContent = 'dark_mode';
+            if (themeToggleIconMobile) themeToggleIconMobile.textContent = 'dark_mode';
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            if (themeToggleIcon) themeToggleIcon.textContent = 'light_mode';
+            if (themeToggleIconMobile) themeToggleIconMobile.textContent = 'light_mode';
+        }
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', toggleTheme);
+    }
+    if (themeToggleBtnMobile) {
+        themeToggleBtnMobile.addEventListener('click', toggleTheme);
+    }
+
     // Mobile Menu Logic
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');

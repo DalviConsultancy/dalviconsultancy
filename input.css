@@ -3,6 +3,151 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    /* ── Google Fonts CDN ─────────────────────────────────────────────── */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply font-sans;
+        background-color: #030712;
+        color: #f8fafc;
+    }
+}
+
+@layer utilities {
+    /* ── Glassmorphism ────────────────────────────────────────────────── */
+    .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-strong {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1.5rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(14, 165, 233, 0.3);
+        transform: translateY(-4px);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ── Text Gradients ───────────────────────────────────────────────── */
+    .text-gradient {
+        background: linear-gradient(to right, #0EA5E9, #22D3EE, #818CF8);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-warm {
+        background: linear-gradient(to right, #f59e0b, #ef4444);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* ── Glow effects ─────────────────────────────────────────────────── */
+    .glow-primary {
+        box-shadow: 0 0 30px rgba(14, 165, 233, 0.2),
+                    0 0 60px rgba(14, 165, 233, 0.1);
+    }
+
+    .glow-primary-sm {
+        box-shadow: 0 0 15px rgba(14, 165, 233, 0.15);
+    }
+
+    /* ── Buttons ──────────────────────────────────────────────────────── */
+    .btn-primary {
+        background: #0EA5E9;
+        color: #ffffff;
+        padding: 0.625rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 200ms ease;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background: #0284C7;
+        box-shadow: 0 8px 24px rgba(14, 165, 233, 0.35);
+        transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    .btn-ghost {
+        background: transparent;
+        color: #f8fafc;
+        padding: 0.625rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: 500;
+        font-size: 0.875rem;
+        transition: all 200ms ease;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ── Card animations ──────────────────────────────────────────────── */
+    .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover:hover {
+        transform: translateY(-4px);
+    }
+
+    /* ── Gradient backgrounds ─────────────────────────────────────────── */
+    .bg-hero-glow {
+        background: radial-gradient(ellipse 80% 50% at 50% -20%,
+            rgba(14, 165, 233, 0.12), transparent);
+    }
+
+    .bg-grid-pattern {
+        background-image:
+            linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+        background-size: 64px 64px;
+    }
+}
+
+/* ── Custom Context Menu ──────────────────────────────────────────────── */
 #custom-context-menu {
     position: fixed;
     z-index: 10000;
@@ -72,54 +217,65 @@
     margin: 8px 0;
 }
 
+/* ── Animations ───────────────────────────────────────────────────────── */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
+/* ── Marquee ──────────────────────────────────────────────────────────── */
+.marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 2rem;
 }
 
-::-webkit-scrollbar-track {
-    background: #0f172a;
+.marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    animation: scroll 30s linear infinite;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94a3b8;
+    opacity: 0.5;
 }
 
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+/* ── Custom Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #0EA5E9, #3B82F6);
-    border-radius: 5px;
+    border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, #0284c7, #2563eb);
 }
-
 @supports not selector(::-webkit-scrollbar) {
-    html {
-        scrollbar-width: thin;
-        scrollbar-color: #3B82F6 #0f172a;
-    }
+    html { scrollbar-width: thin; scrollbar-color: #3B82F6 #0f172a; }
 }
 
-/* Aggressively hiding Botpress branding */
-.bpw-powered-by, 
+/* ── Botpress branding hiding ─────────────────────────────────────────── */
+.bpw-powered-by,
 .bpComposerFooter,
-[class*="powered-by"], 
-[class*="Botpress"], 
+[class*="powered-by"],
+[class*="Botpress"],
 [class*="bpComposerFooter"],
-a[href*="botpress.com"], 
+a[href*="botpress.com"],
 div[class*="branding"],
 [class*="bpw-widget"] [class*="footer"] a,
 .bpw-credits {
