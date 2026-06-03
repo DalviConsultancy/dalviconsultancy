@@ -159,7 +159,8 @@
     .font-manrope { font-family: 'Manrope', sans-serif; }
 
     /* ── Nav scroll shadow ────────────────────────────────────── */
-    .nav-scrolled { box-shadow: 0 1px 12px rgba(15,23,42,.06); }
+    .nav-scrolled { box-shadow: 0 4px 24px rgba(15,23,42,.10), 0 1px 3px rgba(15,23,42,.08); }
+    #main-nav { box-shadow: 0 1px 0 #E2E8F0; }
 
     /* ── Dot pattern ──────────────────────────────────────────── */
     .bg-dot {
@@ -196,6 +197,122 @@
     .anim-up-1 { animation-delay: .1s; }
     .anim-up-2 { animation-delay: .25s; }
     .anim-up-3 { animation-delay: .4s; }
+
+    /* ── Depth system ─────────────────────────────────────────── */
+    /* Layered shadow: ambient + directional for natural depth */
+    .shadow-card   { box-shadow: 0 1px 3px rgba(15,23,42,.06), 0 4px 12px rgba(15,23,42,.06); }
+    .shadow-card-hover { box-shadow: 0 8px 30px rgba(3,105,161,.12), 0 2px 8px rgba(15,23,42,.06); }
+    .shadow-lift   { box-shadow: 0 12px 40px rgba(3,105,161,.16), 0 4px 12px rgba(15,23,42,.08); }
+    .shadow-inset  { box-shadow: inset 0 1px 3px rgba(15,23,42,.06); }
+    .ring-accent   { outline: 2px solid #0369A1; outline-offset: 2px; }
+
+    /* ── Card base depth ─────────────────────────────────────── */
+    .depth-card {
+      box-shadow: 0 1px 3px rgba(15,23,42,.06), 0 4px 16px rgba(15,23,42,.05);
+      transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+    }
+    .depth-card:hover {
+      box-shadow: 0 8px 32px rgba(3,105,161,.14), 0 2px 8px rgba(15,23,42,.06);
+      transform: translateY(-4px);
+      border-color: #0369A1 !important;
+    }
+
+    /* ── Hero stat cards ─────────────────────────────────────── */
+    .stat-card {
+      box-shadow: 0 2px 8px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+    .stat-card:hover { box-shadow: 0 8px 24px rgba(3,105,161,.12); transform: translateY(-2px); }
+
+    /* ── Bento grid items ────────────────────────────────────── */
+    .bento-item {
+      box-shadow: 0 2px 8px rgba(15,23,42,.08);
+      transition: box-shadow .3s ease, transform .3s ease;
+    }
+    .bento-item:hover {
+      box-shadow: 0 16px 48px rgba(15,23,42,.18);
+      transform: translateY(-3px) scale(1.005);
+    }
+
+    /* ── FAQ depth ────────────────────────────────────────────── */
+    .faq-item {
+      box-shadow: 0 1px 4px rgba(15,23,42,.05);
+      transition: box-shadow .2s ease;
+    }
+    .faq-item.open, .faq-item:focus-within {
+      box-shadow: 0 4px 20px rgba(3,105,161,.10);
+      border-color: #BFDBFE !important;
+    }
+
+    /* ── Contact icons ───────────────────────────────────────── */
+    .contact-icon {
+      box-shadow: 0 2px 8px rgba(15,23,42,.08);
+      transition: box-shadow .2s ease, background .2s ease;
+    }
+    .contact-icon:hover { box-shadow: 0 4px 16px rgba(3,105,161,.18); background: #0369A1 !important; color: white !important; }
+    .contact-icon:hover span { color: white !important; }
+
+    /* ── Contact form card ───────────────────────────────────── */
+    .form-card {
+      box-shadow: 0 4px 24px rgba(15,23,42,.07), 0 1px 4px rgba(15,23,42,.05);
+    }
+
+    /* ── Product cards ───────────────────────────────────────── */
+    .product-card {
+      box-shadow: 0 1px 4px rgba(15,23,42,.05);
+      transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+    }
+    .product-card:hover {
+      box-shadow: 0 8px 32px rgba(3,105,161,.12);
+      transform: translateY(-3px);
+      border-color: #0369A1 !important;
+    }
+
+    /* ── Input depth ─────────────────────────────────────────── */
+    input, textarea {
+      box-shadow: inset 0 1px 3px rgba(15,23,42,.05);
+      transition: box-shadow .2s ease, border-color .2s ease;
+    }
+    input:focus, textarea:focus {
+      box-shadow: inset 0 1px 3px rgba(15,23,42,.04), 0 0 0 3px rgba(3,105,161,.15);
+    }
+
+    /* ── Submit button depth ─────────────────────────────────── */
+    button[type=submit] {
+      box-shadow: 0 4px 16px rgba(3,105,161,.30), 0 1px 3px rgba(3,105,161,.20);
+      transition: box-shadow .2s ease, transform .2s ease, background .2s ease;
+    }
+    button[type=submit]:hover {
+      box-shadow: 0 8px 28px rgba(3,105,161,.40), 0 2px 6px rgba(3,105,161,.25);
+    }
+
+    /* ── Footer social icons ─────────────────────────────────── */
+    .social-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 1px 3px rgba(15,23,42,.05);
+      transition: box-shadow .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .social-icon:hover {
+      background: #0369A1;
+      border-color: #0369A1;
+      box-shadow: 0 4px 14px rgba(3,105,161,.30);
+      transform: translateY(-2px);
+    }
+    .social-icon:hover span { color: white !important; }
+
+    /* ── Section divider gradient ────────────────────────────── */
+    .section-glow {
+      position: relative;
+    }
+    .section-glow::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(3,105,161,.04), transparent);
+      pointer-events: none;
+    }
 
     /* ── Botpress branding hiding ─────────────────────────────── */
     .bpw-powered-by, .bpComposerFooter, [class*="powered-by"],
@@ -388,7 +505,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      SERVICES
 ═══════════════════════════════════════════════════════════════ -->
-<section id="services" class="py-24 bg-white px-6 md:px-10">
+<section id="services" class="py-24 bg-white px-6 md:px-10 section-glow">
   <div class="max-w-7xl mx-auto">
     <div class="text-center max-w-2xl mx-auto mb-16">
       <span class="font-manrope font-bold text-xs tracking-widest text-[#0369A1] uppercase mb-4 block">What We Build</span>
@@ -397,43 +514,43 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Service cards -->
-      <div class="group p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#0369A1] hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0369A1]/5 transition-all duration-300 cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
+        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
           <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">code</span>
         </div>
         <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">Web Development</h3>
         <p class="font-manrope text-sm text-[#475569] leading-relaxed">High-performance, responsive web applications built with modern frameworks like Next.js and React.</p>
       </div>
-      <div class="group p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#0369A1] hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0369A1]/5 transition-all duration-300 cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
+        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
           <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">smartphone</span>
         </div>
         <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">Mobile Apps</h3>
         <p class="font-manrope text-sm text-[#475569] leading-relaxed">Native and cross-platform mobile experiences that engage users on iOS and Android.</p>
       </div>
-      <div class="group p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#0369A1] hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0369A1]/5 transition-all duration-300 cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
+        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
           <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">smart_toy</span>
         </div>
         <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">AI Chatbots</h3>
         <p class="font-manrope text-sm text-[#475569] leading-relaxed">Intelligent conversational agents powered by Google AI and Botpress to automate support.</p>
       </div>
-      <div class="group p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#0369A1] hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0369A1]/5 transition-all duration-300 cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
+        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
           <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">hub</span>
         </div>
         <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">Workflow Automation</h3>
         <p class="font-manrope text-sm text-[#475569] leading-relaxed">Streamline operations with n8n and custom API integrations to eliminate repetitive work.</p>
       </div>
-      <div class="group p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#0369A1] hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0369A1]/5 transition-all duration-300 cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
+        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
           <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">cloud</span>
         </div>
         <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">SaaS Products</h3>
         <p class="font-manrope text-sm text-[#475569] leading-relaxed">Scalable, multi-tenant software platforms built for growth, reliability, and security.</p>
       </div>
-      <div class="group p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#0369A1] hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0369A1]/5 transition-all duration-300 cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
+        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
           <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">design_services</span>
         </div>
         <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">UI/UX Design</h3>
@@ -461,20 +578,22 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
 
       <!-- Berrybash — large -->
-      <a href="projects/berrybash.html" class="md:col-span-2 md:row-span-2 group relative rounded-2xl overflow-hidden cursor-pointer bg-gradient-to-br from-pink-400 to-rose-600 min-h-[300px]">
+      <a href="projects/berrybash.html" class="bento-item md:col-span-2 md:row-span-2 group relative rounded-2xl overflow-hidden cursor-pointer bg-gradient-to-br from-pink-400 to-rose-600 min-h-[300px]">
         <img src="assets/berrybash.webp" alt="Berrybash" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl group-hover:ring-white/20 transition-all"></div>
         <div class="absolute bottom-0 left-0 p-8 z-10">
-          <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-[11px] font-manrope font-bold mb-3 uppercase tracking-wider">Food &amp; Beverage</span>
+          <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-[11px] font-manrope font-bold mb-3 uppercase tracking-wider" style="box-shadow:0 2px 8px rgba(0,0,0,.20);">Food &amp; Beverage</span>
           <h3 class="font-syne font-bold text-3xl text-white mb-1">Berrybash</h3>
           <p class="font-manrope text-sm text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fruit-based dessert franchise website</p>
         </div>
       </a>
 
       <!-- Buon Cibo -->
-      <a href="projects/buoncibo.html" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-[#E0F2FE]">
+      <a href="projects/buoncibo.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-[#E0F2FE]">
         <img src="assets/buoncibo.webp" alt="Buon Cibo" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
+        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl"></div>
         <div class="absolute bottom-0 left-0 p-6 z-20">
           <span class="inline-block px-3 py-1 bg-black/30 backdrop-blur-sm text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider">Restaurant</span>
           <h3 class="font-syne font-bold text-xl text-white">Buon Cibo</h3>
@@ -482,19 +601,21 @@
       </a>
 
       <!-- RTO Buddy -->
-      <a href="projects/rtobuddy.html" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-[#F1F5F9] border border-[#E2E8F0]">
+      <a href="projects/rtobuddy.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-[#F1F5F9] border border-[#E2E8F0]">
         <img src="assets/rtobuddy.webp" alt="RTO Buddy" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 to-transparent z-10"></div>
+        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl"></div>
         <div class="absolute bottom-0 left-0 p-6 z-20">
-          <span class="inline-block px-3 py-1 bg-[#0369A1] text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider">SaaS Platform</span>
+          <span class="inline-block px-3 py-1 bg-[#0369A1] text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider" style="box-shadow:0 2px 8px rgba(3,105,161,.30);">SaaS Platform</span>
           <h3 class="font-syne font-bold text-xl text-white">RTO Buddy</h3>
         </div>
       </a>
 
       <!-- SMPG -->
-      <a href="projects/smpg.html" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-[#0F172A]">
+      <a href="projects/smpg.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-[#0F172A]">
         <div class="absolute inset-0 bg-dot opacity-20"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] to-transparent z-10"></div>
+        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl"></div>
         <div class="absolute bottom-0 left-0 p-6 z-20">
           <span class="inline-block px-3 py-1 bg-white/10 border border-white/20 text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider">Product</span>
           <h3 class="font-syne font-bold text-xl text-white">SMPG</h3>
@@ -502,7 +623,7 @@
       </a>
 
       <!-- Dirt Shack -->
-      <a href="projects/dirtshack.html" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-amber-50 border border-[#E2E8F0]">
+      <a href="projects/dirtshack.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-amber-50 border border-[#E2E8F0]">
         <img src="assets/dirtshack.webp" alt="Dirt Shack" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent z-10"></div>
         <div class="absolute bottom-0 left-0 p-5 z-20">
@@ -512,7 +633,7 @@
       </a>
 
       <!-- Millet Bee -->
-      <a href="projects/milletbee.html" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-green-50 border border-[#E2E8F0]">
+      <a href="projects/milletbee.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-green-50 border border-[#E2E8F0]">
         <img src="assets/milletbee.webp" alt="Millet Bee" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent z-10"></div>
         <div class="absolute bottom-0 left-0 p-5 z-20">
@@ -535,8 +656,8 @@
       <h2 class="font-syne font-extrabold text-4xl text-[#0F172A]">Our Products</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <a href="projects/rtobuddy.html" class="flex flex-col sm:flex-row gap-6 p-6 border border-[#E2E8F0] rounded-2xl hover:border-[#0369A1] transition-colors group cursor-pointer">
-        <div class="w-16 h-16 shrink-0 bg-[#F1F5F9] rounded-xl flex items-center justify-center text-[#0369A1] group-hover:bg-[#0369A1] group-hover:text-white transition-colors">
+      <a href="projects/rtobuddy.html" class="product-card flex flex-col sm:flex-row gap-6 p-6 border border-[#E2E8F0] rounded-2xl group cursor-pointer bg-white">
+        <div class="w-16 h-16 shrink-0 bg-[#F1F5F9] rounded-xl flex items-center justify-center text-[#0369A1] group-hover:bg-[#0369A1] group-hover:text-white transition-all" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
           <span class="material-symbols-outlined text-3xl">directions_car</span>
         </div>
         <div class="flex-1 flex flex-col justify-between">
@@ -544,13 +665,13 @@
             <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-2">RTO Buddy</h3>
             <p class="font-manrope text-sm text-[#475569] mb-4">SaaS platform for RTO agents — digitizes vehicle registration, automates form filling, tracks applications in real-time.</p>
           </div>
-          <span class="inline-flex items-center gap-1 font-manrope font-bold text-sm text-[#0369A1]">
+          <span class="inline-flex items-center gap-1 font-manrope font-bold text-sm text-[#0369A1] group-hover:gap-2 transition-all">
             Learn More <span class="material-symbols-outlined text-[16px]">chevron_right</span>
           </span>
         </div>
       </a>
-      <a href="projects/smpg.html" class="flex flex-col sm:flex-row gap-6 p-6 border border-[#E2E8F0] rounded-2xl hover:border-[#0369A1] transition-colors group cursor-pointer">
-        <div class="w-16 h-16 shrink-0 bg-[#F1F5F9] rounded-xl flex items-center justify-center text-[#0369A1] group-hover:bg-[#0369A1] group-hover:text-white transition-colors">
+      <a href="projects/smpg.html" class="product-card flex flex-col sm:flex-row gap-6 p-6 border border-[#E2E8F0] rounded-2xl group cursor-pointer bg-white">
+        <div class="w-16 h-16 shrink-0 bg-[#F1F5F9] rounded-xl flex items-center justify-center text-[#0369A1] group-hover:bg-[#0369A1] group-hover:text-white transition-all" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
           <span class="material-symbols-outlined text-3xl">campaign</span>
         </div>
         <div class="flex-1 flex flex-col justify-between">
@@ -558,7 +679,7 @@
             <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-2">SMPG</h3>
             <p class="font-manrope text-sm text-[#475569] mb-4">AI-powered Social Media Post Generator — create on-brand content for LinkedIn, Instagram, and Twitter in seconds.</p>
           </div>
-          <span class="inline-flex items-center gap-1 font-manrope font-bold text-sm text-[#0369A1]">
+          <span class="inline-flex items-center gap-1 font-manrope font-bold text-sm text-[#0369A1] group-hover:gap-2 transition-all">
             Learn More <span class="material-symbols-outlined text-[16px]">chevron_right</span>
           </span>
         </div>
@@ -577,39 +698,39 @@
       <span class="font-manrope font-bold text-xs tracking-widest text-[#0369A1] uppercase mb-3 block">FAQ</span>
       <h2 class="font-syne font-extrabold text-4xl text-[#0F172A]">Common Questions</h2>
     </div>
-    <div class="space-y-4" id="faq-container">
+    <div class="space-y-3" id="faq-container">
       <!-- FAQ items -->
       <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-[#F8FAFC] transition-colors" aria-expanded="false">
           <span class="font-syne font-bold text-lg text-[#0F172A]">What services does Dalvi Consultancy offer?</span>
-          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4">add</span>
+          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4" style="background:#EFF6FF;border-radius:50%;padding:2px;">add</span>
         </button>
         <div class="faq-answer px-6 pb-6">
           <p class="font-manrope text-[#475569] leading-relaxed">We provide custom software development, AI chatbot integration, web application engineering using Next.js and React, mobile app development, and workflow automation for businesses in Pune and globally.</p>
         </div>
       </div>
       <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-[#F8FAFC] transition-colors" aria-expanded="false">
           <span class="font-syne font-bold text-lg text-[#0F172A]">Where is Dalvi Consultancy located?</span>
-          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4">add</span>
+          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4" style="background:#EFF6FF;border-radius:50%;padding:2px;">add</span>
         </button>
         <div class="faq-answer px-6 pb-6">
           <p class="font-manrope text-[#475569] leading-relaxed">We're based in Hinjewadi, Pune, Maharashtra, India — serving clients across Pune's tech hubs (Magarpatta, Wakad, Aundh) and internationally.</p>
         </div>
       </div>
       <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-[#F8FAFC] transition-colors" aria-expanded="false">
           <span class="font-syne font-bold text-lg text-[#0F172A]">What technologies do you specialize in?</span>
-          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4">add</span>
+          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4" style="background:#EFF6FF;border-radius:50%;padding:2px;">add</span>
         </button>
         <div class="faq-answer px-6 pb-6">
           <p class="font-manrope text-[#475569] leading-relaxed">Our core stack: Next.js, React, TypeScript, Node.js, Firebase, Python, n8n automation, Tailwind CSS, and Google AI/Genkit for intelligent features.</p>
         </div>
       </div>
       <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-[#F8FAFC] transition-colors" aria-expanded="false">
           <span class="font-syne font-bold text-lg text-[#0F172A]">How do I start a project?</span>
-          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4">add</span>
+          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4" style="background:#EFF6FF;border-radius:50%;padding:2px;">add</span>
         </button>
         <div class="faq-answer px-6 pb-6">
           <p class="font-manrope text-[#475569] leading-relaxed">Email us at <a href="mailto:consultancy@dalvigroup.co.in" class="text-[#0369A1] hover:underline font-semibold">consultancy@dalvigroup.co.in</a> or fill out the contact form below. We'll get back within 24 hours to schedule a free discovery call.</p>
@@ -637,7 +758,7 @@
       </p>
       <div class="space-y-6">
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-full bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0">
+          <div class="contact-icon w-12 h-12 rounded-xl bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0 cursor-pointer">
             <span class="material-symbols-outlined">location_on</span>
           </div>
           <div>
@@ -646,7 +767,7 @@
           </div>
         </div>
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-full bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0">
+          <div class="contact-icon w-12 h-12 rounded-xl bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0 cursor-pointer">
             <span class="material-symbols-outlined">mail</span>
           </div>
           <div>
@@ -655,7 +776,7 @@
           </div>
         </div>
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-full bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0">
+          <div class="contact-icon w-12 h-12 rounded-xl bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0 cursor-pointer">
             <span class="material-symbols-outlined">phone</span>
           </div>
           <div>
@@ -667,7 +788,7 @@
     </div>
 
     <!-- Right: Form -->
-    <div class="bg-[#F8FAFC] p-8 md:p-10 rounded-[2rem] border border-[#E2E8F0]">
+    <div class="form-card bg-[#F8FAFC] p-8 md:p-10 rounded-[2rem] border border-[#E2E8F0]">
       <form class="space-y-6" id="contact-form" onsubmit="event.preventDefault(); handleContactSubmit();">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
@@ -709,15 +830,15 @@
       <p class="font-manrope text-sm text-[#475569] leading-relaxed">
         Pune-based premium software &amp; AI consultancy. We build digital products that move businesses forward.
       </p>
-      <div class="flex items-center gap-4 pt-2">
-        <a href="https://www.linkedin.com/company/dalviconsultancy" target="_blank" rel="noopener" class="text-[#475569] hover:text-[#0369A1] transition-colors" aria-label="LinkedIn">
-          <span class="material-symbols-outlined">link</span>
+      <div class="flex items-center gap-3 pt-2">
+        <a href="https://www.linkedin.com/company/dalviconsultancy" target="_blank" rel="noopener" class="social-icon text-[#475569]" aria-label="LinkedIn">
+          <span class="material-symbols-outlined text-[20px]">link</span>
         </a>
-        <a href="mailto:consultancy@dalvigroup.co.in" class="text-[#475569] hover:text-[#0369A1] transition-colors" aria-label="Email">
-          <span class="material-symbols-outlined">mail</span>
+        <a href="mailto:consultancy@dalvigroup.co.in" class="social-icon text-[#475569]" aria-label="Email">
+          <span class="material-symbols-outlined text-[20px]">mail</span>
         </a>
-        <a href="https://twitter.com/DalviConsultancy" target="_blank" rel="noopener" class="text-[#475569] hover:text-[#0369A1] transition-colors" aria-label="Twitter">
-          <span class="material-symbols-outlined">chat_bubble</span>
+        <a href="https://twitter.com/DalviConsultancy" target="_blank" rel="noopener" class="social-icon text-[#475569]" aria-label="Twitter">
+          <span class="material-symbols-outlined text-[20px]">chat_bubble</span>
         </a>
       </div>
     </div>
