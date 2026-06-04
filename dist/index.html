@@ -78,14 +78,14 @@
       }
     ]
   }
-  </script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link rel="stylesheet" href="styles.3a3bd22c.css"><style>
+  </script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link rel="stylesheet" href="styles.3464fadb.css"><style>
     /* ── Design System Tokens ─────────────────────────────────── */
     :root {
       --bg:         #FFFFFF;
       --surface:    #F8FAFC;
       --muted:      #F1F5F9;
       --text:       #0F172A;
-      --text-muted: #475569;
+      --text-muted: #334155;
       --accent:     #0369A1;
       --accent-h:   #0284C7;
       --border:     #E2E8F0;
@@ -273,6 +273,13 @@
       opacity: 0 !important; pointer-events: none !important;
     }
 
+    /* ── Botpress Accessibility Overrides ──────────────────────── */
+    #message-preview-root .bpMessagePreviewDescription,
+    .bpMessagePreviewDescription {
+      color: #0F172A !important;
+      font-weight: 500 !important;
+    }
+
     /* ── Scrollbar ────────────────────────────────────────────── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #f1f5f9; }
@@ -361,6 +368,23 @@ function handleContactSubmit() {
     document.getElementById('contact-form').reset();
   }, 3000);
 }
+
+// MutationObserver to automatically fix any dynamically loaded/injected images (like Botpress) missing alt attributes
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    mutation.addedNodes.forEach((node) => {
+      if (node.nodeType === 1) {
+        const imgs = node.querySelectorAll('img');
+        imgs.forEach((img) => {
+          if (!img.getAttribute('alt')) {
+            img.setAttribute('alt', 'Botpress Assistant Avatar');
+          }
+        });
+      }
+    });
+  });
+});
+observer.observe(document.body, { childList: true, subtree: true });
 
 // Float animation for hero badge
 const style = document.createElement('style');

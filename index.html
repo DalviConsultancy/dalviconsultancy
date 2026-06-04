@@ -136,7 +136,7 @@
       --surface:    #F8FAFC;
       --muted:      #F1F5F9;
       --text:       #0F172A;
-      --text-muted: #475569;
+      --text-muted: #334155;
       --accent:     #0369A1;
       --accent-h:   #0284C7;
       --border:     #E2E8F0;
@@ -322,6 +322,13 @@
       display: none !important; visibility: hidden !important;
       height: 0 !important; width: 0 !important;
       opacity: 0 !important; pointer-events: none !important;
+    }
+
+    /* ── Botpress Accessibility Overrides ──────────────────────── */
+    #message-preview-root .bpMessagePreviewDescription,
+    .bpMessagePreviewDescription {
+      color: #0F172A !important;
+      font-weight: 500 !important;
     }
 
     /* ── Scrollbar ────────────────────────────────────────────── */
@@ -937,6 +944,23 @@ function handleContactSubmit() {
     document.getElementById('contact-form').reset();
   }, 3000);
 }
+
+// MutationObserver to automatically fix any dynamically loaded/injected images (like Botpress) missing alt attributes
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    mutation.addedNodes.forEach((node) => {
+      if (node.nodeType === 1) {
+        const imgs = node.querySelectorAll('img');
+        imgs.forEach((img) => {
+          if (!img.getAttribute('alt')) {
+            img.setAttribute('alt', 'Botpress Assistant Avatar');
+          }
+        });
+      }
+    });
+  });
+});
+observer.observe(document.body, { childList: true, subtree: true });
 
 // Float animation for hero badge
 const style = document.createElement('style');
