@@ -1,0 +1,1352 @@
+{
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\analyze_report.py": {
+    "mtime": 1773474660.795374,
+    "ast_hash": "2cf180c760aa1401ac9b4a268bf70aaf",
+    "semantic_hash": "2cf180c760aa1401ac9b4a268bf70aaf"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\apply_glassmorphic.py": {
+    "mtime": 1780399451.292525,
+    "ast_hash": "836840bdf089104b854f03050a01bfe2",
+    "semantic_hash": "836840bdf089104b854f03050a01bfe2"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\apply_mobile_nav.py": {
+    "mtime": 1773474660.795374,
+    "ast_hash": "a567e98bf64d4327ffc173085cd97a47",
+    "semantic_hash": "a567e98bf64d4327ffc173085cd97a47"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\apply_mobile_nav_v2.py": {
+    "mtime": 1773474660.796376,
+    "ast_hash": "169c508a589b40c1fad83bb399657a2f",
+    "semantic_hash": "169c508a589b40c1fad83bb399657a2f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\apply_project_styles.py": {
+    "mtime": 1781416422.532148,
+    "ast_hash": "dd6f6ad7cc9a25c1052aff0093e8c240",
+    "semantic_hash": "dd6f6ad7cc9a25c1052aff0093e8c240"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\build.py": {
+    "mtime": 1781347859.2475111,
+    "ast_hash": "f765f8171ddba86682c87f83f925d768",
+    "semantic_hash": "f765f8171ddba86682c87f83f925d768"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\build_archive.py": {
+    "mtime": 1775977547.8864436,
+    "ast_hash": "0751daff6162aafc45d9c6d1e02de3f2",
+    "semantic_hash": "0751daff6162aafc45d9c6d1e02de3f2"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\check_score.py": {
+    "mtime": 1773474660.8803427,
+    "ast_hash": "7ea899d74c3d8b9ac334c04d490fc729",
+    "semantic_hash": "7ea899d74c3d8b9ac334c04d490fc729"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\consult.dalvigroup.co.in_2026-06-03_20-06-37.report.json": {
+    "mtime": 1780497411.178197,
+    "ast_hash": "acc921b9b750dbd342f53e2026363caa",
+    "semantic_hash": "acc921b9b750dbd342f53e2026363caa"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\consult.dalvigroup.co.in_2026-06-03_20-55-39.report.json": {
+    "mtime": 1780500352.8557508,
+    "ast_hash": "583435d3966129c7eaeaa24642aeb289",
+    "semantic_hash": "583435d3966129c7eaeaa24642aeb289"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\consult.dalvigroup.co.in_2026-06-04_20-44-39.report.json": {
+    "mtime": 1780586093.3492663,
+    "ast_hash": "2ca687973758233d9810f628013a1ad3",
+    "semantic_hash": "2ca687973758233d9810f628013a1ad3"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\consult.dalvigroup.co.in_2026-06-04_21-26-26.report.json": {
+    "mtime": 1780588601.1829147,
+    "ast_hash": "68ce1721aeb0793bd3c83c5b06bbda26",
+    "semantic_hash": "68ce1721aeb0793bd3c83c5b06bbda26"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\download_fonts.py": {
+    "mtime": 1780324878.7682238,
+    "ast_hash": "f555904a2fa0740701347448bbd6569a",
+    "semantic_hash": "f555904a2fa0740701347448bbd6569a"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\fix_hover_scale.py": {
+    "mtime": 1773474660.883416,
+    "ast_hash": "98da1f27e8bbef83f044f9e4986f65a8",
+    "semantic_hash": "98da1f27e8bbef83f044f9e4986f65a8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\fix_project_pages.py": {
+    "mtime": 1780483640.4615767,
+    "ast_hash": "c590ce9cdf5ac1c9b366619cf9c4721d",
+    "semantic_hash": "c590ce9cdf5ac1c9b366619cf9c4721d"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\package.json": {
+    "mtime": 1775984237.5579572,
+    "ast_hash": "d88d5c4285f031771a63f1dc8c99e8d9",
+    "semantic_hash": "d88d5c4285f031771a63f1dc8c99e8d9"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\replace_nav.py": {
+    "mtime": 1780488112.2278123,
+    "ast_hash": "0ec8ef2e4ac21005e17082aa047cf85b",
+    "semantic_hash": "0ec8ef2e4ac21005e17082aa047cf85b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\scripts.js": {
+    "mtime": 1780324991.9931588,
+    "ast_hash": "a060810e5ca1d9b870784ff3835ae105",
+    "semantic_hash": "a060810e5ca1d9b870784ff3835ae105"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\sw.js": {
+    "mtime": 1775998749.1760075,
+    "ast_hash": "8ddebf0e8149337c8ce38eab288342c1",
+    "semantic_hash": "8ddebf0e8149337c8ce38eab288342c1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\tailwind.config.js": {
+    "mtime": 1780399320.4280148,
+    "ast_hash": "738ab3d1d9d6c71981c8b2cf623f0c99",
+    "semantic_hash": "738ab3d1d9d6c71981c8b2cf623f0c99"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\update_corners.py": {
+    "mtime": 1773474660.883416,
+    "ast_hash": "f79ba4de45d4b7e59361112fa5965a0e",
+    "semantic_hash": "f79ba4de45d4b7e59361112fa5965a0e"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\skill.json": {
+    "mtime": 1780323473.093166,
+    "ast_hash": "38e7befe0e5fee6afbb8f3192429f9a1",
+    "semantic_hash": "38e7befe0e5fee6afbb8f3192429f9a1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\cip\\core.py": {
+    "mtime": 1780323471.9161665,
+    "ast_hash": "97922bcc747a77d5564f2f67d8b4c7b9",
+    "semantic_hash": "97922bcc747a77d5564f2f67d8b4c7b9"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\cip\\generate.py": {
+    "mtime": 1780323471.9193525,
+    "ast_hash": "4e21922d1169f73729fe4f7d9d0d6b62",
+    "semantic_hash": "4e21922d1169f73729fe4f7d9d0d6b62"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\cip\\render-html.py": {
+    "mtime": 1780323471.9242911,
+    "ast_hash": "e0f4ec7de6cbfe51386e2b64ccd19c21",
+    "semantic_hash": "e0f4ec7de6cbfe51386e2b64ccd19c21"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\cip\\search.py": {
+    "mtime": 1780323471.941438,
+    "ast_hash": "3c6a773330a5c317f6214da55b4077ff",
+    "semantic_hash": "3c6a773330a5c317f6214da55b4077ff"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\icon\\generate.py": {
+    "mtime": 1780323471.9534266,
+    "ast_hash": "00856566d7283782e7a02c9c0c238cca",
+    "semantic_hash": "00856566d7283782e7a02c9c0c238cca"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\logo\\core.py": {
+    "mtime": 1780323471.9574416,
+    "ast_hash": "6f79fef275acb58f37a9c9746de9f157",
+    "semantic_hash": "6f79fef275acb58f37a9c9746de9f157"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\logo\\generate.py": {
+    "mtime": 1780323471.9648783,
+    "ast_hash": "c055fcd5fc7d01874b6fc90dc797e5e9",
+    "semantic_hash": "c055fcd5fc7d01874b6fc90dc797e5e9"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\logo\\search.py": {
+    "mtime": 1780323471.9688878,
+    "ast_hash": "751a89ded37904135601234dd4f5ad21",
+    "semantic_hash": "751a89ded37904135601234dd4f5ad21"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\scripts\\fetch-background.py": {
+    "mtime": 1780323471.7153678,
+    "ast_hash": "845de6824aaabb9f04bb0826d859bf6b",
+    "semantic_hash": "845de6824aaabb9f04bb0826d859bf6b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\scripts\\generate-slide.py": {
+    "mtime": 1780323471.7413692,
+    "ast_hash": "4bbb10408cb4443e39941a294786a73f",
+    "semantic_hash": "4bbb10408cb4443e39941a294786a73f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\scripts\\search-slides.py": {
+    "mtime": 1780323471.7573752,
+    "ast_hash": "bf072244fc927f737e0b96b8507aca4f",
+    "semantic_hash": "bf072244fc927f737e0b96b8507aca4f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\scripts\\slide_search_core.py": {
+    "mtime": 1780323471.7653666,
+    "ast_hash": "2613032ccc664e4a036f07e7851e796b",
+    "semantic_hash": "2613032ccc664e4a036f07e7851e796b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\shadcn_add.py": {
+    "mtime": 1780323472.6055255,
+    "ast_hash": "f48766f026e79dcc33963214271487a2",
+    "semantic_hash": "f48766f026e79dcc33963214271487a2"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tailwind_config_gen.py": {
+    "mtime": 1780323472.6075306,
+    "ast_hash": "0524a678e8c06da8494183fae5f62159",
+    "semantic_hash": "0524a678e8c06da8494183fae5f62159"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tests\\coverage-ui.json": {
+    "mtime": 1780323472.6152108,
+    "ast_hash": "42c486def8b180c1e72b1e7b865b9607",
+    "semantic_hash": "42c486def8b180c1e72b1e7b865b9607"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tests\\test_shadcn_add.py": {
+    "mtime": 1780323472.6551707,
+    "ast_hash": "3dd7ee21be2436d9c11cb3baa25f94e8",
+    "semantic_hash": "3dd7ee21be2436d9c11cb3baa25f94e8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tests\\test_tailwind_config_gen.py": {
+    "mtime": 1780323472.6581638,
+    "ast_hash": "d7bf6262c528b829caa11b01b19eab4e",
+    "semantic_hash": "d7bf6262c528b829caa11b01b19eab4e"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude-plugin\\marketplace.json": {
+    "mtime": 1780323471.4977636,
+    "ast_hash": "7f3e6f8dea403986110bdf3456be9d15",
+    "semantic_hash": "7f3e6f8dea403986110bdf3456be9d15"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\.claude-plugin\\plugin.json": {
+    "mtime": 1780323471.500764,
+    "ast_hash": "48a0d38ab60783927964a262a8d354cd",
+    "semantic_hash": "48a0d38ab60783927964a262a8d354cd"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\package.json": {
+    "mtime": 1780323472.9871202,
+    "ast_hash": "2dcd8c26434875ac52b5321a21eb2aaa",
+    "semantic_hash": "2dcd8c26434875ac52b5321a21eb2aaa"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\tsconfig.json": {
+    "mtime": 1780323473.0332808,
+    "ast_hash": "e837ef9ba550eaf043dc4d5f2ca9808c",
+    "semantic_hash": "e837ef9ba550eaf043dc4d5f2ca9808c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\data\\_sync_all.py": {
+    "mtime": 1780323472.7336562,
+    "ast_hash": "ce3fd6613eee315556671046b7a76a6f",
+    "semantic_hash": "ce3fd6613eee315556671046b7a76a6f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\scripts\\core.py": {
+    "mtime": 1780323472.8757782,
+    "ast_hash": "70afbbb9745c76319817fb23c4da64b2",
+    "semantic_hash": "70afbbb9745c76319817fb23c4da64b2"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\scripts\\design_system.py": {
+    "mtime": 1780323472.8837633,
+    "ast_hash": "f10fa759d4a25dcd16d1a6d72a505a5c",
+    "semantic_hash": "f10fa759d4a25dcd16d1a6d72a505a5c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\scripts\\search.py": {
+    "mtime": 1780323472.887767,
+    "ast_hash": "8c7e35426fe8f6f3ed91e9dce0ed7af1",
+    "semantic_hash": "8c7e35426fe8f6f3ed91e9dce0ed7af1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\agent.json": {
+    "mtime": 1780323472.902763,
+    "ast_hash": "1da97ae26a385dfe72dcfc2d53ee4007",
+    "semantic_hash": "1da97ae26a385dfe72dcfc2d53ee4007"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\augment.json": {
+    "mtime": 1780323472.904767,
+    "ast_hash": "91f0d7641e4be16690ad41204f368f46",
+    "semantic_hash": "91f0d7641e4be16690ad41204f368f46"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\claude.json": {
+    "mtime": 1780323472.9067652,
+    "ast_hash": "889d60b17ea32d9125efde4e32661985",
+    "semantic_hash": "889d60b17ea32d9125efde4e32661985"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\codebuddy.json": {
+    "mtime": 1780323472.908765,
+    "ast_hash": "9bed7a142c4d286937c89249ac450403",
+    "semantic_hash": "9bed7a142c4d286937c89249ac450403"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\codex.json": {
+    "mtime": 1780323472.912766,
+    "ast_hash": "cf1b2bd1e89ded1c18628c5a961444ae",
+    "semantic_hash": "cf1b2bd1e89ded1c18628c5a961444ae"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\continue.json": {
+    "mtime": 1780323472.9157646,
+    "ast_hash": "c83dc9767601621b1d6c4769d59b3f0f",
+    "semantic_hash": "c83dc9767601621b1d6c4769d59b3f0f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\copilot.json": {
+    "mtime": 1780323472.9238594,
+    "ast_hash": "0c5bc2cf7678c2495b5b04d86913d708",
+    "semantic_hash": "0c5bc2cf7678c2495b5b04d86913d708"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\cursor.json": {
+    "mtime": 1780323472.9318595,
+    "ast_hash": "040517209e07fd90ea84a0e7ef06a1cf",
+    "semantic_hash": "040517209e07fd90ea84a0e7ef06a1cf"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\droid.json": {
+    "mtime": 1780323472.9338543,
+    "ast_hash": "21bf2431248bcf7ada08fb1e4700ea41",
+    "semantic_hash": "21bf2431248bcf7ada08fb1e4700ea41"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\gemini.json": {
+    "mtime": 1780323472.935856,
+    "ast_hash": "9586eba71075e5a94b7189808683c57c",
+    "semantic_hash": "9586eba71075e5a94b7189808683c57c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\kilocode.json": {
+    "mtime": 1780323472.9388592,
+    "ast_hash": "f4c4bcdddcb88fecad8bc0f53d93d2e7",
+    "semantic_hash": "f4c4bcdddcb88fecad8bc0f53d93d2e7"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\kiro.json": {
+    "mtime": 1780323472.9418585,
+    "ast_hash": "8bafe3a4a93300985a8932d5087bfb3f",
+    "semantic_hash": "8bafe3a4a93300985a8932d5087bfb3f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\opencode.json": {
+    "mtime": 1780323472.9551194,
+    "ast_hash": "fcfde55d4f61aba985a1d39d0aab24a7",
+    "semantic_hash": "fcfde55d4f61aba985a1d39d0aab24a7"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\qoder.json": {
+    "mtime": 1780323472.9681225,
+    "ast_hash": "e08340509021578de2746107e660320f",
+    "semantic_hash": "e08340509021578de2746107e660320f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\roocode.json": {
+    "mtime": 1780323472.9701314,
+    "ast_hash": "41f09d01c965befdf14456c7e0b5df28",
+    "semantic_hash": "41f09d01c965befdf14456c7e0b5df28"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\trae.json": {
+    "mtime": 1780323472.9731202,
+    "ast_hash": "5bb1852dadf1f9b9d3d45455bb98bb26",
+    "semantic_hash": "5bb1852dadf1f9b9d3d45455bb98bb26"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\warp.json": {
+    "mtime": 1780323472.975124,
+    "ast_hash": "2854878d64f4c43c33ead888952bdf82",
+    "semantic_hash": "2854878d64f4c43c33ead888952bdf82"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\windsurf.json": {
+    "mtime": 1780323472.9791193,
+    "ast_hash": "de081e586c8a66c14b66e7c088bc655d",
+    "semantic_hash": "de081e586c8a66c14b66e7c088bc655d"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\index.ts": {
+    "mtime": 1780323473.009291,
+    "ast_hash": "730fffda8cbb62fea0c24e102f3a002b",
+    "semantic_hash": "730fffda8cbb62fea0c24e102f3a002b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\commands\\init.ts": {
+    "mtime": 1780323473.0011237,
+    "ast_hash": "a5b9d3b6cb0790f4008c154e4d48cd1a",
+    "semantic_hash": "a5b9d3b6cb0790f4008c154e4d48cd1a"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\commands\\uninstall.ts": {
+    "mtime": 1780323473.0031178,
+    "ast_hash": "cb8c6c74e663435f10849ce1567476ca",
+    "semantic_hash": "cb8c6c74e663435f10849ce1567476ca"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\commands\\update.ts": {
+    "mtime": 1780323473.0052755,
+    "ast_hash": "d3cb7f7f8e918d29f85b5cdac3068019",
+    "semantic_hash": "d3cb7f7f8e918d29f85b5cdac3068019"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\commands\\versions.ts": {
+    "mtime": 1780323473.00627,
+    "ast_hash": "037828c21dfd2a2c2b70517810872529",
+    "semantic_hash": "037828c21dfd2a2c2b70517810872529"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\types\\index.ts": {
+    "mtime": 1780323473.0162785,
+    "ast_hash": "c27ea8c1408525cc79368c55eef013b8",
+    "semantic_hash": "c27ea8c1408525cc79368c55eef013b8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\utils\\detect.ts": {
+    "mtime": 1780323473.019276,
+    "ast_hash": "23d019853c490851eff169cf7d56c0a4",
+    "semantic_hash": "23d019853c490851eff169cf7d56c0a4"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\utils\\extract.ts": {
+    "mtime": 1780323473.022273,
+    "ast_hash": "f9e84e45a521a2fc41a838e56c34c4f0",
+    "semantic_hash": "f9e84e45a521a2fc41a838e56c34c4f0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\utils\\github.ts": {
+    "mtime": 1780323473.0242734,
+    "ast_hash": "b7857440289008abce806f869399e34c",
+    "semantic_hash": "b7857440289008abce806f869399e34c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\utils\\logger.ts": {
+    "mtime": 1780323473.0262733,
+    "ast_hash": "efccc9f9d33a43147825403052b3230f",
+    "semantic_hash": "efccc9f9d33a43147825403052b3230f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\cli\\src\\utils\\template.ts": {
+    "mtime": 1780323473.0302768,
+    "ast_hash": "8fb94e14afdcbe394b26d26237594cef",
+    "semantic_hash": "8fb94e14afdcbe394b26d26237594cef"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\data\\_sync_all.py": {
+    "mtime": 1780323473.1017165,
+    "ast_hash": "ce3fd6613eee315556671046b7a76a6f",
+    "semantic_hash": "ce3fd6613eee315556671046b7a76a6f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\scripts\\core.py": {
+    "mtime": 1780323473.253677,
+    "ast_hash": "579bd996ca10aa22a33c712a172d8b90",
+    "semantic_hash": "579bd996ca10aa22a33c712a172d8b90"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\scripts\\design_system.py": {
+    "mtime": 1780323473.2798972,
+    "ast_hash": "f10fa759d4a25dcd16d1a6d72a505a5c",
+    "semantic_hash": "f10fa759d4a25dcd16d1a6d72a505a5c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\scripts\\search.py": {
+    "mtime": 1780323473.2818995,
+    "ast_hash": "89f1dc15dbd0ecd96999deaf936e3166",
+    "semantic_hash": "89f1dc15dbd0ecd96999deaf936e3166"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\agent.json": {
+    "mtime": 1780323473.3058991,
+    "ast_hash": "c4a66a4235824b6c6c2d4d9c830ea55b",
+    "semantic_hash": "c4a66a4235824b6c6c2d4d9c830ea55b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\augment.json": {
+    "mtime": 1780323473.3088984,
+    "ast_hash": "b483589d32f22a9211d1e827412f4342",
+    "semantic_hash": "b483589d32f22a9211d1e827412f4342"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\claude.json": {
+    "mtime": 1780323473.3149023,
+    "ast_hash": "1ce71533f4290a12cb1acb425def3e7f",
+    "semantic_hash": "1ce71533f4290a12cb1acb425def3e7f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\codebuddy.json": {
+    "mtime": 1780323473.3169026,
+    "ast_hash": "d7d53866d1b14cfc710c6c3ec58419b4",
+    "semantic_hash": "d7d53866d1b14cfc710c6c3ec58419b4"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\codex.json": {
+    "mtime": 1780323473.318899,
+    "ast_hash": "4ccf0266c7c7f09c7c04d89dd23a8d13",
+    "semantic_hash": "4ccf0266c7c7f09c7c04d89dd23a8d13"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\continue.json": {
+    "mtime": 1780323473.3209033,
+    "ast_hash": "b1001267718c22fd57f9e80489a06786",
+    "semantic_hash": "b1001267718c22fd57f9e80489a06786"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\copilot.json": {
+    "mtime": 1780323473.3249054,
+    "ast_hash": "85566a8ce7f7d68f51247f7d6ba3564d",
+    "semantic_hash": "85566a8ce7f7d68f51247f7d6ba3564d"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\cursor.json": {
+    "mtime": 1780323473.3269067,
+    "ast_hash": "46445b325d391cdd834e173989887107",
+    "semantic_hash": "46445b325d391cdd834e173989887107"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\droid.json": {
+    "mtime": 1780323473.3320513,
+    "ast_hash": "f732ba08356148e9b2656847e29210f5",
+    "semantic_hash": "f732ba08356148e9b2656847e29210f5"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\gemini.json": {
+    "mtime": 1780323473.3360543,
+    "ast_hash": "3c64435aa70598f9cd0a0a22085d94fe",
+    "semantic_hash": "3c64435aa70598f9cd0a0a22085d94fe"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\kilocode.json": {
+    "mtime": 1780323473.3410501,
+    "ast_hash": "80f2b26926a464c672baef88516efd2e",
+    "semantic_hash": "80f2b26926a464c672baef88516efd2e"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\kiro.json": {
+    "mtime": 1780323473.3440554,
+    "ast_hash": "b31b20bca5019e5c5329b20c2fef63f5",
+    "semantic_hash": "b31b20bca5019e5c5329b20c2fef63f5"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\opencode.json": {
+    "mtime": 1780323473.3520522,
+    "ast_hash": "39e67ff75a45243b8702059d6c78c14c",
+    "semantic_hash": "39e67ff75a45243b8702059d6c78c14c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\qoder.json": {
+    "mtime": 1780323473.3550549,
+    "ast_hash": "8b11462bc192383c91be31722bb5597c",
+    "semantic_hash": "8b11462bc192383c91be31722bb5597c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\roocode.json": {
+    "mtime": 1780323473.3570597,
+    "ast_hash": "d6f9bca842aa9a03aa3d17216bbbabe3",
+    "semantic_hash": "d6f9bca842aa9a03aa3d17216bbbabe3"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\trae.json": {
+    "mtime": 1780323473.3590584,
+    "ast_hash": "11004ab7c557df8bd9ce672494e010d1",
+    "semantic_hash": "11004ab7c557df8bd9ce672494e010d1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\warp.json": {
+    "mtime": 1780323473.3630524,
+    "ast_hash": "4065ff35f98d71032cc2533090f52a9a",
+    "semantic_hash": "4065ff35f98d71032cc2533090f52a9a"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.agent\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\windsurf.json": {
+    "mtime": 1780323473.3650513,
+    "ast_hash": "3449cfd496bdfeeb32bf5c86e80e1d18",
+    "semantic_hash": "3449cfd496bdfeeb32bf5c86e80e1d18"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\.tmp\\package\\package.json": {
+    "mtime": 499162500.0,
+    "ast_hash": "729c63b340e2051fe74f87b3bdc0b286",
+    "semantic_hash": "729c63b340e2051fe74f87b3bdc0b286"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\skill-assets\\ui-ux-pro-max\\data\\_sync_all.py": {
+    "mtime": 1781344474.1872008,
+    "ast_hash": "ce3fd6613eee315556671046b7a76a6f",
+    "semantic_hash": "ce3fd6613eee315556671046b7a76a6f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\skill-assets\\ui-ux-pro-max\\scripts\\core.py": {
+    "mtime": 1781344474.242473,
+    "ast_hash": "579bd996ca10aa22a33c712a172d8b90",
+    "semantic_hash": "579bd996ca10aa22a33c712a172d8b90"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\skill-assets\\ui-ux-pro-max\\scripts\\design_system.py": {
+    "mtime": 1781344474.2434747,
+    "ast_hash": "f10fa759d4a25dcd16d1a6d72a505a5c",
+    "semantic_hash": "f10fa759d4a25dcd16d1a6d72a505a5c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\skill-assets\\ui-ux-pro-max\\scripts\\search.py": {
+    "mtime": 1781345025.2895634,
+    "ast_hash": "e098db813c9f404f753e0216160bcb9b",
+    "semantic_hash": "e098db813c9f404f753e0216160bcb9b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\skill.json": {
+    "mtime": 1781344474.181736,
+    "ast_hash": "38e7befe0e5fee6afbb8f3192429f9a1",
+    "semantic_hash": "38e7befe0e5fee6afbb8f3192429f9a1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\cip\\core.py": {
+    "mtime": 1781344473.7055473,
+    "ast_hash": "97922bcc747a77d5564f2f67d8b4c7b9",
+    "semantic_hash": "97922bcc747a77d5564f2f67d8b4c7b9"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\cip\\generate.py": {
+    "mtime": 1781344473.7078621,
+    "ast_hash": "4e21922d1169f73729fe4f7d9d0d6b62",
+    "semantic_hash": "4e21922d1169f73729fe4f7d9d0d6b62"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\cip\\render-html.py": {
+    "mtime": 1781344473.7098637,
+    "ast_hash": "e0f4ec7de6cbfe51386e2b64ccd19c21",
+    "semantic_hash": "e0f4ec7de6cbfe51386e2b64ccd19c21"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\cip\\search.py": {
+    "mtime": 1781344473.7108681,
+    "ast_hash": "3c6a773330a5c317f6214da55b4077ff",
+    "semantic_hash": "3c6a773330a5c317f6214da55b4077ff"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\icon\\generate.py": {
+    "mtime": 1781344473.7148633,
+    "ast_hash": "00856566d7283782e7a02c9c0c238cca",
+    "semantic_hash": "00856566d7283782e7a02c9c0c238cca"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\logo\\core.py": {
+    "mtime": 1781344473.7183611,
+    "ast_hash": "6f79fef275acb58f37a9c9746de9f157",
+    "semantic_hash": "6f79fef275acb58f37a9c9746de9f157"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\logo\\generate.py": {
+    "mtime": 1781344473.7203608,
+    "ast_hash": "c055fcd5fc7d01874b6fc90dc797e5e9",
+    "semantic_hash": "c055fcd5fc7d01874b6fc90dc797e5e9"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\scripts\\logo\\search.py": {
+    "mtime": 1781344473.7223628,
+    "ast_hash": "751a89ded37904135601234dd4f5ad21",
+    "semantic_hash": "751a89ded37904135601234dd4f5ad21"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\scripts\\fetch-background.py": {
+    "mtime": 1781344473.6241207,
+    "ast_hash": "845de6824aaabb9f04bb0826d859bf6b",
+    "semantic_hash": "845de6824aaabb9f04bb0826d859bf6b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\scripts\\generate-slide.py": {
+    "mtime": 1781344473.6263895,
+    "ast_hash": "4bbb10408cb4443e39941a294786a73f",
+    "semantic_hash": "4bbb10408cb4443e39941a294786a73f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\scripts\\search-slides.py": {
+    "mtime": 1781344473.6353898,
+    "ast_hash": "bf072244fc927f737e0b96b8507aca4f",
+    "semantic_hash": "bf072244fc927f737e0b96b8507aca4f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\scripts\\slide_search_core.py": {
+    "mtime": 1781344473.637743,
+    "ast_hash": "2613032ccc664e4a036f07e7851e796b",
+    "semantic_hash": "2613032ccc664e4a036f07e7851e796b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\shadcn_add.py": {
+    "mtime": 1781344474.0078282,
+    "ast_hash": "f48766f026e79dcc33963214271487a2",
+    "semantic_hash": "f48766f026e79dcc33963214271487a2"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tailwind_config_gen.py": {
+    "mtime": 1781344474.009825,
+    "ast_hash": "0524a678e8c06da8494183fae5f62159",
+    "semantic_hash": "0524a678e8c06da8494183fae5f62159"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tests\\coverage-ui.json": {
+    "mtime": 1781344474.0118337,
+    "ast_hash": "42c486def8b180c1e72b1e7b865b9607",
+    "semantic_hash": "42c486def8b180c1e72b1e7b865b9607"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tests\\test_shadcn_add.py": {
+    "mtime": 1781344474.0138285,
+    "ast_hash": "3dd7ee21be2436d9c11cb3baa25f94e8",
+    "semantic_hash": "3dd7ee21be2436d9c11cb3baa25f94e8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tests\\test_tailwind_config_gen.py": {
+    "mtime": 1781344474.0159047,
+    "ast_hash": "d7bf6262c528b829caa11b01b19eab4e",
+    "semantic_hash": "d7bf6262c528b829caa11b01b19eab4e"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude-plugin\\marketplace.json": {
+    "mtime": 1781344473.5158393,
+    "ast_hash": "7f3e6f8dea403986110bdf3456be9d15",
+    "semantic_hash": "7f3e6f8dea403986110bdf3456be9d15"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude-plugin\\plugin.json": {
+    "mtime": 1781344473.5188553,
+    "ast_hash": "48a0d38ab60783927964a262a8d354cd",
+    "semantic_hash": "48a0d38ab60783927964a262a8d354cd"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\package.json": {
+    "mtime": 1781345321.8829987,
+    "ast_hash": "761cc3489363b6a2450d41e3c43cec8f",
+    "semantic_hash": "761cc3489363b6a2450d41e3c43cec8f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\tsconfig.json": {
+    "mtime": 1781344474.1619525,
+    "ast_hash": "e837ef9ba550eaf043dc4d5f2ca9808c",
+    "semantic_hash": "e837ef9ba550eaf043dc4d5f2ca9808c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\data\\_sync_all.py": {
+    "mtime": 1781344474.1872008,
+    "ast_hash": "ce3fd6613eee315556671046b7a76a6f",
+    "semantic_hash": "ce3fd6613eee315556671046b7a76a6f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\scripts\\core.py": {
+    "mtime": 1781344474.242473,
+    "ast_hash": "579bd996ca10aa22a33c712a172d8b90",
+    "semantic_hash": "579bd996ca10aa22a33c712a172d8b90"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\scripts\\design_system.py": {
+    "mtime": 1781344474.2434747,
+    "ast_hash": "f10fa759d4a25dcd16d1a6d72a505a5c",
+    "semantic_hash": "f10fa759d4a25dcd16d1a6d72a505a5c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\scripts\\search.py": {
+    "mtime": 1781345025.2895634,
+    "ast_hash": "e098db813c9f404f753e0216160bcb9b",
+    "semantic_hash": "e098db813c9f404f753e0216160bcb9b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\agent.json": {
+    "mtime": 1781344984.0144558,
+    "ast_hash": "a3ea19155a4be5292f1fadb30ef27cfd",
+    "semantic_hash": "a3ea19155a4be5292f1fadb30ef27cfd"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\augment.json": {
+    "mtime": 1781344984.0174565,
+    "ast_hash": "b75b7ba2babcbf01faf907e8630a2283",
+    "semantic_hash": "b75b7ba2babcbf01faf907e8630a2283"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\claude.json": {
+    "mtime": 1781344984.0204515,
+    "ast_hash": "180c385a9a0c98e9519a2eb2521ef7dd",
+    "semantic_hash": "180c385a9a0c98e9519a2eb2521ef7dd"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\codebuddy.json": {
+    "mtime": 1781344984.0234578,
+    "ast_hash": "2e65ecb8505cadc46775279f6c1aaab8",
+    "semantic_hash": "2e65ecb8505cadc46775279f6c1aaab8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\codex.json": {
+    "mtime": 1781344984.0254467,
+    "ast_hash": "22e48b3c5ac3c2fb291f9468c4896ab1",
+    "semantic_hash": "22e48b3c5ac3c2fb291f9468c4896ab1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\continue.json": {
+    "mtime": 1781344984.0284486,
+    "ast_hash": "6d17e68928913d068be6a687f9682bf5",
+    "semantic_hash": "6d17e68928913d068be6a687f9682bf5"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\copilot.json": {
+    "mtime": 1781344984.0314476,
+    "ast_hash": "973e1c914c0b6b8c788b2c4cceb52cb6",
+    "semantic_hash": "973e1c914c0b6b8c788b2c4cceb52cb6"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\cursor.json": {
+    "mtime": 1781344984.0334527,
+    "ast_hash": "18096b75bf32196396795812194481df",
+    "semantic_hash": "18096b75bf32196396795812194481df"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\droid.json": {
+    "mtime": 1781344984.03677,
+    "ast_hash": "a49d39c8e6746f414bb5d55cad1fbf78",
+    "semantic_hash": "a49d39c8e6746f414bb5d55cad1fbf78"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\gemini.json": {
+    "mtime": 1781344984.0387673,
+    "ast_hash": "f49eed5c2b2d1e523ff41ac3596d36fb",
+    "semantic_hash": "f49eed5c2b2d1e523ff41ac3596d36fb"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\kilocode.json": {
+    "mtime": 1781344984.0407648,
+    "ast_hash": "d42bb611b884ae278e3679f6627ec65f",
+    "semantic_hash": "d42bb611b884ae278e3679f6627ec65f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\kiro.json": {
+    "mtime": 1781344984.042765,
+    "ast_hash": "c0dac9ff4e8a40c23b1d8bc91752c7ac",
+    "semantic_hash": "c0dac9ff4e8a40c23b1d8bc91752c7ac"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\opencode.json": {
+    "mtime": 1781344984.044767,
+    "ast_hash": "03478f6a94fdb9b0d8af53c26df9591f",
+    "semantic_hash": "03478f6a94fdb9b0d8af53c26df9591f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\qoder.json": {
+    "mtime": 1781344984.047043,
+    "ast_hash": "142515b12fa3baa6cb452d691f252f08",
+    "semantic_hash": "142515b12fa3baa6cb452d691f252f08"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\roocode.json": {
+    "mtime": 1781344984.0500278,
+    "ast_hash": "0f2d6f5bca999d08c9f7223ad6a366d5",
+    "semantic_hash": "0f2d6f5bca999d08c9f7223ad6a366d5"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\trae.json": {
+    "mtime": 1781344984.0520248,
+    "ast_hash": "c09756ee67e6a72de982ea36920c62fb",
+    "semantic_hash": "c09756ee67e6a72de982ea36920c62fb"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\warp.json": {
+    "mtime": 1781344984.0560322,
+    "ast_hash": "1dc2f312d4161be0d9bd4bc377bbcce8",
+    "semantic_hash": "1dc2f312d4161be0d9bd4bc377bbcce8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\assets\\templates\\platforms\\windsurf.json": {
+    "mtime": 1781344984.058025,
+    "ast_hash": "9bc8a2cf6e7901994751624d7bd2eb37",
+    "semantic_hash": "9bc8a2cf6e7901994751624d7bd2eb37"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\index.ts": {
+    "mtime": 1781344474.151607,
+    "ast_hash": "730fffda8cbb62fea0c24e102f3a002b",
+    "semantic_hash": "730fffda8cbb62fea0c24e102f3a002b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\commands\\init.ts": {
+    "mtime": 1781344474.146605,
+    "ast_hash": "a5b9d3b6cb0790f4008c154e4d48cd1a",
+    "semantic_hash": "a5b9d3b6cb0790f4008c154e4d48cd1a"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\commands\\uninstall.ts": {
+    "mtime": 1781344474.1476111,
+    "ast_hash": "cb8c6c74e663435f10849ce1567476ca",
+    "semantic_hash": "cb8c6c74e663435f10849ce1567476ca"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\commands\\update.ts": {
+    "mtime": 1781344474.148607,
+    "ast_hash": "d3cb7f7f8e918d29f85b5cdac3068019",
+    "semantic_hash": "d3cb7f7f8e918d29f85b5cdac3068019"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\commands\\versions.ts": {
+    "mtime": 1781344474.1506078,
+    "ast_hash": "037828c21dfd2a2c2b70517810872529",
+    "semantic_hash": "037828c21dfd2a2c2b70517810872529"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\types\\index.ts": {
+    "mtime": 1781344474.1526144,
+    "ast_hash": "c27ea8c1408525cc79368c55eef013b8",
+    "semantic_hash": "c27ea8c1408525cc79368c55eef013b8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\utils\\detect.ts": {
+    "mtime": 1781344474.1546235,
+    "ast_hash": "23d019853c490851eff169cf7d56c0a4",
+    "semantic_hash": "23d019853c490851eff169cf7d56c0a4"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\utils\\extract.ts": {
+    "mtime": 1781344474.1559486,
+    "ast_hash": "f9e84e45a521a2fc41a838e56c34c4f0",
+    "semantic_hash": "f9e84e45a521a2fc41a838e56c34c4f0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\utils\\github.ts": {
+    "mtime": 1781344474.157954,
+    "ast_hash": "b7857440289008abce806f869399e34c",
+    "semantic_hash": "b7857440289008abce806f869399e34c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\utils\\logger.ts": {
+    "mtime": 1781344474.1589518,
+    "ast_hash": "efccc9f9d33a43147825403052b3230f",
+    "semantic_hash": "efccc9f9d33a43147825403052b3230f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\cli\\src\\utils\\template.ts": {
+    "mtime": 1781344474.1599498,
+    "ast_hash": "8fb94e14afdcbe394b26d26237594cef",
+    "semantic_hash": "8fb94e14afdcbe394b26d26237594cef"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\data\\_sync_all.py": {
+    "mtime": 1781344474.1872008,
+    "ast_hash": "ce3fd6613eee315556671046b7a76a6f",
+    "semantic_hash": "ce3fd6613eee315556671046b7a76a6f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\scripts\\core.py": {
+    "mtime": 1781344474.242473,
+    "ast_hash": "579bd996ca10aa22a33c712a172d8b90",
+    "semantic_hash": "579bd996ca10aa22a33c712a172d8b90"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\scripts\\design_system.py": {
+    "mtime": 1781344474.2434747,
+    "ast_hash": "f10fa759d4a25dcd16d1a6d72a505a5c",
+    "semantic_hash": "f10fa759d4a25dcd16d1a6d72a505a5c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\scripts\\search.py": {
+    "mtime": 1781345025.2895634,
+    "ast_hash": "e098db813c9f404f753e0216160bcb9b",
+    "semantic_hash": "e098db813c9f404f753e0216160bcb9b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\agent.json": {
+    "mtime": 1781344984.0144558,
+    "ast_hash": "a3ea19155a4be5292f1fadb30ef27cfd",
+    "semantic_hash": "a3ea19155a4be5292f1fadb30ef27cfd"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\augment.json": {
+    "mtime": 1781344984.0174565,
+    "ast_hash": "b75b7ba2babcbf01faf907e8630a2283",
+    "semantic_hash": "b75b7ba2babcbf01faf907e8630a2283"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\claude.json": {
+    "mtime": 1781344984.0204515,
+    "ast_hash": "180c385a9a0c98e9519a2eb2521ef7dd",
+    "semantic_hash": "180c385a9a0c98e9519a2eb2521ef7dd"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\codebuddy.json": {
+    "mtime": 1781344984.0234578,
+    "ast_hash": "2e65ecb8505cadc46775279f6c1aaab8",
+    "semantic_hash": "2e65ecb8505cadc46775279f6c1aaab8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\codex.json": {
+    "mtime": 1781344984.0254467,
+    "ast_hash": "22e48b3c5ac3c2fb291f9468c4896ab1",
+    "semantic_hash": "22e48b3c5ac3c2fb291f9468c4896ab1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\continue.json": {
+    "mtime": 1781344984.0284486,
+    "ast_hash": "6d17e68928913d068be6a687f9682bf5",
+    "semantic_hash": "6d17e68928913d068be6a687f9682bf5"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\copilot.json": {
+    "mtime": 1781344984.0314476,
+    "ast_hash": "973e1c914c0b6b8c788b2c4cceb52cb6",
+    "semantic_hash": "973e1c914c0b6b8c788b2c4cceb52cb6"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\cursor.json": {
+    "mtime": 1781344984.0334527,
+    "ast_hash": "18096b75bf32196396795812194481df",
+    "semantic_hash": "18096b75bf32196396795812194481df"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\droid.json": {
+    "mtime": 1781344984.03677,
+    "ast_hash": "a49d39c8e6746f414bb5d55cad1fbf78",
+    "semantic_hash": "a49d39c8e6746f414bb5d55cad1fbf78"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\gemini.json": {
+    "mtime": 1781344984.0387673,
+    "ast_hash": "f49eed5c2b2d1e523ff41ac3596d36fb",
+    "semantic_hash": "f49eed5c2b2d1e523ff41ac3596d36fb"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\kilocode.json": {
+    "mtime": 1781344984.0407648,
+    "ast_hash": "d42bb611b884ae278e3679f6627ec65f",
+    "semantic_hash": "d42bb611b884ae278e3679f6627ec65f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\kiro.json": {
+    "mtime": 1781344984.042765,
+    "ast_hash": "c0dac9ff4e8a40c23b1d8bc91752c7ac",
+    "semantic_hash": "c0dac9ff4e8a40c23b1d8bc91752c7ac"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\opencode.json": {
+    "mtime": 1781344984.044767,
+    "ast_hash": "03478f6a94fdb9b0d8af53c26df9591f",
+    "semantic_hash": "03478f6a94fdb9b0d8af53c26df9591f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\qoder.json": {
+    "mtime": 1781344984.047043,
+    "ast_hash": "142515b12fa3baa6cb452d691f252f08",
+    "semantic_hash": "142515b12fa3baa6cb452d691f252f08"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\roocode.json": {
+    "mtime": 1781344984.0500278,
+    "ast_hash": "0f2d6f5bca999d08c9f7223ad6a366d5",
+    "semantic_hash": "0f2d6f5bca999d08c9f7223ad6a366d5"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\trae.json": {
+    "mtime": 1781344984.0520248,
+    "ast_hash": "c09756ee67e6a72de982ea36920c62fb",
+    "semantic_hash": "c09756ee67e6a72de982ea36920c62fb"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\warp.json": {
+    "mtime": 1781344984.0560322,
+    "ast_hash": "1dc2f312d4161be0d9bd4bc377bbcce8",
+    "semantic_hash": "1dc2f312d4161be0d9bd4bc377bbcce8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\src\\ui-ux-pro-max\\templates\\platforms\\windsurf.json": {
+    "mtime": 1781344984.058025,
+    "ast_hash": "9bc8a2cf6e7901994751624d7bd2eb37",
+    "semantic_hash": "9bc8a2cf6e7901994751624d7bd2eb37"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\consult.dalvigroup.co.in_2026-06-03_20-06-37.report.html": {
+    "mtime": 1780497411.18375,
+    "ast_hash": "f144d275f2d78128f6cca60f75a4196b",
+    "semantic_hash": "f144d275f2d78128f6cca60f75a4196b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\consult.dalvigroup.co.in_2026-06-03_20-55-39.report.html": {
+    "mtime": 1780500352.8605592,
+    "ast_hash": "e4336372d313f52255b8cedae1f3790e",
+    "semantic_hash": "e4336372d313f52255b8cedae1f3790e"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\consult.dalvigroup.co.in_2026-06-04_20-44-39.report.html": {
+    "mtime": 1780586093.3560212,
+    "ast_hash": "01a3dac02dbea4eb76b41af679e16060",
+    "semantic_hash": "01a3dac02dbea4eb76b41af679e16060"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\consult.dalvigroup.co.in_2026-06-04_21-26-26.report.html": {
+    "mtime": 1780588601.1909797,
+    "ast_hash": "2559b55cd050412c9b78e68d8c9a28cc",
+    "semantic_hash": "2559b55cd050412c9b78e68d8c9a28cc"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\llms-full.txt": {
+    "mtime": 1773474661.1432087,
+    "ast_hash": "56684234f6d0e21987e20a61c546c611",
+    "semantic_hash": "56684234f6d0e21987e20a61c546c611"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\llms.txt": {
+    "mtime": 1773474661.1442094,
+    "ast_hash": "3ed97caf6d213b6a3de5bc8d8b39fc6b",
+    "semantic_hash": "3ed97caf6d213b6a3de5bc8d8b39fc6b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\banner-design\\SKILL.md": {
+    "mtime": 1781344473.525898,
+    "ast_hash": "b9e489566e9e04049b9ac2482c1e6773",
+    "semantic_hash": "b9e489566e9e04049b9ac2482c1e6773"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\banner-design\\references\\banner-sizes-and-styles.md": {
+    "mtime": 1781344473.5291543,
+    "ast_hash": "d77cc03e8ce1a2621dd8d6e565d2a835",
+    "semantic_hash": "d77cc03e8ce1a2621dd8d6e565d2a835"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\brand\\SKILL.md": {
+    "mtime": 1781344473.53315,
+    "ast_hash": "1bee3c3249845db66e6a1d22f678f4ff",
+    "semantic_hash": "1bee3c3249845db66e6a1d22f678f4ff"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\brand\\references\\approval-checklist.md": {
+    "mtime": 1781344473.5365484,
+    "ast_hash": "32c1cbadbd8fb01558c89e47a3eea2c9",
+    "semantic_hash": "32c1cbadbd8fb01558c89e47a3eea2c9"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\brand\\references\\asset-organization.md": {
+    "mtime": 1781344473.5395532,
+    "ast_hash": "3fd34bbdbcb6f7d6bc3e3b54291c1f81",
+    "semantic_hash": "3fd34bbdbcb6f7d6bc3e3b54291c1f81"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\brand\\references\\brand-guideline-template.md": {
+    "mtime": 1781344473.5425532,
+    "ast_hash": "a105e4b545d7ee596951e5a942941f52",
+    "semantic_hash": "a105e4b545d7ee596951e5a942941f52"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\brand\\references\\color-palette-management.md": {
+    "mtime": 1781344473.5455604,
+    "ast_hash": "ff5b9d16adfa70735bfaaf86c092cff2",
+    "semantic_hash": "ff5b9d16adfa70735bfaaf86c092cff2"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\brand\\references\\consistency-checklist.md": {
+    "mtime": 1781344473.5476637,
+    "ast_hash": "1508efecb7217da592bacbe5dd8453c3",
+    "semantic_hash": "1508efecb7217da592bacbe5dd8453c3"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\brand\\references\\logo-usage-rules.md": {
+    "mtime": 1781344473.5496514,
+    "ast_hash": "880c7a7461a816256d1eb29a4c9a45a1",
+    "semantic_hash": "880c7a7461a816256d1eb29a4c9a45a1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\brand\\references\\messaging-framework.md": {
+    "mtime": 1781344473.5514033,
+    "ast_hash": "57f14bdc36a88948ac5da2927dd478ba",
+    "semantic_hash": "57f14bdc36a88948ac5da2927dd478ba"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\cip-prompt-engineering.md": {
+    "mtime": 1781344473.6772196,
+    "ast_hash": "c37289aaaa114caa03642c3e582b8363",
+    "semantic_hash": "c37289aaaa114caa03642c3e582b8363"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\cip-style-guide.md": {
+    "mtime": 1781344473.679217,
+    "ast_hash": "af22ac3b3af8c0845e9e20216adc0ca5",
+    "semantic_hash": "af22ac3b3af8c0845e9e20216adc0ca5"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\design-routing.md": {
+    "mtime": 1781344473.6812057,
+    "ast_hash": "33ca1737a2fa08c2651cb2970b17988b",
+    "semantic_hash": "33ca1737a2fa08c2651cb2970b17988b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\icon-design.md": {
+    "mtime": 1781344473.6822095,
+    "ast_hash": "878c3c03161170f19c5c27eddc7bea61",
+    "semantic_hash": "878c3c03161170f19c5c27eddc7bea61"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\logo-color-psychology.md": {
+    "mtime": 1781344473.6842132,
+    "ast_hash": "ea8820f66e2ea82d52acc70ec8fa2211",
+    "semantic_hash": "ea8820f66e2ea82d52acc70ec8fa2211"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\logo-design.md": {
+    "mtime": 1781344473.6852162,
+    "ast_hash": "1f0ac87c092a11964f00846ec80c0c97",
+    "semantic_hash": "1f0ac87c092a11964f00846ec80c0c97"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\logo-prompt-engineering.md": {
+    "mtime": 1781344473.6872184,
+    "ast_hash": "42ac71a96a568ba6d151ab2b512c59c4",
+    "semantic_hash": "42ac71a96a568ba6d151ab2b512c59c4"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\logo-style-guide.md": {
+    "mtime": 1781344473.6882162,
+    "ast_hash": "71429dc380a3c5a731c8654addb467c6",
+    "semantic_hash": "71429dc380a3c5a731c8654addb467c6"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\slides-copywriting-formulas.md": {
+    "mtime": 1781344473.6902187,
+    "ast_hash": "25ee8ea822b1c8186db79aa794fa246c",
+    "semantic_hash": "25ee8ea822b1c8186db79aa794fa246c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\slides-create.md": {
+    "mtime": 1781344473.692212,
+    "ast_hash": "477752a5cc080a9ce932b02ba961a0d8",
+    "semantic_hash": "477752a5cc080a9ce932b02ba961a0d8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\slides-html-template.md": {
+    "mtime": 1781344473.694217,
+    "ast_hash": "f72faaf4f650dfc05550619a42fae258",
+    "semantic_hash": "f72faaf4f650dfc05550619a42fae258"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\slides-layout-patterns.md": {
+    "mtime": 1781344473.6955492,
+    "ast_hash": "0cbb0495b234ea4b7182e661570a1879",
+    "semantic_hash": "0cbb0495b234ea4b7182e661570a1879"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\slides-strategies.md": {
+    "mtime": 1781344473.696558,
+    "ast_hash": "3356abc0533fe316df905a39c4a3afa0",
+    "semantic_hash": "3356abc0533fe316df905a39c4a3afa0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\slides.md": {
+    "mtime": 1781344473.6985602,
+    "ast_hash": "90e3b6463ed33d5bb87556cf69873705",
+    "semantic_hash": "90e3b6463ed33d5bb87556cf69873705"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design\\references\\social-photos-design.md": {
+    "mtime": 1781344473.7005568,
+    "ast_hash": "b8617d37634488aee25a5d8298e26e8d",
+    "semantic_hash": "b8617d37634488aee25a5d8298e26e8d"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\SKILL.md": {
+    "mtime": 1781344473.5762305,
+    "ast_hash": "0810798ee4a353e6d11509a767e5a6e0",
+    "semantic_hash": "0810798ee4a353e6d11509a767e5a6e0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\references\\component-specs.md": {
+    "mtime": 1781344473.6057906,
+    "ast_hash": "800d64833545996f7c61af874ea0c66e",
+    "semantic_hash": "800d64833545996f7c61af874ea0c66e"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\references\\states-and-variants.md": {
+    "mtime": 1781344473.616114,
+    "ast_hash": "7c9ea66af1b4b2df9b1cb585d9d67d84",
+    "semantic_hash": "7c9ea66af1b4b2df9b1cb585d9d67d84"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\design-system\\references\\tailwind-integration.md": {
+    "mtime": 1781344473.6181207,
+    "ast_hash": "d8cbd2666cd878b35bee5ea2dc25e4e0",
+    "semantic_hash": "d8cbd2666cd878b35bee5ea2dc25e4e0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\slides\\SKILL.md": {
+    "mtime": 1781344473.7273486,
+    "ast_hash": "a92c2c4ade3184c3c10573349f599c41",
+    "semantic_hash": "a92c2c4ade3184c3c10573349f599c41"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\slides\\references\\copywriting-formulas.md": {
+    "mtime": 1781344473.730345,
+    "ast_hash": "25ee8ea822b1c8186db79aa794fa246c",
+    "semantic_hash": "25ee8ea822b1c8186db79aa794fa246c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\slides\\references\\create.md": {
+    "mtime": 1781344473.7323515,
+    "ast_hash": "477752a5cc080a9ce932b02ba961a0d8",
+    "semantic_hash": "477752a5cc080a9ce932b02ba961a0d8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\slides\\references\\html-template.md": {
+    "mtime": 1781344473.7353387,
+    "ast_hash": "f72faaf4f650dfc05550619a42fae258",
+    "semantic_hash": "f72faaf4f650dfc05550619a42fae258"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\slides\\references\\layout-patterns.md": {
+    "mtime": 1781344473.7373405,
+    "ast_hash": "0cbb0495b234ea4b7182e661570a1879",
+    "semantic_hash": "0cbb0495b234ea4b7182e661570a1879"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\slides\\references\\slide-strategies.md": {
+    "mtime": 1781344473.74034,
+    "ast_hash": "3356abc0533fe316df905a39c4a3afa0",
+    "semantic_hash": "3356abc0533fe316df905a39c4a3afa0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\LICENSE.txt": {
+    "mtime": 1781344473.7443483,
+    "ast_hash": "0ba5044c64ef53cb0189c9546081e228",
+    "semantic_hash": "0ba5044c64ef53cb0189c9546081e228"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\SKILL.md": {
+    "mtime": 1781344473.7463455,
+    "ast_hash": "d6b1c5a77cf1846a43a5a1b9dd4eace0",
+    "semantic_hash": "d6b1c5a77cf1846a43a5a1b9dd4eace0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\ArsenalSC-OFL.txt": {
+    "mtime": 1781344473.750345,
+    "ast_hash": "055bd399651c728b58127489b203a607",
+    "semantic_hash": "055bd399651c728b58127489b203a607"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\BigShoulders-OFL.txt": {
+    "mtime": 1781344473.7623389,
+    "ast_hash": "b0ec6188dddb41bf5044b09a7491debc",
+    "semantic_hash": "b0ec6188dddb41bf5044b09a7491debc"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\Boldonse-OFL.txt": {
+    "mtime": 1781344473.7683496,
+    "ast_hash": "854766d78df004c93bb082be848947b9",
+    "semantic_hash": "854766d78df004c93bb082be848947b9"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\BricolageGrotesque-OFL.txt": {
+    "mtime": 1781344473.7784774,
+    "ast_hash": "bd05ea51cf13ec198f9133c1f1f64da0",
+    "semantic_hash": "bd05ea51cf13ec198f9133c1f1f64da0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\CrimsonPro-OFL.txt": {
+    "mtime": 1781344473.792482,
+    "ast_hash": "333ff51d7c275eb19f486ec9abbf21af",
+    "semantic_hash": "333ff51d7c275eb19f486ec9abbf21af"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\DMMono-OFL.txt": {
+    "mtime": 1781344473.7984765,
+    "ast_hash": "b03164427c6f0defd4796fd3f3fb0cf4",
+    "semantic_hash": "b03164427c6f0defd4796fd3f3fb0cf4"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\EricaOne-OFL.txt": {
+    "mtime": 1781344473.8034787,
+    "ast_hash": "9ad51b36a93965acb98cf1c652c60970",
+    "semantic_hash": "9ad51b36a93965acb98cf1c652c60970"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\GeistMono-OFL.txt": {
+    "mtime": 1781344473.8094778,
+    "ast_hash": "f07afc995766b888767e16ae8d119901",
+    "semantic_hash": "f07afc995766b888767e16ae8d119901"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\Gloock-OFL.txt": {
+    "mtime": 1781344473.814474,
+    "ast_hash": "3fcad5713c9b110fddef500d051ac585",
+    "semantic_hash": "3fcad5713c9b110fddef500d051ac585"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\IBMPlexMono-OFL.txt": {
+    "mtime": 1781344473.8227904,
+    "ast_hash": "992dcb568e1ffac11f740ee2fa1f028b",
+    "semantic_hash": "992dcb568e1ffac11f740ee2fa1f028b"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\Lora-OFL.txt": {
+    "mtime": 1781344473.921654,
+    "ast_hash": "65d41d82ac358216fb2707da15c1d3fb",
+    "semantic_hash": "65d41d82ac358216fb2707da15c1d3fb"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\NationalPark-OFL.txt": {
+    "mtime": 1781344473.9306457,
+    "ast_hash": "367777dbf9fa1d1ef152fd06b5e08fc6",
+    "semantic_hash": "367777dbf9fa1d1ef152fd06b5e08fc6"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\NothingYouCouldDo-OFL.txt": {
+    "mtime": 1781344473.934648,
+    "ast_hash": "42a7c035f1ddb3fcda7ddf746519b017",
+    "semantic_hash": "42a7c035f1ddb3fcda7ddf746519b017"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\Outfit-OFL.txt": {
+    "mtime": 1781344473.9396572,
+    "ast_hash": "af9efd1ed592546b9477763b02d684c1",
+    "semantic_hash": "af9efd1ed592546b9477763b02d684c1"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\PixelifySans-OFL.txt": {
+    "mtime": 1781344473.9470332,
+    "ast_hash": "24ba91e15992e8bbd5a20db081d4d92f",
+    "semantic_hash": "24ba91e15992e8bbd5a20db081d4d92f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\PoiretOne-OFL.txt": {
+    "mtime": 1781344473.9480338,
+    "ast_hash": "3d4cab0d7b79e053c1a40dab710bfc95",
+    "semantic_hash": "3d4cab0d7b79e053c1a40dab710bfc95"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\RedHatMono-OFL.txt": {
+    "mtime": 1781344473.9530303,
+    "ast_hash": "ef29b840f660a62db32c43d71a7280c0",
+    "semantic_hash": "ef29b840f660a62db32c43d71a7280c0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\Silkscreen-OFL.txt": {
+    "mtime": 1781344473.9563603,
+    "ast_hash": "6bd21d8f9817d19bb012997a9726d968",
+    "semantic_hash": "6bd21d8f9817d19bb012997a9726d968"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\SmoochSans-OFL.txt": {
+    "mtime": 1781344473.961372,
+    "ast_hash": "79208bd389da9f263bc0b3d79aaaa3f6",
+    "semantic_hash": "79208bd389da9f263bc0b3d79aaaa3f6"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\Tektur-OFL.txt": {
+    "mtime": 1781344473.9654243,
+    "ast_hash": "5bf5c4d52bb660a0b29f6ca8d1d5b892",
+    "semantic_hash": "5bf5c4d52bb660a0b29f6ca8d1d5b892"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\WorkSans-OFL.txt": {
+    "mtime": 1781344473.9829493,
+    "ast_hash": "e5dd6bfc16fb9c9713dce1e02d877c90",
+    "semantic_hash": "e5dd6bfc16fb9c9713dce1e02d877c90"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\canvas-fonts\\YoungSerif-OFL.txt": {
+    "mtime": 1781344473.9892929,
+    "ast_hash": "016f9e9ecf329086639c0e1b542bf9a6",
+    "semantic_hash": "016f9e9ecf329086639c0e1b542bf9a6"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\references\\canvas-design-system.md": {
+    "mtime": 1781344473.99429,
+    "ast_hash": "31a5d5a6e020a02a32415ad17067da24",
+    "semantic_hash": "31a5d5a6e020a02a32415ad17067da24"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\references\\shadcn-accessibility.md": {
+    "mtime": 1781344473.9955695,
+    "ast_hash": "5158549b94aaae3326b7e7854d51dc06",
+    "semantic_hash": "5158549b94aaae3326b7e7854d51dc06"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\references\\shadcn-components.md": {
+    "mtime": 1781344473.9975753,
+    "ast_hash": "7dfd7e872df6c607a571dbeeb59e1789",
+    "semantic_hash": "7dfd7e872df6c607a571dbeeb59e1789"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\references\\tailwind-responsive.md": {
+    "mtime": 1781344474.0015867,
+    "ast_hash": "4bd3c15e0828b65f646e248a4e6c67a8",
+    "semantic_hash": "4bd3c15e0828b65f646e248a4e6c67a8"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\references\\tailwind-utilities.md": {
+    "mtime": 1781344474.0025792,
+    "ast_hash": "b0a93822074b869ebe3c6647acffa733",
+    "semantic_hash": "b0a93822074b869ebe3c6647acffa733"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\requirements.txt": {
+    "mtime": 1781344474.0068288,
+    "ast_hash": "d2f397f72424decd5aca67cc7c28dc4c",
+    "semantic_hash": "d2f397f72424decd5aca67cc7c28dc4c"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-styling\\scripts\\tests\\requirements.txt": {
+    "mtime": 1781344474.0128286,
+    "ast_hash": "d60e024efe9d4a8d1d065ec333260210",
+    "semantic_hash": "d60e024efe9d4a8d1d065ec333260210"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.claude\\skills\\ui-ux-pro-max\\SKILL.md": {
+    "mtime": 1781344474.0181448,
+    "ast_hash": "9e67626a0013e85287078d475bdf105f",
+    "semantic_hash": "9e67626a0013e85287078d475bdf105f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.github\\workflows\\claude-code-review.yml": {
+    "mtime": 1781344474.02315,
+    "ast_hash": "eb8350983dfe3661a54b70c99fb2f60e",
+    "semantic_hash": "eb8350983dfe3661a54b70c99fb2f60e"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.github\\workflows\\claude.yml": {
+    "mtime": 1781344474.0251484,
+    "ast_hash": "af6222d735f87d48dabfa6b6ca17f031",
+    "semantic_hash": "af6222d735f87d48dabfa6b6ca17f031"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\.github\\workflows\\python-package-conda.yml": {
+    "mtime": 1781344474.0263932,
+    "ast_hash": "5700cabe0bcda00e8b43b62c5cf222c7",
+    "semantic_hash": "5700cabe0bcda00e8b43b62c5cf222c7"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\preview\\xiaomaomi-app.html": {
+    "mtime": 1781344474.1684165,
+    "ast_hash": "1b8e1368672ff644002da44af3562a3f",
+    "semantic_hash": "1b8e1368672ff644002da44af3562a3f"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\logo.svg": {
+    "mtime": 1773474661.1452086,
+    "ast_hash": "ca185578cb1c3cf771998622933e5d48",
+    "semantic_hash": "ca185578cb1c3cf771998622933e5d48"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\berrybash.webp": {
+    "mtime": 1773474660.8043709,
+    "ast_hash": "64d46629f606cb7128253ee3b9bb00b7",
+    "semantic_hash": "64d46629f606cb7128253ee3b9bb00b7"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\boundlessgenerosity.webp": {
+    "mtime": 1773474660.8053718,
+    "ast_hash": "22ca41fa427db8a594b0dae3e13b0607",
+    "semantic_hash": "22ca41fa427db8a594b0dae3e13b0607"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\buoncibo.webp": {
+    "mtime": 1773474660.8066032,
+    "ast_hash": "35bdfc61a6c0701fc389fe52ad14dbdb",
+    "semantic_hash": "35bdfc61a6c0701fc389fe52ad14dbdb"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\dirtshack.webp": {
+    "mtime": 1773474660.845176,
+    "ast_hash": "dbad7530397e10c1e1495b3480d9def9",
+    "semantic_hash": "dbad7530397e10c1e1495b3480d9def9"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\Logo.png": {
+    "mtime": 1773474660.7921684,
+    "ast_hash": "625b6bbdf3bcf8b28dbfa6bfbae77010",
+    "semantic_hash": "625b6bbdf3bcf8b28dbfa6bfbae77010"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\logo.svg": {
+    "mtime": 1773474661.1452086,
+    "ast_hash": "ca185578cb1c3cf771998622933e5d48",
+    "semantic_hash": "ca185578cb1c3cf771998622933e5d48"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\milletbee.webp": {
+    "mtime": 1773474660.863312,
+    "ast_hash": "205aa091528f27c70ff5a0782131ca71",
+    "semantic_hash": "205aa091528f27c70ff5a0782131ca71"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\playverse.webp": {
+    "mtime": 1773474660.864314,
+    "ast_hash": "dc508d03bb055064ec3f61a2c6c6caea",
+    "semantic_hash": "dc508d03bb055064ec3f61a2c6c6caea"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\rtobuddy.webp": {
+    "mtime": 1773474660.8695643,
+    "ast_hash": "503dfae415ccbff0d7d4d3bfc86b6e86",
+    "semantic_hash": "503dfae415ccbff0d7d4d3bfc86b6e86"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\smpg.webp": {
+    "mtime": 1773474660.874561,
+    "ast_hash": "087e79ffbb2e42e77c5a1d1445e2f261",
+    "semantic_hash": "087e79ffbb2e42e77c5a1d1445e2f261"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\assets\\vptc.webp": {
+    "mtime": 1773474660.8756318,
+    "ast_hash": "feac22bb03d38fd9eb5dbed1925b05f0",
+    "semantic_hash": "feac22bb03d38fd9eb5dbed1925b05f0"
+  },
+  "C:\\Users\\ishaa\\Work\\dalviconsultancy\\ui-ux-pro-max-skill\\screenshots\\website.png": {
+    "mtime": 1781344474.1807358,
+    "ast_hash": "e31f3d6be53491d545dbfad528e7fa7b",
+    "semantic_hash": "e31f3d6be53491d545dbfad528e7fa7b"
+  }
+}

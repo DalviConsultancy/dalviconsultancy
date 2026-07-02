@@ -153,6 +153,8 @@ def version_assets():
                         for original, new in renames.items():
                             content = content.replace(f'"{original}"', f'"{new}"')
                             content = content.replace(f"'{original}'", f"'{new}'")
+                            content = content.replace(f'"../{original}"', f'"../{new}"')
+                            content = content.replace(f"'../{original}'", f"'../{new}'")
                         with open(file_path, 'w', encoding='utf-8') as f:
                             f.write(content)
                     except Exception as e:

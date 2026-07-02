@@ -132,14 +132,14 @@
   <style>
     /* ── Design System Tokens ─────────────────────────────────── */
     :root {
-      --bg:         #FFFFFF;
-      --surface:    #F8FAFC;
-      --muted:      #F1F5F9;
-      --text:       #0F172A;
-      --text-muted: #334155;
-      --accent:     #0369A1;
+      --bg:         #030712;
+      --surface:    rgba(255, 255, 255, 0.03);
+      --muted:      #0b1329;
+      --text:       #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent:     #0ea5e9;
       --accent-h:   #0284C7;
-      --border:     #E2E8F0;
+      --border:     rgba(255, 255, 255, 0.08);
     }
 
     /* ── Base ─────────────────────────────────────────────────── */
@@ -152,20 +152,25 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
-    ::selection { background: var(--accent); color: #fff; }
+    ::selection { background: var(--accent); color: #000; }
 
     /* ── Typography ───────────────────────────────────────────── */
     .font-syne   { font-family: 'Syne', sans-serif; }
     .font-manrope { font-family: 'Manrope', sans-serif; }
 
     /* ── Nav scroll shadow ────────────────────────────────────── */
-    .nav-scrolled { box-shadow: 0 4px 24px rgba(15,23,42,.10), 0 1px 3px rgba(15,23,42,.08); }
-    #main-nav { box-shadow: 0 1px 0 #E2E8F0; }
+    .nav-scrolled {
+      background-color: rgba(3, 7, 18, 0.75) !important;
+      backdrop-filter: blur(16px);
+      border-color: rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    #main-nav { border-color: rgba(255, 255, 255, 0.05); }
 
     /* ── Dot pattern ──────────────────────────────────────────── */
     .bg-dot {
-      background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
-      background-size: 22px 22px;
+      background-image: radial-gradient(rgba(14, 165, 233, 0.15) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
 
     /* ── Marquee ──────────────────────────────────────────────── */
@@ -173,9 +178,9 @@
     .animate-marquee { display: flex; width: max-content; animation: marquee 30s linear infinite; }
     .marquee-track { overflow: hidden; position: relative; }
     .marquee-fade-l { position: absolute; inset-y: 0; left: 0;  width: 8rem;
-      background: linear-gradient(to right, #0F172A, transparent); z-index: 10; }
+      background: linear-gradient(to right, #030712, transparent); z-index: 10; }
     .marquee-fade-r { position: absolute; inset-y: 0; right: 0; width: 8rem;
-      background: linear-gradient(to left,  #0F172A, transparent); z-index: 10; }
+      background: linear-gradient(to left,  #030712, transparent); z-index: 10; }
 
     /* ── Scroll-to-top ────────────────────────────────────────── */
     #scroll-top { opacity: 0; pointer-events: none; transition: opacity .3s; }
@@ -188,119 +193,152 @@
     .faq-item.open .faq-icon { transform: rotate(45deg); }
 
     /* ── Mobile menu ──────────────────────────────────────────── */
-    #mobile-menu { transform: translateX(100%); transition: transform .3s ease; }
+    #mobile-menu { transform: translateX(100%); transition: transform .3s ease; background-color: rgba(3, 7, 18, 0.95); backdrop-filter: blur(20px); }
     #mobile-menu.open { transform: translateX(0); }
 
     /* ── Animations ───────────────────────────────────────────── */
-    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
-    .anim-up { animation: fadeUp .7s ease forwards; opacity: 0; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(25px); } to { opacity:1; transform:translateY(0); } }
+    .anim-up { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
     .anim-up-1 { animation-delay: .1s; }
     .anim-up-2 { animation-delay: .25s; }
     .anim-up-3 { animation-delay: .4s; }
 
     /* ── Depth system ─────────────────────────────────────────── */
-    /* Layered shadow: ambient + directional for natural depth */
-    .shadow-card   { box-shadow: 0 1px 3px rgba(15,23,42,.06), 0 4px 12px rgba(15,23,42,.06); }
-    .shadow-card-hover { box-shadow: 0 8px 30px rgba(3,105,161,.12), 0 2px 8px rgba(15,23,42,.06); }
-    .shadow-lift   { box-shadow: 0 12px 40px rgba(3,105,161,.16), 0 4px 12px rgba(15,23,42,.08); }
-    .shadow-inset  { box-shadow: inset 0 1px 3px rgba(15,23,42,.06); }
-    .ring-accent   { outline: 2px solid #0369A1; outline-offset: 2px; }
+    .shadow-card   { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+    .shadow-card-hover { box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15); }
+    .shadow-lift   { box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6); }
+    .shadow-inset  { box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8); }
+    .ring-accent   { outline: 2px solid #0ea5e9; outline-offset: 2px; }
 
     /* ── Card base depth ─────────────────────────────────────── */
     .depth-card {
-      box-shadow: 0 1px 3px rgba(15,23,42,.06), 0 4px 16px rgba(15,23,42,.05);
-      transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all .3s cubic-bezier(0.25, 1, 0.5, 1);
     }
     .depth-card:hover {
-      box-shadow: 0 8px 32px rgba(3,105,161,.14), 0 2px 8px rgba(15,23,42,.06);
-      transform: translateY(-4px);
-      border-color: #0369A1 !important;
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(14, 165, 233, 0.3) !important;
+      box-shadow: 0 20px 45px rgba(14, 165, 233, 0.15);
+      transform: translateY(-5px) scale(1.01);
     }
 
     /* ── Hero stat cards ─────────────────────────────────────── */
     .stat-card {
-      box-shadow: 0 2px 8px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
-      transition: box-shadow .25s ease, transform .25s ease;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     }
-    .stat-card:hover { box-shadow: 0 8px 24px rgba(3,105,161,.12); transform: translateY(-2px); }
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(129, 140, 248, 0.3);
+      box-shadow: 0 15px 35px rgba(129, 140, 248, 0.12);
+      transform: translateY(-4px);
+    }
 
     /* ── Bento grid items ────────────────────────────────────── */
     .bento-item {
-      box-shadow: 0 2px 8px rgba(15,23,42,.08);
-      transition: box-shadow .3s ease, transform .3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all .4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .bento-item:hover {
-      box-shadow: 0 16px 48px rgba(15,23,42,.18);
-      transform: translateY(-3px) scale(1.005);
+      border-color: rgba(14, 165, 233, 0.4);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+      transform: translateY(-6px) scale(1.01);
     }
 
     /* ── FAQ depth ────────────────────────────────────────────── */
     .faq-item {
-      box-shadow: 0 1px 4px rgba(15,23,42,.05);
-      transition: box-shadow .2s ease;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all .3s ease;
     }
     .faq-item.open, .faq-item:focus-within {
-      box-shadow: 0 4px 20px rgba(3,105,161,.10);
-      border-color: #BFDBFE !important;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.08);
+      border-color: rgba(14, 165, 233, 0.3) !important;
     }
 
     /* ── Contact icons ───────────────────────────────────────── */
     .contact-icon {
-      box-shadow: 0 2px 8px rgba(15,23,42,.08);
-      transition: box-shadow .2s ease, background .2s ease;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all .2s ease;
     }
-    .contact-icon:hover { box-shadow: 0 4px 16px rgba(3,105,161,.18); background: #0369A1 !important; color: white !important; }
-    .contact-icon:hover span { color: white !important; }
+    .contact-icon:hover {
+      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.25);
+      background: #0ea5e9 !important;
+      color: #030712 !important;
+      border-color: #0ea5e9 !important;
+    }
+    .contact-icon:hover span { color: #030712 !important; }
 
     /* ── Contact form card ───────────────────────────────────── */
     .form-card {
-      box-shadow: 0 4px 24px rgba(15,23,42,.07), 0 1px 4px rgba(15,23,42,.05);
+      background: rgba(255, 255, 255, 0.01);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     }
 
     /* ── Product cards ───────────────────────────────────────── */
     .product-card {
-      box-shadow: 0 1px 4px rgba(15,23,42,.05);
-      transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all .3s cubic-bezier(0.25, 1, 0.5, 1);
     }
     .product-card:hover {
-      box-shadow: 0 8px 32px rgba(3,105,161,.12);
-      transform: translateY(-3px);
-      border-color: #0369A1 !important;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.12);
+      transform: translateY(-5px);
+      border-color: rgba(14, 165, 233, 0.3) !important;
     }
 
     /* ── Input depth ─────────────────────────────────────────── */
     input, textarea {
-      box-shadow: inset 0 1px 3px rgba(15,23,42,.05);
-      transition: box-shadow .2s ease, border-color .2s ease;
+      background: rgba(255, 255, 255, 0.02) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      color: #fff !important;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+      transition: all .2s ease;
     }
     input:focus, textarea:focus {
-      box-shadow: inset 0 1px 3px rgba(15,23,42,.04), 0 0 0 3px rgba(3,105,161,.15);
+      border-color: rgba(14, 165, 233, 0.5) !important;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(14, 165, 233, 0.25);
+      outline: none;
     }
 
     /* ── Submit button depth ─────────────────────────────────── */
     button[type=submit] {
-      box-shadow: 0 4px 16px rgba(3,105,161,.30), 0 1px 3px rgba(3,105,161,.20);
-      transition: box-shadow .2s ease, transform .2s ease, background .2s ease;
+      background: linear-gradient(135deg, #0ea5e9, #818cf8);
+      color: #030712;
+      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+      transition: all .2s cubic-bezier(0.25, 1, 0.5, 1);
     }
     button[type=submit]:hover {
-      box-shadow: 0 8px 28px rgba(3,105,161,.40), 0 2px 6px rgba(3,105,161,.25);
+      box-shadow: 0 15px 35px rgba(14, 165, 233, 0.45);
+      transform: translateY(-2px);
     }
 
     /* ── Footer social icons ─────────────────────────────────── */
     .social-icon {
       width: 36px; height: 36px; border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
-      border: 1px solid #E2E8F0;
-      box-shadow: 0 1px 3px rgba(15,23,42,.05);
-      transition: box-shadow .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all .2s ease;
     }
     .social-icon:hover {
-      background: #0369A1;
-      border-color: #0369A1;
-      box-shadow: 0 4px 14px rgba(3,105,161,.30);
-      transform: translateY(-2px);
+      background: #0ea5e9;
+      border-color: #0ea5e9;
+      box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+      transform: translateY(-3px);
     }
-    .social-icon:hover span { color: white !important; }
+    .social-icon:hover span { color: #030712 !important; }
 
     /* ── Section divider gradient ────────────────────────────── */
     .section-glow {
@@ -310,7 +348,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(3,105,161,.04), transparent);
+      background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(14, 165, 233, 0.06), transparent);
       pointer-events: none;
     }
 
@@ -327,64 +365,107 @@
     /* ── Botpress Accessibility Overrides ──────────────────────── */
     #message-preview-root .bpMessagePreviewDescription,
     .bpMessagePreviewDescription {
-      color: #0F172A !important;
+      color: #fff !important;
       font-weight: 500 !important;
     }
-
-    /* ── Scrollbar ────────────────────────────────────────────── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
   </style>
 </head>
 
 <body>
 
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<div id="custom-context-menu" role="menu" aria-label="Quick Actions">
+  <div class="context-menu-item" onclick="toggleParticles()">
+    <span class="material-symbols-outlined text-sm">filter_vintage</span>
+    <span>Toggle Particles</span>
+  </div>
+  <div class="context-menu-item" onclick="toggleSounds()">
+    <span class="material-symbols-outlined text-sm">volume_up</span>
+    <span id="sound-status-text">Enable Sounds</span>
+  </div>
+  <div class="context-menu-divider"></div>
+  <div class="context-menu-item" onclick="copyEmail()">
+    <span class="material-symbols-outlined text-sm">content_copy</span>
+    <span>Copy Email</span>
+  </div>
+  <div class="context-menu-divider"></div>
+  <div class="context-menu-item" onclick="scrollToSection('#services')">
+    <span class="material-symbols-outlined text-sm">code</span>
+    <span>Services</span>
+  </div>
+  <div class="context-menu-item" onclick="scrollToSection('#client-projects')">
+    <span class="material-symbols-outlined text-sm">folder</span>
+    <span>Portfolio</span>
+  </div>
+  <div class="context-menu-item" onclick="scrollToSection('#contact')">
+    <span class="material-symbols-outlined text-sm">mail</span>
+    <span>Contact Us</span>
+  </div>
+</div>
+
+<div id="scroll-progress" aria-hidden="true"></div>
+
 <!-- ═══════════════════════════════════════════════════════════════
      NAVBAR
 ═══════════════════════════════════════════════════════════════ -->
-<nav id="main-nav" class="fixed top-0 w-full z-50 bg-white border-b border-[#E2E8F0] transition-all duration-300" role="navigation" aria-label="Main navigation">
+<nav id="main-nav" class="fixed top-0 w-full z-50 bg-[#030712]/75 backdrop-blur-md border-b border-white/5 transition-all duration-300" role="navigation" aria-label="Main navigation">
   <div class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
 
     <!-- Logo -->
     <a href="/" class="flex items-center gap-3 group" aria-label="Dalvi Consultancy Homepage">
-      <div class="w-9 h-9 rounded-lg bg-[#0369A1] flex items-center justify-center shrink-0">
-        <img src="logo.svg" alt="Dalvi Consultancy" class="w-7 h-7 object-contain brightness-0 invert">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(14,165,233,0.3)]">
+        <img src="logo.svg" alt="Dalvi Consultancy" class="w-7 h-7 object-contain brightness-0">
       </div>
-      <span class="font-syne font-extrabold text-xl tracking-tight text-[#0F172A] group-hover:text-[#0369A1] transition-colors">
+      <span class="font-syne font-extrabold text-xl tracking-tight text-white group-hover:text-[#0ea5e9] transition-colors">
         Dalvi Consultancy
       </span>
     </a>
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8">
-      <a href="#services" class="font-manrope font-medium text-sm text-[#475569] hover:text-[#0369A1] hover:-translate-y-0.5 transition-all duration-200">Services</a>
-      <a href="#products" class="font-manrope font-medium text-sm text-[#475569] hover:text-[#0369A1] hover:-translate-y-0.5 transition-all duration-200">Products</a>
-      <a href="#client-projects" class="font-manrope font-medium text-sm text-[#475569] hover:text-[#0369A1] hover:-translate-y-0.5 transition-all duration-200">Our Work</a>
-      <a href="#tech-stack" class="font-manrope font-medium text-sm text-[#475569] hover:text-[#0369A1] hover:-translate-y-0.5 transition-all duration-200">Technologies</a>
-      <a href="#contact" class="ml-2 inline-flex items-center justify-center px-5 py-2.5 bg-[#0369A1] text-white font-manrope font-semibold text-sm rounded-lg hover:bg-[#0284C7] hover:-translate-y-0.5 transition-all duration-200 shadow-sm">
+      <a href="#services" class="font-manrope font-medium text-sm text-slate-300 hover:text-[#0ea5e9] hover:-translate-y-0.5 transition-all duration-200">Services</a>
+      <a href="#products" class="font-manrope font-medium text-sm text-slate-300 hover:text-[#0ea5e9] hover:-translate-y-0.5 transition-all duration-200">Products</a>
+      <a href="#client-projects" class="font-manrope font-medium text-sm text-slate-300 hover:text-[#0ea5e9] hover:-translate-y-0.5 transition-all duration-200">Our Work</a>
+      <a href="#tech-stack" class="font-manrope font-medium text-sm text-slate-300 hover:text-[#0ea5e9] hover:-translate-y-0.5 transition-all duration-200">Technologies</a>
+      
+      <!-- Search Button Trigger -->
+      <button onclick="toggleCommandPalette(true)" class="flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 hover:border-white/20 text-slate-400 hover:text-white rounded-lg transition-all text-xs font-manrope cursor-pointer focus:outline-none" aria-label="Search or run commands">
+        <span class="material-symbols-outlined text-base">search</span>
+        <span>Search</span>
+        <kbd class="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[10px] font-sans font-medium text-slate-500 bg-white/5 border border-white/10 rounded">Ctrl K</kbd>
+      </button>
+
+      <a href="#contact" class="ml-2 inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] text-[#030712] font-manrope font-bold text-sm rounded-lg hover:shadow-[0_0_20px_rgba(14,165,233,0.4)] hover:-translate-y-0.5 transition-all duration-200 shadow-sm">
         Start a Project
       </a>
     </div>
 
     <!-- Mobile button -->
-    <button id="mobile-menu-btn" class="md:hidden p-2 text-[#475569] hover:text-[#0F172A] transition-colors" aria-label="Open menu">
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white transition-colors" aria-label="Open menu">
       <span class="material-symbols-outlined text-2xl">menu</span>
     </button>
   </div>
 </nav>
 
 <!-- Mobile menu overlay -->
-<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col items-center justify-center gap-8 md:hidden" aria-hidden="true">
-  <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-[#475569] hover:text-[#0F172A]" aria-label="Close menu">
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#030712]/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8 md:hidden" aria-hidden="true">
+  <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-slate-300 hover:text-white" aria-label="Close menu">
     <span class="material-symbols-outlined text-2xl">close</span>
   </button>
-  <nav class="flex flex-col items-center gap-7 text-xl font-syne font-bold text-[#0F172A]">
-    <a href="#services"        class="hover:text-[#0369A1] transition-colors">Services</a>
-    <a href="#products"        class="hover:text-[#0369A1] transition-colors">Products</a>
-    <a href="#client-projects" class="hover:text-[#0369A1] transition-colors">Our Work</a>
-    <a href="#tech-stack"      class="hover:text-[#0369A1] transition-colors">Technologies</a>
-    <a href="#contact"         class="mt-2 px-8 py-3.5 bg-[#0369A1] text-white rounded-lg font-manrope font-bold text-base hover:bg-[#0284C7] transition-colors">
+  <nav class="flex flex-col items-center gap-7 text-xl font-syne font-bold text-white">
+    <a href="#services"        class="hover:text-[#0ea5e9] transition-colors">Services</a>
+    <a href="#products"        class="hover:text-[#0ea5e9] transition-colors">Products</a>
+    <a href="#client-projects" class="hover:text-[#0ea5e9] transition-colors">Our Work</a>
+    <a href="#tech-stack"      class="hover:text-[#0ea5e9] transition-colors">Technologies</a>
+    
+    <!-- Mobile Search Trigger -->
+    <button onclick="toggleCommandPalette(true); document.getElementById('mobile-menu').classList.remove('open');" class="flex items-center justify-center gap-2 w-full max-w-[240px] px-4 py-2 bg-white/5 border border-white/10 text-slate-300 rounded-lg text-sm font-manrope">
+      <span class="material-symbols-outlined text-lg">search</span>
+      <span>Search...</span>
+    </button>
+
+    <a href="#contact"         class="mt-2 px-8 py-3.5 bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] text-[#030712] rounded-lg font-manrope font-bold text-base hover:shadow-[0_0_20px_rgba(14,165,233,0.4)] transition-colors">
       Start a Project
     </a>
   </nav>
@@ -394,29 +475,36 @@
 <!-- ═══════════════════════════════════════════════════════════════
      HERO
 ═══════════════════════════════════════════════════════════════ -->
-<header class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 md:px-10 max-w-7xl mx-auto overflow-hidden" role="banner">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+<header class="relative pt-32 pb-20 md:pt-44 md:pb-32 px-6 md:px-10 max-w-7xl mx-auto overflow-hidden z-10" role="banner">
+  <!-- Interactive Canvas Background -->
+  <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#0ea5e9]/10 blur-[120px] pointer-events-none z-0 animate-pulse" style="animation-duration: 8s;"></div>
+  <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 rounded-full bg-[#818cf8]/10 blur-[120px] pointer-events-none z-0 animate-pulse" style="animation-duration: 12s;"></div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
 
     <!-- Left -->
-    <div class="space-y-8 z-10">
-      <div class="anim-up anim-up-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F1F5F9] border border-[#E2E8F0] text-[#0F172A] font-manrope font-semibold text-xs tracking-widest uppercase">
-        <span class="w-2 h-2 rounded-full bg-[#0369A1] animate-pulse"></span>
+    <div class="space-y-8">
+      <div class="anim-up anim-up-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/50 border border-white/10 text-slate-300 font-manrope font-semibold text-xs tracking-widest uppercase">
+        <span class="w-2 h-2 rounded-full bg-[#0ea5e9] animate-pulse"></span>
         Pune-based Software Agency
       </div>
 
-      <h1 class="anim-up anim-up-2 font-syne font-extrabold text-5xl md:text-6xl lg:text-[64px] leading-[1.08] text-[#0F172A] tracking-tight">
-        We Build Software That <span class="text-[#0369A1]">Moves Businesses</span> Forward
+      <h1 class="anim-up anim-up-2 font-syne font-extrabold text-5xl md:text-6xl lg:text-[64px] leading-[1.08] text-white tracking-tight">
+        We Build Software That <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] drop-shadow-[0_0_15px_rgba(14,165,233,0.15)]">Moves Businesses</span> Forward
       </h1>
 
-      <p class="anim-up anim-up-3 font-manrope text-lg md:text-xl text-[#475569] leading-relaxed max-w-xl">
+      <p class="anim-up anim-up-3 font-manrope text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl">
         From AI chatbots to full-stack web apps — we ship fast, build right, and help your business scale.
       </p>
 
       <div class="anim-up anim-up-3 flex flex-col sm:flex-row gap-4 pt-2">
-        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-[#0369A1] text-white font-manrope font-bold text-base rounded-lg hover:bg-[#0284C7] hover:-translate-y-1 transition-all duration-200 shadow-lg shadow-[#0369A1]/20">
+        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] text-[#030712] font-manrope font-bold text-base rounded-lg hover:shadow-[0_0_25px_rgba(14,165,233,0.4)] hover:-translate-y-1 transition-all duration-200 shadow-lg">
           Start a Project
         </a>
-        <a href="#client-projects" class="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-[#E2E8F0] text-[#0F172A] font-manrope font-bold text-base rounded-lg hover:border-[#0369A1] hover:text-[#0369A1] hover:-translate-y-1 transition-all duration-200">
+        <a href="#client-projects" class="inline-flex items-center justify-center px-8 py-4 bg-slate-950/40 border border-white/10 text-white font-manrope font-bold text-base rounded-lg hover:border-[#0ea5e9] hover:text-[#0ea5e9] hover:-translate-y-1 transition-all duration-200">
           View Our Work
         </a>
       </div>
@@ -424,53 +512,57 @@
       <!-- Trust row -->
       <div class="anim-up anim-up-3 pt-4 flex items-center gap-5">
         <div class="flex -space-x-3">
-          <div class="w-10 h-10 rounded-full bg-[#E2E8F0] border-2 border-white flex items-center justify-center text-[10px] font-bold text-[#475569]">JD</div>
-          <div class="w-10 h-10 rounded-full bg-[#F1F5F9] border-2 border-white flex items-center justify-center text-[10px] font-bold text-[#475569]">AS</div>
-          <div class="w-10 h-10 rounded-full bg-[#E2E8F0] border-2 border-white flex items-center justify-center text-[10px] font-bold text-[#475569]">RK</div>
-          <div class="w-10 h-10 rounded-full bg-[#0369A1] border-2 border-white flex items-center justify-center text-[10px] font-bold text-white">+50</div>
+          <div class="w-10 h-10 rounded-full bg-slate-800 border-2 border-[#030712] flex items-center justify-center text-[10px] font-bold text-slate-300">JD</div>
+          <div class="w-10 h-10 rounded-full bg-slate-900 border-2 border-[#030712] flex items-center justify-center text-[10px] font-bold text-slate-300">AS</div>
+          <div class="w-10 h-10 rounded-full bg-slate-800 border-2 border-[#030712] flex items-center justify-center text-[10px] font-bold text-slate-300">RK</div>
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] border-2 border-[#030712] flex items-center justify-center text-[10px] font-bold text-[#030712]">+50</div>
         </div>
-        <p class="text-sm font-manrope font-medium text-[#475569]">Trusted by 50+ growing businesses</p>
+        <p class="text-sm font-manrope font-medium text-slate-400">Trusted by 50+ growing businesses</p>
       </div>
     </div>
 
-    <!-- Right: Visual -->
-    <div class="relative lg:h-[580px] flex items-center justify-center">
-      <div class="absolute inset-0 bg-[#F1F5F9] rounded-[2rem] rotate-3 scale-105 opacity-60"></div>
-      <div class="absolute inset-0 bg-dot opacity-40 rounded-[2rem]"></div>
-      <!-- Stat cards -->
-      <div class="relative z-10 w-full p-6 md:p-10 grid grid-cols-2 gap-4">
-        <!-- Stat 1 -->
-        <div class="col-span-2 bg-white rounded-2xl border border-[#E2E8F0] p-6 shadow-sm flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-[#EFF6FF] flex items-center justify-center text-[#0369A1]">
-            <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+    <!-- Right: Live AI Automation Console Simulation -->
+    <div class="relative w-full lg:h-[520px] flex items-center justify-center perspective-1000 z-10">
+      <!-- Ambient Back Glow -->
+      <div class="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-[#0ea5e9]/10 to-[#818cf8]/10 blur-xl pointer-events-none"></div>
+      
+      <!-- Interactive 3D Cyber Console Card -->
+      <div class="relative w-full h-[450px] rounded-[1.5rem] border border-white/10 bg-slate-950/70 backdrop-blur-md shadow-2xl p-6 flex flex-col justify-between tilt-card magnetic-card scanlines overflow-hidden preserve-3d">
+        
+        <!-- Terminal Header -->
+        <div class="flex items-center justify-between border-b border-white/5 pb-4 translate-z-20">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+            <span class="font-mono text-xs text-slate-400 ml-2">dalvi-bot@automation-hub:~</span>
+          </div>
+          <div class="flex items-center gap-2 font-mono text-[10px] text-[#0ea5e9] bg-[#0ea5e9]/10 px-2 py-0.5 rounded border border-[#0ea5e9]/20 animate-pulse">
+            ● LIVE AUTOMATION
+          </div>
+        </div>
+        
+        <!-- Terminal Screen Content (simulated logs) -->
+        <div class="flex-1 font-mono text-xs text-slate-300 py-4 overflow-y-auto space-y-2 translate-z-30 select-none scrollbar-none" id="terminal-screen" style="max-height: 280px;">
+          <p class="text-slate-500">[SYSTEM] Initializing Dalvi Agent Orchestrator...</p>
+          <p class="text-[#818cf8]">&gt; Loading n8n pipeline node [AI_AGENT_CORE]... OK</p>
+          <p class="text-[#0ea5e9]">&gt; Hooking RTO Buddy SaaS webhook ... RESOLVED (200)</p>
+          <p class="text-green-400">&gt; Executing neural model inference [Gemini_v2_Flash]... OK</p>
+          <p class="text-white">&gt; Uptime: <span class="text-green-400 font-bold">100.0%</span> | Status: <span class="text-green-400 font-bold">READY</span></p>
+          <p class="text-slate-500">[SYSTEM] Listening for new triggers...</p>
+        </div>
+        
+        <!-- Terminal Footer Status -->
+        <div class="flex items-center justify-between border-t border-white/5 pt-4 translate-z-20 text-[11px] font-mono text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-[#0ea5e9] animate-pulse">bolt</span>
+            <span>latency: <span class="text-green-400 font-bold" id="terminal-latency">12ms</span></span>
           </div>
           <div>
-            <p class="font-syne font-bold text-3xl text-[#0F172A]">50+</p>
-            <p class="font-manrope text-sm text-[#475569]">Projects Delivered</p>
+            <span>uptime: <span class="text-white font-semibold">99.98%</span></span>
           </div>
         </div>
-        <!-- Stat 2 -->
-        <div class="bg-[#0369A1] rounded-2xl p-6 shadow-sm flex flex-col gap-2">
-          <p class="font-syne font-bold text-3xl text-white">98%</p>
-          <p class="font-manrope text-xs text-white/80">Client Satisfaction</p>
-        </div>
-        <!-- Stat 3 -->
-        <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 shadow-sm flex flex-col gap-2">
-          <p class="font-syne font-bold text-3xl text-[#0F172A]">3 wk</p>
-          <p class="font-manrope text-xs text-[#475569]">Avg. Launch Time</p>
-        </div>
-        <!-- Stat 4 -->
-        <div class="col-span-2 bg-white rounded-2xl border border-[#E2E8F0] p-5 shadow-sm flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-[#F0FDF4] flex items-center justify-center">
-            <span class="material-symbols-outlined text-xl text-green-600">verified</span>
-          </div>
-          <p class="font-manrope font-semibold text-sm text-[#0F172A]">Serving clients in Pune &amp; globally</p>
-        </div>
-      </div>
-      <!-- Floating badge -->
-      <div class="absolute top-8 -left-4 bg-white py-3 px-4 rounded-xl shadow-lg border border-[#E2E8F0] z-20 flex items-center gap-2" style="animation: float 4s ease-in-out infinite;">
-        <span class="material-symbols-outlined text-[#0369A1] text-lg">smart_toy</span>
-        <span class="font-manrope font-bold text-xs text-[#0F172A]">AI-Powered Solutions</span>
+        
       </div>
     </div>
   </div>
@@ -480,30 +572,30 @@
 <!-- ═══════════════════════════════════════════════════════════════
      TECH MARQUEE BAR
 ═══════════════════════════════════════════════════════════════ -->
-<section id="tech-stack" class="bg-[#0F172A] py-5 border-y border-[#1E293B] marquee-track select-none" aria-label="Technology stack">
+<section id="tech-stack" class="bg-[#090f1d]/50 backdrop-blur-sm py-5 border-y border-white/5 marquee-track select-none z-10" aria-label="Technology stack">
   <div class="marquee-fade-l"></div>
   <div class="marquee-fade-r"></div>
   <div class="animate-marquee items-center gap-10 font-syne font-bold text-lg text-white/80">
-    <span>Next.js</span><span class="text-[#0369A1]">·</span>
-    <span>React</span><span class="text-[#0369A1]">·</span>
-    <span>Firebase</span><span class="text-[#0369A1]">·</span>
-    <span>TypeScript</span><span class="text-[#0369A1]">·</span>
-    <span>Python</span><span class="text-[#0369A1]">·</span>
-    <span>n8n</span><span class="text-[#0369A1]">·</span>
-    <span>Node.js</span><span class="text-[#0369A1]">·</span>
-    <span>Tailwind CSS</span><span class="text-[#0369A1]">·</span>
-    <span>Google AI</span><span class="text-[#0369A1]">·</span>
-    <span>Botpress</span><span class="text-[#0369A1]">·</span>
+    <span>Next.js</span><span class="text-[#0ea5e9]">·</span>
+    <span>React</span><span class="text-[#0ea5e9]">·</span>
+    <span>Firebase</span><span class="text-[#0ea5e9]">·</span>
+    <span>TypeScript</span><span class="text-[#0ea5e9]">·</span>
+    <span>Python</span><span class="text-[#0ea5e9]">·</span>
+    <span>n8n</span><span class="text-[#0ea5e9]">·</span>
+    <span>Node.js</span><span class="text-[#0ea5e9]">·</span>
+    <span>Tailwind CSS</span><span class="text-[#0ea5e9]">·</span>
+    <span>Google AI</span><span class="text-[#0ea5e9]">·</span>
+    <span>Botpress</span><span class="text-[#0ea5e9]">·</span>
     <!-- duplicate for seamless loop -->
-    <span>Next.js</span><span class="text-[#0369A1]">·</span>
-    <span>React</span><span class="text-[#0369A1]">·</span>
-    <span>Firebase</span><span class="text-[#0369A1]">·</span>
-    <span>TypeScript</span><span class="text-[#0369A1]">·</span>
-    <span>Python</span><span class="text-[#0369A1]">·</span>
-    <span>n8n</span><span class="text-[#0369A1]">·</span>
-    <span>Node.js</span><span class="text-[#0369A1]">·</span>
-    <span>Tailwind CSS</span><span class="text-[#0369A1]">·</span>
-    <span>Google AI</span><span class="text-[#0369A1]">·</span>
+    <span>Next.js</span><span class="text-[#0ea5e9]">·</span>
+    <span>React</span><span class="text-[#0ea5e9]">·</span>
+    <span>Firebase</span><span class="text-[#0ea5e9]">·</span>
+    <span>TypeScript</span><span class="text-[#0ea5e9]">·</span>
+    <span>Python</span><span class="text-[#0ea5e9]">·</span>
+    <span>n8n</span><span class="text-[#0ea5e9]">·</span>
+    <span>Node.js</span><span class="text-[#0ea5e9]">·</span>
+    <span>Tailwind CSS</span><span class="text-[#0ea5e9]">·</span>
+    <span>Google AI</span><span class="text-[#0ea5e9]">·</span>
     <span>Botpress</span>
   </div>
 </section>
@@ -512,56 +604,61 @@
 <!-- ═══════════════════════════════════════════════════════════════
      SERVICES
 ═══════════════════════════════════════════════════════════════ -->
-<section id="services" class="py-24 bg-white px-6 md:px-10 section-glow">
+<section id="services" class="py-24 bg-transparent px-6 md:px-10 section-glow relative z-10">
   <div class="max-w-7xl mx-auto">
     <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="font-manrope font-bold text-xs tracking-widest text-[#0369A1] uppercase mb-4 block">What We Build</span>
-      <h2 class="font-syne font-extrabold text-4xl text-[#0F172A]">End-to-End Digital Solutions</h2>
-      <p class="font-manrope text-[#475569] mt-4 text-lg">Everything you need to go from idea to live product — fast.</p>
+      <span class="font-manrope font-bold text-xs tracking-widest text-[#0ea5e9] uppercase mb-4 block">What We Build</span>
+      <h2 class="font-syne font-extrabold text-4xl text-white">End-to-End Digital Solutions</h2>
+      <p class="font-manrope text-slate-400 mt-4 text-lg">Everything you need to go from idea to live product — fast.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-1000">
       <!-- Service cards -->
-      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
-          <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">code</span>
+      <div class="depth-card group p-8 rounded-2xl cursor-pointer tilt-card magnetic-card glow-border-cyan">
+        <div class="w-14 h-14 bg-slate-900/50 group-hover:bg-[#0ea5e9] rounded-xl flex items-center justify-center mb-6 transition-all duration-300 border border-white/5" style="box-shadow:0 0 15px rgba(14, 165, 233, 0.15);">
+          <span class="material-symbols-outlined text-2xl text-[#0ea5e9] group-hover:text-[#030712] transition-colors">code</span>
         </div>
-        <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">Web Development</h3>
-        <p class="font-manrope text-sm text-[#475569] leading-relaxed">High-performance, responsive web applications built with modern frameworks like Next.js and React.</p>
+        <h3 class="font-syne font-bold text-xl text-white mb-3 translate-z-10">Web Development</h3>
+        <p class="font-manrope text-sm text-slate-400 leading-relaxed translate-z-10">High-performance, responsive web applications built with modern frameworks like Next.js and React.</p>
       </div>
-      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
-          <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">smartphone</span>
+      
+      <div class="depth-card group p-8 rounded-2xl cursor-pointer tilt-card magnetic-card glow-border-purple">
+        <div class="w-14 h-14 bg-slate-900/50 group-hover:bg-[#818cf8] rounded-xl flex items-center justify-center mb-6 transition-all duration-300 border border-white/5" style="box-shadow:0 0 15px rgba(129, 140, 248, 0.15);">
+          <span class="material-symbols-outlined text-2xl text-[#818cf8] group-hover:text-[#030712] transition-colors">smartphone</span>
         </div>
-        <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">Mobile Apps</h3>
-        <p class="font-manrope text-sm text-[#475569] leading-relaxed">Native and cross-platform mobile experiences that engage users on iOS and Android.</p>
+        <h3 class="font-syne font-bold text-xl text-white mb-3 translate-z-10">Mobile Apps</h3>
+        <p class="font-manrope text-sm text-slate-400 leading-relaxed translate-z-10">Native and cross-platform mobile experiences that engage users on iOS and Android.</p>
       </div>
-      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
-          <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">smart_toy</span>
+      
+      <div class="depth-card group p-8 rounded-2xl cursor-pointer tilt-card magnetic-card glow-border-cyan">
+        <div class="w-14 h-14 bg-slate-900/50 group-hover:bg-[#0ea5e9] rounded-xl flex items-center justify-center mb-6 transition-all duration-300 border border-white/5" style="box-shadow:0 0 15px rgba(14, 165, 233, 0.15);">
+          <span class="material-symbols-outlined text-2xl text-[#0ea5e9] group-hover:text-[#030712] transition-colors">smart_toy</span>
         </div>
-        <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">AI Chatbots</h3>
-        <p class="font-manrope text-sm text-[#475569] leading-relaxed">Intelligent conversational agents powered by Google AI and Botpress to automate support.</p>
+        <h3 class="font-syne font-bold text-xl text-white mb-3 translate-z-10">AI Chatbots</h3>
+        <p class="font-manrope text-sm text-slate-400 leading-relaxed translate-z-10">Intelligent conversational agents powered by Google AI and Botpress to automate support.</p>
       </div>
-      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
-          <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">hub</span>
+      
+      <div class="depth-card group p-8 rounded-2xl cursor-pointer tilt-card magnetic-card glow-border-purple">
+        <div class="w-14 h-14 bg-slate-900/50 group-hover:bg-[#818cf8] rounded-xl flex items-center justify-center mb-6 transition-all duration-300 border border-white/5" style="box-shadow:0 0 15px rgba(129, 140, 248, 0.15);">
+          <span class="material-symbols-outlined text-2xl text-[#818cf8] group-hover:text-[#030712] transition-colors">hub</span>
         </div>
-        <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">Workflow Automation</h3>
-        <p class="font-manrope text-sm text-[#475569] leading-relaxed">Streamline operations with n8n and custom API integrations to eliminate repetitive work.</p>
+        <h3 class="font-syne font-bold text-xl text-white mb-3 translate-z-10">Workflow Automation</h3>
+        <p class="font-manrope text-sm text-slate-400 leading-relaxed translate-z-10">Streamline operations with n8n and custom API integrations to eliminate repetitive work.</p>
       </div>
-      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
-          <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">cloud</span>
+      
+      <div class="depth-card group p-8 rounded-2xl cursor-pointer tilt-card magnetic-card glow-border-cyan">
+        <div class="w-14 h-14 bg-slate-900/50 group-hover:bg-[#0ea5e9] rounded-xl flex items-center justify-center mb-6 transition-all duration-300 border border-white/5" style="box-shadow:0 0 15px rgba(14, 165, 233, 0.15);">
+          <span class="material-symbols-outlined text-2xl text-[#0ea5e9] group-hover:text-[#030712] transition-colors">cloud</span>
         </div>
-        <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">SaaS Products</h3>
-        <p class="font-manrope text-sm text-[#475569] leading-relaxed">Scalable, multi-tenant software platforms built for growth, reliability, and security.</p>
+        <h3 class="font-syne font-bold text-xl text-white mb-3 translate-z-10">SaaS Products</h3>
+        <p class="font-manrope text-sm text-slate-400 leading-relaxed translate-z-10">Scalable, multi-tenant software platforms built for growth, reliability, and security.</p>
       </div>
-      <div class="depth-card group p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer">
-        <div class="w-14 h-14 bg-[#F8FAFC] group-hover:bg-[#0369A1] rounded-xl flex items-center justify-center mb-6 transition-all duration-300" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
-          <span class="material-symbols-outlined text-2xl text-[#0F172A] group-hover:text-white transition-colors">design_services</span>
+      
+      <div class="depth-card group p-8 rounded-2xl cursor-pointer tilt-card magnetic-card glow-border-purple">
+        <div class="w-14 h-14 bg-slate-900/50 group-hover:bg-[#818cf8] rounded-xl flex items-center justify-center mb-6 transition-all duration-300 border border-white/5" style="box-shadow:0 0 15px rgba(129, 140, 248, 0.15);">
+          <span class="material-symbols-outlined text-2xl text-[#818cf8] group-hover:text-[#030712] transition-colors">design_services</span>
         </div>
-        <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-3">UI/UX Design</h3>
-        <p class="font-manrope text-sm text-[#475569] leading-relaxed">Intuitive, beautiful interfaces designed to delight users and drive conversion.</p>
+        <h3 class="font-syne font-bold text-xl text-white mb-3 translate-z-10">UI/UX Design</h3>
+        <p class="font-manrope text-sm text-slate-400 leading-relaxed translate-z-10">Intuitive, beautiful interfaces designed to delight users and drive conversion.</p>
       </div>
     </div>
   </div>
@@ -571,81 +668,81 @@
 <!-- ═══════════════════════════════════════════════════════════════
      CLIENT PROJECTS — Bento Grid
 ═══════════════════════════════════════════════════════════════ -->
-<section id="client-projects" class="py-24 bg-[#F8FAFC] px-6 md:px-10">
+<section id="client-projects" class="py-24 bg-transparent px-6 md:px-10 z-10 relative">
   <div class="max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
       <div>
-        <span class="font-manrope font-bold text-xs tracking-widest text-[#0369A1] uppercase mb-3 block">Portfolio</span>
-        <h2 class="font-syne font-extrabold text-4xl text-[#0F172A]">Client Work</h2>
-        <p class="font-manrope text-lg text-[#475569] mt-3 max-w-xl">A curated selection of recent partnerships and successful launches.</p>
+        <span class="font-manrope font-bold text-xs tracking-widest text-[#0ea5e9] uppercase mb-3 block">Portfolio</span>
+        <h2 class="font-syne font-extrabold text-4xl text-white">Client Work</h2>
+        <p class="font-manrope text-lg text-slate-400 mt-3 max-w-xl">A curated selection of recent partnerships and successful launches.</p>
       </div>
     </div>
 
     <!-- Bento grid -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px] perspective-1000">
 
       <!-- Berrybash — large -->
-      <a href="projects/berrybash.html" class="bento-item md:col-span-2 md:row-span-2 group relative rounded-2xl overflow-hidden cursor-pointer bg-gradient-to-br from-pink-400 to-rose-600 min-h-[300px]">
-        <img src="assets/berrybash.webp" alt="Berrybash" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl group-hover:ring-white/20 transition-all"></div>
-        <div class="absolute bottom-0 left-0 p-8 z-10">
-          <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-[11px] font-manrope font-bold mb-3 uppercase tracking-wider" style="box-shadow:0 2px 8px rgba(0,0,0,.20);">Food &amp; Beverage</span>
+      <a href="projects/berrybash.html" class="bento-item md:col-span-2 md:row-span-2 group relative rounded-2xl overflow-hidden cursor-pointer bg-gradient-to-br from-pink-400/20 to-rose-600/20 min-h-[300px] tilt-card magnetic-card">
+        <img src="assets/berrybash.webp" alt="Berrybash" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent"></div>
+        <div class="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-2xl group-hover:ring-white/10 transition-all"></div>
+        <div class="absolute bottom-0 left-0 p-8 z-10 translate-z-20">
+          <span class="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm text-white rounded-full text-[11px] font-manrope font-bold mb-3 uppercase tracking-wider" style="box-shadow:0 2px 8px rgba(0,0,0,.20);">Food &amp; Beverage</span>
           <h3 class="font-syne font-bold text-3xl text-white mb-1">Berrybash</h3>
           <p class="font-manrope text-sm text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fruit-based dessert franchise website</p>
         </div>
       </a>
 
       <!-- Buon Cibo -->
-      <a href="projects/buoncibo.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-[#E0F2FE]">
-        <img src="assets/buoncibo.webp" alt="Buon Cibo" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
-        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl"></div>
-        <div class="absolute bottom-0 left-0 p-6 z-20">
-          <span class="inline-block px-3 py-1 bg-black/30 backdrop-blur-sm text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider">Restaurant</span>
+      <a href="projects/buoncibo.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-900/40 tilt-card magnetic-card">
+        <img src="assets/buoncibo.webp" alt="Buon Cibo" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-75 group-hover:scale-105 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+        <div class="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-2xl"></div>
+        <div class="absolute bottom-0 left-0 p-6 z-20 translate-z-10">
+          <span class="inline-block px-3 py-1 bg-black/40 backdrop-blur-sm text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider border border-white/5">Restaurant</span>
           <h3 class="font-syne font-bold text-xl text-white">Buon Cibo</h3>
         </div>
       </a>
 
       <!-- RTO Buddy -->
-      <a href="projects/rtobuddy.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-[#F1F5F9] border border-[#E2E8F0]">
-        <img src="assets/rtobuddy.webp" alt="RTO Buddy" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 to-transparent z-10"></div>
-        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl"></div>
-        <div class="absolute bottom-0 left-0 p-6 z-20">
-          <span class="inline-block px-3 py-1 bg-[#0369A1] text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider" style="box-shadow:0 2px 8px rgba(3,105,161,.30);">SaaS Platform</span>
+      <a href="projects/rtobuddy.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-900/40 tilt-card magnetic-card">
+        <img src="assets/rtobuddy.webp" alt="RTO Buddy" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/95 to-transparent z-10"></div>
+        <div class="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-2xl"></div>
+        <div class="absolute bottom-0 left-0 p-6 z-20 translate-z-10">
+          <span class="inline-block px-3 py-1 bg-[#0ea5e9]/20 text-[#0ea5e9] rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider border border-[#0ea5e9]/30" style="box-shadow:0 2px 8px rgba(14,165,233,0.15);">SaaS Platform</span>
           <h3 class="font-syne font-bold text-xl text-white">RTO Buddy</h3>
         </div>
       </a>
 
       <!-- SMPG -->
-      <a href="projects/smpg.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-[#0F172A]">
-        <div class="absolute inset-0 bg-dot opacity-20"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] to-transparent z-10"></div>
-        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl"></div>
-        <div class="absolute bottom-0 left-0 p-6 z-20">
-          <span class="inline-block px-3 py-1 bg-white/10 border border-white/20 text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider">Product</span>
+      <a href="projects/smpg.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-900/60 tilt-card magnetic-card">
+        <div class="absolute inset-0 bg-dot opacity-30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent z-10"></div>
+        <div class="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-2xl"></div>
+        <div class="absolute bottom-0 left-0 p-6 z-20 translate-z-10">
+          <span class="inline-block px-3 py-1 bg-white/10 border border-white/15 text-white rounded-full text-[10px] font-manrope font-bold mb-2 uppercase tracking-wider">Product</span>
           <h3 class="font-syne font-bold text-xl text-white">SMPG</h3>
         </div>
       </a>
 
       <!-- Dirt Shack -->
-      <a href="projects/dirtshack.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-amber-50 border border-[#E2E8F0]">
-        <img src="assets/dirtshack.webp" alt="Dirt Shack" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent z-10"></div>
-        <div class="absolute bottom-0 left-0 p-5 z-20">
-          <span class="text-[#0369A1] font-manrope text-[10px] font-bold uppercase tracking-wider block mb-1">E-Commerce</span>
-          <h3 class="font-syne font-bold text-lg text-[#0F172A]">Dirt Shack</h3>
+      <a href="projects/dirtshack.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-900/40 tilt-card magnetic-card">
+        <img src="assets/dirtshack.webp" alt="Dirt Shack" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/95 to-transparent z-10"></div>
+        <div class="absolute bottom-0 left-0 p-5 z-20 translate-z-10">
+          <span class="text-[#0ea5e9] font-manrope text-[10px] font-bold uppercase tracking-wider block mb-1">E-Commerce</span>
+          <h3 class="font-syne font-bold text-lg text-white">Dirt Shack</h3>
         </div>
       </a>
 
       <!-- Millet Bee -->
-      <a href="projects/milletbee.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-green-50 border border-[#E2E8F0]">
-        <img src="assets/milletbee.webp" alt="Millet Bee" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent z-10"></div>
-        <div class="absolute bottom-0 left-0 p-5 z-20">
-          <span class="text-[#0369A1] font-manrope text-[10px] font-bold uppercase tracking-wider block mb-1">D2C Brand</span>
-          <h3 class="font-syne font-bold text-lg text-[#0F172A]">Millet Bee</h3>
+      <a href="projects/milletbee.html" class="bento-item group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-900/40 tilt-card magnetic-card">
+        <img src="assets/milletbee.webp" alt="Millet Bee" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/95 to-transparent z-10"></div>
+        <div class="absolute bottom-0 left-0 p-5 z-20 translate-z-10">
+          <span class="text-[#0ea5e9] font-manrope text-[10px] font-bold uppercase tracking-wider block mb-1">D2C Brand</span>
+          <h3 class="font-syne font-bold text-lg text-white">Millet Bee</h3>
         </div>
       </a>
     </div>
@@ -656,37 +753,37 @@
 <!-- ═══════════════════════════════════════════════════════════════
      OUR PRODUCTS
 ═══════════════════════════════════════════════════════════════ -->
-<section id="products" class="py-24 bg-white px-6 md:px-10 border-b border-[#E2E8F0]">
+<section id="products" class="py-24 bg-transparent px-6 md:px-10 border-b border-white/5 relative z-10">
   <div class="max-w-7xl mx-auto">
     <div class="mb-12">
-      <span class="font-manrope font-bold text-xs tracking-widest text-[#0369A1] uppercase mb-3 block">Built In-House</span>
-      <h2 class="font-syne font-extrabold text-4xl text-[#0F172A]">Our Products</h2>
+      <span class="font-manrope font-bold text-xs tracking-widest text-[#0ea5e9] uppercase mb-3 block">Built In-House</span>
+      <h2 class="font-syne font-extrabold text-4xl text-white">Our Products</h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <a href="projects/rtobuddy.html" class="product-card flex flex-col sm:flex-row gap-6 p-6 border border-[#E2E8F0] rounded-2xl group cursor-pointer bg-white">
-        <div class="w-16 h-16 shrink-0 bg-[#F1F5F9] rounded-xl flex items-center justify-center text-[#0369A1] group-hover:bg-[#0369A1] group-hover:text-white transition-all" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 perspective-1000">
+      <a href="projects/rtobuddy.html" class="product-card flex flex-col sm:flex-row gap-6 p-6 border border-white/5 rounded-2xl group cursor-pointer bg-transparent tilt-card magnetic-card glow-border-cyan">
+        <div class="w-16 h-16 shrink-0 bg-slate-900/50 rounded-xl flex items-center justify-center text-[#0ea5e9] group-hover:bg-[#0ea5e9] group-hover:text-[#030712] transition-all border border-white/5 shadow-[0_0_15px_rgba(14,165,233,0.1)]">
           <span class="material-symbols-outlined text-3xl">directions_car</span>
         </div>
-        <div class="flex-1 flex flex-col justify-between">
+        <div class="flex-1 flex flex-col justify-between translate-z-10">
           <div>
-            <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-2">RTO Buddy</h3>
-            <p class="font-manrope text-sm text-[#475569] mb-4">SaaS platform for RTO agents — digitizes vehicle registration, automates form filling, tracks applications in real-time.</p>
+            <h3 class="font-syne font-bold text-xl text-white mb-2">RTO Buddy</h3>
+            <p class="font-manrope text-sm text-slate-400 mb-4">SaaS platform for RTO agents — digitizes vehicle registration, automates form filling, tracks applications in real-time.</p>
           </div>
-          <span class="inline-flex items-center gap-1 font-manrope font-bold text-sm text-[#0369A1] group-hover:gap-2 transition-all">
+          <span class="inline-flex items-center gap-1 font-manrope font-bold text-sm text-[#0ea5e9] group-hover:gap-2 transition-all">
             Learn More <span class="material-symbols-outlined text-[16px]">chevron_right</span>
           </span>
         </div>
       </a>
-      <a href="projects/smpg.html" class="product-card flex flex-col sm:flex-row gap-6 p-6 border border-[#E2E8F0] rounded-2xl group cursor-pointer bg-white">
-        <div class="w-16 h-16 shrink-0 bg-[#F1F5F9] rounded-xl flex items-center justify-center text-[#0369A1] group-hover:bg-[#0369A1] group-hover:text-white transition-all" style="box-shadow:0 2px 8px rgba(15,23,42,.06);">
+      <a href="projects/smpg.html" class="product-card flex flex-col sm:flex-row gap-6 p-6 border border-white/5 rounded-2xl group cursor-pointer bg-transparent tilt-card magnetic-card glow-border-purple">
+        <div class="w-16 h-16 shrink-0 bg-slate-900/50 rounded-xl flex items-center justify-center text-[#818cf8] group-hover:bg-[#818cf8] group-hover:text-[#030712] transition-all border border-white/5 shadow-[0_0_15px_rgba(129,140,248,0.1)]">
           <span class="material-symbols-outlined text-3xl">campaign</span>
         </div>
-        <div class="flex-1 flex flex-col justify-between">
+        <div class="flex-1 flex flex-col justify-between translate-z-10">
           <div>
-            <h3 class="font-syne font-bold text-xl text-[#0F172A] mb-2">SMPG</h3>
-            <p class="font-manrope text-sm text-[#475569] mb-4">AI-powered Social Media Post Generator — create on-brand content for LinkedIn, Instagram, and Twitter in seconds.</p>
+            <h3 class="font-syne font-bold text-xl text-white mb-2">SMPG</h3>
+            <p class="font-manrope text-sm text-slate-400 mb-4">AI-powered Social Media Post Generator — create on-brand content for LinkedIn, Instagram, and Twitter in seconds.</p>
           </div>
-          <span class="inline-flex items-center gap-1 font-manrope font-bold text-sm text-[#0369A1] group-hover:gap-2 transition-all">
+          <span class="inline-flex items-center gap-1 font-manrope font-bold text-sm text-[#818cf8] group-hover:gap-2 transition-all">
             Learn More <span class="material-symbols-outlined text-[16px]">chevron_right</span>
           </span>
         </div>
@@ -699,48 +796,48 @@
 <!-- ═══════════════════════════════════════════════════════════════
      FAQ
 ═══════════════════════════════════════════════════════════════ -->
-<section class="py-24 bg-[#F8FAFC] px-6 md:px-10">
+<section class="py-24 bg-transparent px-6 md:px-10 z-10 relative">
   <div class="max-w-3xl mx-auto">
     <div class="mb-12 text-center">
-      <span class="font-manrope font-bold text-xs tracking-widest text-[#0369A1] uppercase mb-3 block">FAQ</span>
-      <h2 class="font-syne font-extrabold text-4xl text-[#0F172A]">Common Questions</h2>
+      <span class="font-manrope font-bold text-xs tracking-widest text-[#0ea5e9] uppercase mb-3 block">FAQ</span>
+      <h2 class="font-syne font-extrabold text-4xl text-white">Common Questions</h2>
     </div>
     <div class="space-y-3" id="faq-container">
       <!-- FAQ items -->
-      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-[#F8FAFC] transition-colors" aria-expanded="false">
-          <span class="font-syne font-bold text-lg text-[#0F172A]">What services does Dalvi Consultancy offer?</span>
-          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4" style="background:#EFF6FF;border-radius:50%;padding:2px;">add</span>
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors" aria-expanded="false">
+          <span class="font-syne font-bold text-lg text-white">What services does Dalvi Consultancy offer?</span>
+          <span class="faq-icon material-symbols-outlined text-[#0ea5e9] text-xl shrink-0 ml-4" style="background:rgba(14,165,233,0.1);border-radius:50%;padding:2px;">add</span>
         </button>
         <div class="faq-answer px-6 pb-6">
-          <p class="font-manrope text-[#475569] leading-relaxed">We provide custom software development, AI chatbot integration, web application engineering using Next.js and React, mobile app development, and workflow automation for businesses in Pune and globally.</p>
+          <p class="font-manrope text-slate-400 leading-relaxed">We provide custom software development, AI chatbot integration, web application engineering using Next.js and React, mobile app development, and workflow automation for businesses in Pune and globally.</p>
         </div>
       </div>
-      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-[#F8FAFC] transition-colors" aria-expanded="false">
-          <span class="font-syne font-bold text-lg text-[#0F172A]">Where is Dalvi Consultancy located?</span>
-          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4" style="background:#EFF6FF;border-radius:50%;padding:2px;">add</span>
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors" aria-expanded="false">
+          <span class="font-syne font-bold text-lg text-white">Where is Dalvi Consultancy located?</span>
+          <span class="faq-icon material-symbols-outlined text-[#0ea5e9] text-xl shrink-0 ml-4" style="background:rgba(14,165,233,0.1);border-radius:50%;padding:2px;">add</span>
         </button>
         <div class="faq-answer px-6 pb-6">
-          <p class="font-manrope text-[#475569] leading-relaxed">We're based in Hinjewadi, Pune, Maharashtra, India — serving clients across Pune's tech hubs (Magarpatta, Wakad, Aundh) and internationally.</p>
+          <p class="font-manrope text-slate-400 leading-relaxed">We're based in Hinjewadi, Pune, Maharashtra, India — serving clients across Pune's tech hubs (Magarpatta, Wakad, Aundh) and internationally.</p>
         </div>
       </div>
-      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-[#F8FAFC] transition-colors" aria-expanded="false">
-          <span class="font-syne font-bold text-lg text-[#0F172A]">What technologies do you specialize in?</span>
-          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4" style="background:#EFF6FF;border-radius:50%;padding:2px;">add</span>
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors" aria-expanded="false">
+          <span class="font-syne font-bold text-lg text-white">What technologies do you specialize in?</span>
+          <span class="faq-icon material-symbols-outlined text-[#0ea5e9] text-xl shrink-0 ml-4" style="background:rgba(14,165,233,0.1);border-radius:50%;padding:2px;">add</span>
         </button>
         <div class="faq-answer px-6 pb-6">
-          <p class="font-manrope text-[#475569] leading-relaxed">Our core stack: Next.js, React, TypeScript, Node.js, Firebase, Python, n8n automation, Tailwind CSS, and Google AI/Genkit for intelligent features.</p>
+          <p class="font-manrope text-slate-400 leading-relaxed">Our core stack: Next.js, React, TypeScript, Node.js, Firebase, Python, n8n automation, Tailwind CSS, and Google AI/Genkit for intelligent features.</p>
         </div>
       </div>
-      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-[#F8FAFC] transition-colors" aria-expanded="false">
-          <span class="font-syne font-bold text-lg text-[#0F172A]">How do I start a project?</span>
-          <span class="faq-icon material-symbols-outlined text-[#0369A1] text-xl shrink-0 ml-4" style="background:#EFF6FF;border-radius:50%;padding:2px;">add</span>
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors" aria-expanded="false">
+          <span class="font-syne font-bold text-lg text-white">How do I start a project?</span>
+          <span class="faq-icon material-symbols-outlined text-[#0ea5e9] text-xl shrink-0 ml-4" style="background:rgba(14,165,233,0.1);border-radius:50%;padding:2px;">add</span>
         </button>
         <div class="faq-answer px-6 pb-6">
-          <p class="font-manrope text-[#475569] leading-relaxed">Email us at <a href="mailto:consultancy@dalvigroup.co.in" class="text-[#0369A1] hover:underline font-semibold">consultancy@dalvigroup.co.in</a> or fill out the contact form below. We'll get back within 24 hours to schedule a free discovery call.</p>
+          <p class="font-manrope text-slate-400 leading-relaxed">Email us at <a href="mailto:consultancy@dalvigroup.co.in" class="text-[#0ea5e9] hover:underline font-semibold">consultancy@dalvigroup.co.in</a> or fill out the contact form below. We'll get back within 24 hours to schedule a free discovery call.</p>
         </div>
       </div>
     </div>
@@ -751,67 +848,67 @@
 <!-- ═══════════════════════════════════════════════════════════════
      CONTACT
 ═══════════════════════════════════════════════════════════════ -->
-<section id="contact" class="py-24 bg-white px-6 md:px-10">
+<section id="contact" class="py-24 bg-transparent px-6 md:px-10 z-10 relative">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
     <!-- Left -->
     <div>
-      <span class="font-manrope font-bold text-xs tracking-widest text-[#0369A1] uppercase mb-4 block">Get In Touch</span>
-      <h2 class="font-syne font-extrabold text-4xl md:text-5xl text-[#0F172A] mb-6 leading-tight">
-        Let's Build Something <span class="text-[#0369A1]">Great</span>
+      <span class="font-manrope font-bold text-xs tracking-widest text-[#0ea5e9] uppercase mb-4 block">Get In Touch</span>
+      <h2 class="font-syne font-extrabold text-4xl md:text-5xl text-white mb-6 leading-tight">
+        Let's Build Something <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] drop-shadow-[0_0_15px_rgba(14,165,233,0.15)]">Great</span>
       </h2>
-      <p class="font-manrope text-lg text-[#475569] mb-10 max-w-md">
+      <p class="font-manrope text-lg text-slate-300 mb-10 max-w-md">
         Ready to transform your business with custom software? Tell us about your project — we'll get back within 24 hours.
       </p>
       <div class="space-y-6">
         <div class="flex items-start gap-4">
-          <div class="contact-icon w-12 h-12 rounded-xl bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0 cursor-pointer">
+          <div class="contact-icon w-12 h-12 rounded-xl flex items-center justify-center text-[#0ea5e9] shrink-0 cursor-pointer border border-white/5">
             <span class="material-symbols-outlined">location_on</span>
           </div>
           <div>
-            <h4 class="font-syne font-bold text-[#0F172A] mb-1">Office</h4>
-            <p class="font-manrope text-[#475569] text-sm">Hinjewadi, Pune, Maharashtra, India<br>Available for global projects</p>
+            <h4 class="font-syne font-bold text-white mb-1">Office</h4>
+            <p class="font-manrope text-slate-400 text-sm">Hinjewadi, Pune, Maharashtra, India<br>Available for global projects</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
-          <div class="contact-icon w-12 h-12 rounded-xl bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0 cursor-pointer">
+          <div class="contact-icon w-12 h-12 rounded-xl flex items-center justify-center text-[#0ea5e9] shrink-0 cursor-pointer border border-white/5">
             <span class="material-symbols-outlined">mail</span>
           </div>
           <div>
-            <h4 class="font-syne font-bold text-[#0F172A] mb-1">Email</h4>
-            <a href="mailto:consultancy@dalvigroup.co.in" class="font-manrope text-[#0369A1] text-sm hover:underline">consultancy@dalvigroup.co.in</a>
+            <h4 class="font-syne font-bold text-white mb-1">Email</h4>
+            <a href="mailto:consultancy@dalvigroup.co.in" class="font-manrope text-[#0ea5e9] text-sm hover:underline">consultancy@dalvigroup.co.in</a>
           </div>
         </div>
         <div class="flex items-start gap-4">
-          <div class="contact-icon w-12 h-12 rounded-xl bg-[#F1F5F9] flex items-center justify-center text-[#0369A1] shrink-0 cursor-pointer">
+          <div class="contact-icon w-12 h-12 rounded-xl flex items-center justify-center text-[#0ea5e9] shrink-0 cursor-pointer border border-white/5">
             <span class="material-symbols-outlined">phone</span>
           </div>
           <div>
-            <h4 class="font-syne font-bold text-[#0F172A] mb-1">Phone</h4>
-            <a href="tel:+919511634860" class="font-manrope text-[#475569] text-sm hover:text-[#0369A1]">+91-9511634860</a>
+            <h4 class="font-syne font-bold text-white mb-1">Phone</h4>
+            <a href="tel:+919511634860" class="font-manrope text-slate-400 text-sm hover:text-[#0ea5e9]">+91-9511634860</a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Right: Form -->
-    <div class="form-card bg-[#F8FAFC] p-8 md:p-10 rounded-[2rem] border border-[#E2E8F0]">
+    <div class="form-card p-8 md:p-10 rounded-[2rem] border border-white/5 bg-white/2 backdrop-blur-md tilt-card glow-border-cyan">
       <form class="space-y-6" id="contact-form" onsubmit="event.preventDefault(); handleContactSubmit();">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <label class="block font-manrope font-semibold text-sm text-[#0F172A] mb-2" for="contact-name">Name</label>
-            <input class="w-full bg-white border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0369A1] focus:border-transparent transition-shadow font-manrope" id="contact-name" name="name" placeholder="Your name" type="text" required>
+            <label class="block font-manrope font-semibold text-sm text-slate-300 mb-2" for="contact-name">Name</label>
+            <input class="w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] focus:border-transparent transition-shadow font-manrope text-white" id="contact-name" name="name" placeholder="Your name" type="text" required>
           </div>
           <div>
-            <label class="block font-manrope font-semibold text-sm text-[#0F172A] mb-2" for="contact-email">Email</label>
-            <input class="w-full bg-white border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0369A1] focus:border-transparent transition-shadow font-manrope" id="contact-email" name="email" placeholder="you@company.com" type="email" required>
+            <label class="block font-manrope font-semibold text-sm text-slate-300 mb-2" for="contact-email">Email</label>
+            <input class="w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] focus:border-transparent transition-shadow font-manrope text-white" id="contact-email" name="email" placeholder="you@company.com" type="email" required>
           </div>
         </div>
         <div>
-          <label class="block font-manrope font-semibold text-sm text-[#0F172A] mb-2" for="contact-message">Tell us about your project</label>
-          <textarea class="w-full bg-white border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0369A1] focus:border-transparent transition-shadow font-manrope resize-none" id="contact-message" name="message" placeholder="Describe what you need built..." rows="5" required></textarea>
+          <label class="block font-manrope font-semibold text-sm text-slate-300 mb-2" for="contact-message">Tell us about your project</label>
+          <textarea class="w-full bg-transparent border border-white/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] focus:border-transparent transition-shadow font-manrope resize-none text-white" id="contact-message" name="message" placeholder="Describe what you need built..." rows="5" required></textarea>
         </div>
-        <button class="w-full bg-[#0369A1] hover:bg-[#0284C7] text-white font-manrope font-bold py-4 rounded-lg transition-all duration-200 hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2" type="submit">
+        <button class="w-full bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] text-[#030712] font-manrope font-extrabold py-4 rounded-lg transition-all duration-200 hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2 shadow-lg" type="submit">
           Send Message
           <span class="material-symbols-outlined text-[18px]">send</span>
         </button>
@@ -824,59 +921,59 @@
 <!-- ═══════════════════════════════════════════════════════════════
      FOOTER
 ═══════════════════════════════════════════════════════════════ -->
-<footer class="bg-[#F8FAFC] border-t border-[#E2E8F0]">
+<footer class="bg-[#090f1d]/50 border-t border-white/5 relative z-10">
   <div class="max-w-7xl mx-auto px-6 md:px-10 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
     <!-- Brand -->
     <div class="md:col-span-1 space-y-4">
       <a href="/" class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-[#0369A1] flex items-center justify-center">
-          <img src="logo.svg" alt="Dalvi Consultancy" class="w-6 h-6 object-contain brightness-0 invert">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-r from-[#0ea5e9] to-[#818cf8] flex items-center justify-center shadow-[0_0_10px_rgba(14,165,233,0.2)]">
+          <img src="logo.svg" alt="Dalvi Consultancy" class="w-6 h-6 object-contain brightness-0">
         </div>
-        <span class="font-syne font-bold text-lg text-[#0F172A]">Dalvi Consultancy</span>
+        <span class="font-syne font-bold text-lg text-white">Dalvi Consultancy</span>
       </a>
-      <p class="font-manrope text-sm text-[#475569] leading-relaxed">
+      <p class="font-manrope text-sm text-slate-400 leading-relaxed">
         Pune-based premium software &amp; AI consultancy. We build digital products that move businesses forward.
       </p>
       <div class="flex items-center gap-3 pt-2">
-        <a href="https://www.linkedin.com/company/dalviconsultancy" target="_blank" rel="noopener" class="social-icon text-[#475569]" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/dalviconsultancy" target="_blank" rel="noopener" class="social-icon text-slate-300" aria-label="LinkedIn">
           <span class="material-symbols-outlined text-[20px]">link</span>
         </a>
-        <a href="mailto:consultancy@dalvigroup.co.in" class="social-icon text-[#475569]" aria-label="Email">
+        <a href="mailto:consultancy@dalvigroup.co.in" class="social-icon text-slate-300" aria-label="Email">
           <span class="material-symbols-outlined text-[20px]">mail</span>
         </a>
-        <a href="https://twitter.com/DalviConsultancy" target="_blank" rel="noopener" class="social-icon text-[#475569]" aria-label="Twitter">
+        <a href="https://twitter.com/DalviConsultancy" target="_blank" rel="noopener" class="social-icon text-slate-300" aria-label="Twitter">
           <span class="material-symbols-outlined text-[20px]">chat_bubble</span>
         </a>
       </div>
     </div>
     <!-- Services -->
     <div class="flex flex-col space-y-3">
-      <h4 class="font-syne font-bold text-[#0F172A] mb-2">Services</h4>
-      <a href="#services" class="font-manrope text-sm text-[#475569] hover:text-[#0369A1] transition-colors">Web Development</a>
-      <a href="#services" class="font-manrope text-sm text-[#475569] hover:text-[#0369A1] transition-colors">Mobile Apps</a>
-      <a href="#services" class="font-manrope text-sm text-[#475569] hover:text-[#0369A1] transition-colors">AI Chatbots</a>
-      <a href="#services" class="font-manrope text-sm text-[#475569] hover:text-[#0369A1] transition-colors">Automation</a>
-      <a href="#services" class="font-manrope text-sm text-[#475569] hover:text-[#0369A1] transition-colors">SaaS Products</a>
+      <h4 class="font-syne font-bold text-white mb-2">Services</h4>
+      <a href="#services" class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9] transition-colors">Web Development</a>
+      <a href="#services" class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9] transition-colors">Mobile Apps</a>
+      <a href="#services" class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9] transition-colors">AI Chatbots</a>
+      <a href="#services" class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9] transition-colors">Automation</a>
+      <a href="#services" class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9] transition-colors">SaaS Products</a>
     </div>
     <!-- Products -->
     <div class="flex flex-col space-y-3">
-      <h4 class="font-syne font-bold text-[#0F172A] mb-2">Products</h4>
-      <a href="projects/rtobuddy.html" class="font-manrope text-sm text-[#475569] hover:text-[#0369A1] transition-colors">RTO Buddy</a>
-      <a href="projects/smpg.html"     class="font-manrope text-sm text-[#475569] hover:text-[#0369A1] transition-colors">SMPG</a>
-      <a href="projects/vptc.html"     class="font-manrope text-sm text-[#475569] hover:text-[#0369A1] transition-colors">VPTC</a>
+      <h4 class="font-syne font-bold text-white mb-2">Products</h4>
+      <a href="projects/rtobuddy.html" class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9] transition-colors">RTO Buddy</a>
+      <a href="projects/smpg.html"     class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9] transition-colors">SMPG</a>
+      <a href="projects/vptc.html"     class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9] transition-colors">VPTC</a>
     </div>
     <!-- Contact -->
     <div class="flex flex-col space-y-3">
-      <h4 class="font-syne font-bold text-[#0F172A] mb-2">Get in Touch</h4>
-      <p class="font-manrope text-sm text-[#475569]">Hinjewadi, Pune, India</p>
-      <a href="mailto:consultancy@dalvigroup.co.in" class="font-manrope text-sm text-[#0369A1] font-semibold hover:underline">consultancy@dalvigroup.co.in</a>
-      <a href="tel:+919511634860" class="font-manrope text-sm text-[#475569] hover:text-[#0369A1]">+91-9511634860</a>
+      <h4 class="font-syne font-bold text-white mb-2">Get in Touch</h4>
+      <p class="font-manrope text-sm text-slate-400">Hinjewadi, Pune, India</p>
+      <a href="mailto:consultancy@dalvigroup.co.in" class="font-manrope text-sm text-[#0ea5e9] font-semibold hover:underline">consultancy@dalvigroup.co.in</a>
+      <a href="tel:+919511634860" class="font-manrope text-sm text-slate-400 hover:text-[#0ea5e9]">+91-9511634860</a>
     </div>
   </div>
-  <div class="border-t border-[#E2E8F0] py-6 px-6 md:px-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="font-manrope text-sm text-[#475569]">© 2025 Dalvi Consultancy. All rights reserved. Built in Pune, India.</p>
-    <div class="flex items-center gap-6 font-manrope text-sm text-[#475569]">
-      <a href="/llms.txt" class="hover:text-[#0369A1] transition-colors">llms.txt</a>
+  <div class="border-t border-white/5 py-6 px-6 md:px-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="font-manrope text-sm text-slate-400">© 2025 Dalvi Consultancy. All rights reserved. Built in Pune, India.</p>
+    <div class="flex items-center gap-6 font-manrope text-sm text-slate-400">
+      <a href="/llms.txt" class="hover:text-[#0ea5e9] transition-colors">llms.txt</a>
     </div>
   </div>
 </footer>
@@ -886,10 +983,124 @@
      SCRIPTS
 ═══════════════════════════════════════════════════════════════ -->
 <script>
+// ── Web Audio API UI Sound Synthesizer ────────────────────────────────
+let soundEnabled = false;
+let audioCtx = null;
+
+function playSound(type) {
+  if (!soundEnabled) return;
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    
+    if (type === 'hover') {
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(850, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(1400, audioCtx.currentTime + 0.04);
+      gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.04);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.04);
+    } else if (type === 'click') {
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(520, audioCtx.currentTime);
+      osc.frequency.setValueAtTime(1150, audioCtx.currentTime + 0.03);
+      gain.gain.setValueAtTime(0.02, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.07);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.07);
+    }
+  } catch (e) {
+    console.warn("Audio Context error:", e);
+  }
+}
+
+// Add hover states and play sound on mouse event triggers
+function setupHoverSounds() {
+  const hoverables = document.querySelectorAll('a, button, input, textarea, select, .tilt-card, .magnetic-card, .faq-trigger, .contact-icon, .social-icon, .context-menu-item');
+  hoverables.forEach(item => {
+    if (item.dataset.hoverSoundBound) return;
+    item.dataset.hoverSoundBound = "true";
+    
+    item.addEventListener('mouseenter', () => {
+      playSound('hover');
+    });
+    item.addEventListener('click', () => {
+      playSound('click');
+    });
+  });
+}
+setupHoverSounds();
+setInterval(setupHoverSounds, 2000);
+
+
+// ── Custom Context Menu ──────────────────────────────────────────────
+const contextMenu = document.getElementById('custom-context-menu');
+window.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  if (!contextMenu) return;
+  contextMenu.style.left = `${e.clientX}px`;
+  contextMenu.style.top = `${e.clientY}px`;
+  contextMenu.classList.add('visible');
+  playSound('hover');
+});
+
+window.addEventListener('click', (e) => {
+  if (contextMenu && !contextMenu.contains(e.target)) {
+    contextMenu.classList.remove('visible');
+  }
+});
+
+let particlesEnabled = true;
+function toggleParticles() {
+  particlesEnabled = !particlesEnabled;
+  const canvas = document.getElementById('hero-canvas');
+  if (canvas) {
+    canvas.style.display = particlesEnabled ? 'block' : 'none';
+  }
+  if (contextMenu) contextMenu.classList.remove('visible');
+}
+
+function toggleSounds() {
+  soundEnabled = !soundEnabled;
+  const textEl = document.getElementById('sound-status-text');
+  if (textEl) {
+    textEl.textContent = soundEnabled ? 'Disable Sounds' : 'Enable Sounds';
+  }
+  if (contextMenu) contextMenu.classList.remove('visible');
+  if (soundEnabled) {
+    playSound('click');
+  }
+}
+
+function copyEmail() {
+  navigator.clipboard.writeText('consultancy@dalvigroup.co.in').then(() => {
+    alert('Agency email copied to clipboard!');
+  });
+  if (contextMenu) contextMenu.classList.remove('visible');
+}
+
+function scrollToSection(selector) {
+  const el = document.querySelector(selector);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+  if (contextMenu) contextMenu.classList.remove('visible');
+}
+
 // Nav scroll effect
 const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+  if (nav) nav.classList.toggle('nav-scrolled', window.scrollY > 20);
 });
 
 // Mobile menu
@@ -897,9 +1108,9 @@ const menuBtn   = document.getElementById('mobile-menu-btn');
 const menuClose = document.getElementById('mobile-menu-close');
 const menu      = document.getElementById('mobile-menu');
 const toggleMenu = () => { menu.classList.toggle('open'); menu.setAttribute('aria-hidden', !menu.classList.contains('open')); };
-menuBtn.addEventListener('click', toggleMenu);
-menuClose.addEventListener('click', toggleMenu);
-menu.querySelectorAll('a').forEach(a => a.addEventListener('click', toggleMenu));
+if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+if (menuClose) menuClose.addEventListener('click', toggleMenu);
+if (menu) menu.querySelectorAll('a').forEach(a => a.addEventListener('click', toggleMenu));
 
 // FAQ accordion
 document.querySelectorAll('.faq-trigger').forEach(btn => {
@@ -907,7 +1118,6 @@ document.querySelectorAll('.faq-trigger').forEach(btn => {
     const item   = btn.closest('.faq-item');
     const answer = item.querySelector('.faq-answer');
     const isOpen = item.classList.contains('open');
-    // Close all
     document.querySelectorAll('.faq-item').forEach(i => {
       i.classList.remove('open');
       i.querySelector('.faq-answer').classList.remove('open');
@@ -936,16 +1146,18 @@ function handleContactSubmit() {
   const btn = document.querySelector('#contact-form button[type=submit]');
   btn.textContent = '✓ Message Sent!';
   btn.disabled = true;
-  btn.style.background = '#16a34a';
+  btn.style.background = '#10b981';
+  btn.style.color = '#ffffff';
   setTimeout(() => {
     btn.innerHTML = 'Send Message <span class="material-symbols-outlined text-[18px]">send</span>';
     btn.disabled = false;
     btn.style.background = '';
+    btn.style.color = '';
     document.getElementById('contact-form').reset();
   }, 3000);
 }
 
-// MutationObserver to automatically fix any dynamically loaded/injected images (like Botpress) missing alt attributes
+// MutationObserver to fix Botpress image alt tags
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     mutation.addedNodes.forEach((node) => {
@@ -962,11 +1174,617 @@ const observer = new MutationObserver((mutations) => {
 });
 observer.observe(document.body, { childList: true, subtree: true });
 
-// Float animation for hero badge
+// Float animation style injection
 const style = document.createElement('style');
 style.textContent = `@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }`;
 document.head.appendChild(style);
+
+// ── Scroll progress bar indicator ────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  const progressBar = document.getElementById('scroll-progress');
+  if (progressBar) {
+    progressBar.style.width = scrolled + '%';
+  }
+});
+
+// ── Magnetic Mouse Spotlight Glow Tracking ──────────────────────────
+document.querySelectorAll('.magnetic-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty('--mouse-x', `${x}px`);
+    card.style.setProperty('--mouse-y', `${y}px`);
+  });
+});
+
+// ── 3D Rotating Warp Canvas Animation + Parallax ──────────────────────
+const canvas = document.getElementById('hero-canvas');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2, speed: 0.1 };
+  let scrollSpeed = 1.0;
+
+  function resizeCanvas() {
+    canvas.width = canvas.parentElement.offsetWidth;
+    canvas.height = canvas.parentElement.offsetHeight;
+    initStars();
+  }
+
+  class Star {
+    constructor() {
+      this.reset();
+    }
+    reset() {
+      this.x = (Math.random() - 0.5) * canvas.width * 2;
+      this.y = (Math.random() - 0.5) * canvas.height * 2;
+      this.z = Math.random() * canvas.width;
+      this.pz = this.z;
+      this.color = Math.random() > 0.5 ? 'rgba(14, 165, 233, 0.45)' : 'rgba(129, 140, 248, 0.45)';
+    }
+    update() {
+      let speedMultiplier = scrollSpeed * (1 + mouse.speed * 4);
+      this.z -= 1.8 * speedMultiplier;
+      if (this.z <= 0) {
+        this.reset();
+        this.z = canvas.width;
+        this.pz = this.z;
+      }
+    }
+    draw() {
+      let cx = canvas.width / 2;
+      let cy = canvas.height / 2;
+      
+      let angle = (mouse.x / canvas.width - 0.5) * 0.08;
+      let cos = Math.cos(angle);
+      let sin = Math.sin(angle);
+      let rx = this.x * cos - this.y * sin;
+      let ry = this.y * cos + this.x * sin;
+      
+      let x = rx / (this.z / canvas.width) + cx;
+      let y = ry / (this.z / canvas.width) + cy;
+      
+      let px = rx / (this.pz / canvas.width) + cx;
+      let py = ry / (this.pz / canvas.width) + cy;
+      
+      this.pz = this.z;
+      
+      if (x >= 0 && x <= canvas.width && y >= 0 && y <= canvas.height) {
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = Math.min(1.8 / (this.z / canvas.width), 3);
+        ctx.beginPath();
+        ctx.moveTo(px, py);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  function initStars() {
+    stars = [];
+    const count = 180;
+    for (let i = 0; i < count; i++) {
+      stars.push(new Star());
+    }
+  }
+
+  function animateStars() {
+    ctx.fillStyle = 'rgba(3, 7, 18, 0.18)'; 
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    scrollSpeed += (1.0 - scrollSpeed) * 0.05;
+    
+    if (particlesEnabled) {
+      stars.forEach(s => {
+        s.update();
+        s.draw();
+      });
+    }
+    requestAnimationFrame(animateStars);
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener('scroll', () => {
+    scrollSpeed = Math.min(10.0, scrollSpeed + 0.8);
+    // Subtle background canvas vertical parallax translation
+    canvas.style.transform = `translateY(${window.pageYOffset * 0.18}px)`;
+  });
+
+  canvas.parentElement.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    let dx = e.clientX - rect.left - canvas.width / 2;
+    let dy = e.clientY - rect.top - canvas.height / 2;
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+    mouse.speed = Math.sqrt(dx * dx + dy * dy) / (canvas.width / 2);
+  });
+
+  resizeCanvas();
+  animateStars();
+}
+
+// ── Live AI Automation Console Simulation (Typewriter Upgrade) ──────────
+const terminalScreen = document.getElementById('terminal-screen');
+const latencyEl = document.getElementById('terminal-latency');
+if (terminalScreen) {
+  const terminalLogs = [
+    { text: 'Connecting to n8n webhook listener ... SUCCESS', color: 'text-green-400' },
+    { text: 'Initializing workflow execution [Auto_Support_Agent]...', color: 'text-slate-300' },
+    { text: 'Parsing query parameters: "custom software Pune" ...', color: 'text-slate-400' },
+    { text: 'Routing request to [Lead_Gen_Bot]... ACTIVE', color: 'text-[#818cf8]' },
+    { text: 'Triggering Discord alert & email notification ... SENT', color: 'text-green-400' },
+    { text: 'Uptime check: all nodes 100.0% operational', color: 'text-[#0ea5e9]' },
+    { text: 'Deploying React application bundle to production ...', color: 'text-slate-400' },
+    { text: 'Hash: dlv_e3b8cf6 | Duration: 1450ms ... OK', color: 'text-green-400' },
+    { text: 'Loading vehicle database webhook trigger [RTO_Buddy]...', color: 'text-[#818cf8]' },
+    { text: 'PDF document schema mapping complete. Pass.', color: 'text-[#0ea5e9]' },
+    { text: 'Simulating chatbot dialog: context memory check ... PASS', color: 'text-green-400' },
+    { text: 'Optimizing SQL indexes on Supabase DB ... COMPLETE', color: 'text-green-400' },
+    { text: 'Generating prompt variant: [SMPG_Creative_V1] ... OK', color: 'text-white' }
+  ];
+
+  let logIndex = 0;
+  
+  function typeLogLine() {
+    const log = terminalLogs[logIndex];
+    const p = document.createElement('p');
+    p.className = log.color;
+    
+    const promptSpan = document.createElement('span');
+    promptSpan.className = 'text-[#0ea5e9] mr-1';
+    promptSpan.textContent = '>';
+    p.appendChild(promptSpan);
+    
+    const textSpan = document.createElement('span');
+    p.appendChild(textSpan);
+    
+    const cursor = document.createElement('span');
+    cursor.className = 'terminal-cursor';
+    p.appendChild(cursor);
+    
+    const lastCursor = terminalScreen.querySelector('.terminal-cursor');
+    if (lastCursor) lastCursor.remove();
+    
+    terminalScreen.appendChild(p);
+    terminalScreen.scrollTop = terminalScreen.scrollHeight;
+    
+    if (terminalScreen.children.length > 12) {
+      terminalScreen.removeChild(terminalScreen.firstElementChild);
+    }
+    
+    let i = 0;
+    const txt = log.text;
+    function typeChar() {
+      if (i < txt.length) {
+        textSpan.textContent += txt.charAt(i);
+        i++;
+        setTimeout(typeChar, Math.floor(Math.random() * 12) + 4);
+      } else {
+        if (latencyEl) {
+          latencyEl.textContent = `${Math.floor(Math.random() * 18) + 8}ms`;
+        }
+        logIndex = (logIndex + 1) % terminalLogs.length;
+        setTimeout(typeLogLine, Math.floor(Math.random() * 2200) + 1200);
+      }
+    }
+    typeChar();
+  }
+  
+  setTimeout(typeLogLine, 1000);
+}
+
+// ── 3D Tilt + Card Glare Sheen Effect ─────────────────────────────────
+const tiltCards = document.querySelectorAll('.tilt-card');
+tiltCards.forEach(card => {
+  card.style.position = 'relative';
+  card.style.overflow = 'hidden';
+  
+  // Dynamic creation of reflection layer
+  let sheen = card.querySelector('.card-sheen');
+  if (!sheen) {
+    sheen = document.createElement('div');
+    sheen.className = 'card-sheen';
+    card.appendChild(sheen);
+  }
+  
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    // Update sheen cursor vars
+    const pctX = (x / rect.width) * 100;
+    const pctY = (y / rect.height) * 100;
+    card.style.setProperty('--sheen-x', `${pctX}%`);
+    card.style.setProperty('--sheen-y', `${pctY}%`);
+    
+    // Update tilt and pan coordinates
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const panX = ((x - centerX) / centerX) * 8;
+    const panY = ((y - centerY) / centerY) * 8;
+    const rotateX = ((centerY - y) / centerY) * 8;
+    const rotateY = ((x - centerX) / centerX) * 8;
+    
+    card.style.transform = `perspective(1000px) translate3d(${panX}px, ${panY}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+  });
+  
+  card.style.transformStyle = 'preserve-3d';
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = `perspective(1000px) translate3d(0px, 0px, 0) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+  });
+});
+
+// ── Scroll Reveal with Staggered Sequencing ──────────────────────────
+const revealElements = document.querySelectorAll('#services .depth-card, #client-projects .bento-item, #products .product-card, #faq-container .faq-item, #contact .form-card');
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  let staggerDelay = 0;
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      el.style.transitionDelay = `${staggerDelay}ms`;
+      el.classList.add('opacity-100', 'translate-y-0');
+      el.classList.remove('opacity-0', 'translate-y-8');
+      staggerDelay += 75; // Increment delay per item in cluster
+      observer.unobserve(el);
+    }
+  });
+  setTimeout(() => { staggerDelay = 0; }, 150);
+}, { threshold: 0.08 });
+
+revealElements.forEach(el => {
+  el.classList.add('transition-all', 'duration-700', 'transform', 'opacity-0', 'translate-y-8');
+  revealObserver.observe(el);
+});
+
+// ── Laser Glow Border Tracers & Background Grid Beams ─────────────────
+function initLaserGlows() {
+  const cards = document.querySelectorAll('.tilt-card, .product-card, .bento-item, .depth-card');
+  cards.forEach(card => {
+    if (card.querySelector('.laser-glow-border')) return;
+    
+    const border = document.createElement('div');
+    border.className = 'laser-glow-border';
+    
+    if (card.classList.contains('glow-border-purple') || card.classList.contains('bg-rose-600/20')) {
+      border.classList.add('laser-glow-purple-cyan');
+    } else {
+      border.classList.add('laser-glow-cyan-purple');
+    }
+    
+    card.appendChild(border);
+    
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const targetAngle = (180 * Math.atan2(mouseY - centerY, mouseX - centerX)) / Math.PI + 90;
+      card.style.setProperty('--start', String(targetAngle));
+    });
+  });
+}
+
+function initGridBeams() {
+  if (document.querySelector('.grid-beam-bg')) return;
+  const heroSection = document.querySelector('header');
+  if (!heroSection) return;
+  
+  const bg = document.createElement('div');
+  bg.className = 'grid-beam-bg';
+  bg.setAttribute('aria-hidden', 'true');
+  
+  const container = document.createElement('div');
+  container.className = 'grid-beam-container';
+  container.setAttribute('aria-hidden', 'true');
+  container.innerHTML = `
+    <div class="grid-beam" style="top: 60px; animation-delay: 0s; animation-duration: 6s;"></div>
+    <div class="grid-beam" style="top: 180px; animation-delay: 2s; animation-duration: 8s;"></div>
+    <div class="grid-beam" style="top: 300px; animation-delay: 4s; animation-duration: 7s;"></div>
+    <div class="grid-beam-vertical" style="left: 120px; animation-delay: 1s; animation-duration: 9s;"></div>
+    <div class="grid-beam-vertical" style="left: 480px; animation-delay: 3s; animation-duration: 10s;"></div>
+    <div class="grid-beam-vertical" style="left: 840px; animation-delay: 5s; animation-duration: 11s;"></div>
+  `;
+  
+  heroSection.insertBefore(bg, heroSection.firstChild);
+  heroSection.insertBefore(container, heroSection.firstChild);
+}
+
+initLaserGlows();
+initGridBeams();
+setInterval(initLaserGlows, 2000);
+
+// ── Command Palette JS ────────────────────────────────────────────────
+const commands = [
+  // Navigation
+  { title: "Services", category: "Navigation", url: "index.html#services", icon: "code" },
+  { title: "Products", category: "Navigation", url: "index.html#products", icon: "widgets" },
+  { title: "Our Work", category: "Navigation", url: "index.html#client-projects", icon: "folder_open" },
+  { title: "Technologies", category: "Navigation", url: "index.html#tech-stack", icon: "psychology" },
+  { title: "Contact Us", category: "Navigation", url: "index.html#contact", icon: "mail" },
+  { title: "Home Page", category: "Navigation", url: "index.html", icon: "home" },
+  
+  // Case Studies
+  { title: "Berrybash (Custom E-commerce)", category: "Case Studies", url: "projects/berrybash.html", icon: "shopping_cart" },
+  { title: "Buon Cibo (Restaurant POS)", category: "Case Studies", url: "projects/buoncibo.html", icon: "restaurant" },
+  { title: "RTO Buddy (Driving License Platform)", category: "Case Studies", url: "projects/rtobuddy.html", icon: "description" },
+  { title: "SMPG (School Management System)", category: "Case Studies", url: "projects/smpg.html", icon: "school" },
+  { title: "Dirt Shack (E-commerce Store)", category: "Case Studies", url: "projects/dirtshack.html", icon: "eco" },
+  { title: "Millet Bee (D2C Brand Website)", category: "Case Studies", url: "projects/milletbee.html", icon: "spa" },
+  { title: "Boundless Generosity (Non-profit)", category: "Case Studies", url: "projects/boundlessgenerosity.html", icon: "volunteer_activism" },
+  { title: "Foodlebe (Food Delivery API)", category: "Case Studies", url: "projects/foodlebe.html", icon: "delivery_dining" },
+  { title: "Playverse (Gaming Community)", category: "Case Studies", url: "projects/playverse.html", icon: "sports_esports" },
+  { title: "VPTC (Video Production Portal)", category: "Case Studies", url: "projects/vptc.html", icon: "video_camera_back" },
+  
+  // Actions / Settings
+  { title: "Toggle Background Particles", category: "Settings", action: "toggleParticles", icon: "filter_vintage" },
+  { title: "Toggle Sound Synthesizer", category: "Settings", action: "toggleSounds", icon: "volume_up" },
+  { title: "Copy Agency Email", category: "Settings", action: "copyEmail", icon: "content_copy" }
+];
+
+let commandPaletteVisible = false;
+let selectedCommandIndex = 0;
+let filteredCommands = [];
+
+function resolveUrl(url) {
+  const isProjectSubpage = window.location.pathname.includes('/projects/') || window.location.pathname.endsWith('.html') && !window.location.pathname.endsWith('index.html') && !window.location.pathname.includes('/dist/index.html');
+  if (!isProjectSubpage) return url;
+  if (url.startsWith('projects/')) {
+    return url.replace('projects/', '');
+  }
+  if (url.startsWith('index.html')) {
+    return '../' + url;
+  }
+  return url;
+}
+
+function toggleCommandPalette(force) {
+  const palette = document.getElementById('command-palette');
+  const input = document.getElementById('command-palette-input');
+  if (!palette) return;
+  
+  if (force !== undefined) {
+    commandPaletteVisible = force;
+  } else {
+    commandPaletteVisible = !commandPaletteVisible;
+  }
+  
+  if (commandPaletteVisible) {
+    palette.classList.add('visible');
+    palette.setAttribute('aria-hidden', 'false');
+    input.value = '';
+    input.focus();
+    renderCommands('');
+    if (typeof playSound === 'function') {
+      playSound('click');
+    }
+  } else {
+    palette.classList.remove('visible');
+    palette.setAttribute('aria-hidden', 'true');
+    input.blur();
+  }
+}
+
+function renderCommands(query) {
+  const list = document.getElementById('command-palette-list');
+  if (!list) return;
+  list.innerHTML = '';
+  
+  const q = query.toLowerCase().trim();
+  
+  filteredCommands = commands.filter(cmd => 
+    cmd.title.toLowerCase().includes(q) || 
+    cmd.category.toLowerCase().includes(q)
+  );
+  
+  if (filteredCommands.length === 0) {
+    list.innerHTML = `<div class="px-4 py-8 text-center text-slate-500 text-sm">No commands found for "${query}"</div>`;
+    selectedCommandIndex = 0;
+    return;
+  }
+  
+  if (selectedCommandIndex >= filteredCommands.length) {
+    selectedCommandIndex = 0;
+  }
+  
+  let currentCategory = "";
+  filteredCommands.forEach((cmd, idx) => {
+    if (cmd.category !== currentCategory) {
+      currentCategory = cmd.category;
+      const groupHeader = document.createElement('div');
+      groupHeader.className = 'command-group-title';
+      groupHeader.textContent = currentCategory;
+      list.appendChild(groupHeader);
+    }
+    
+    const item = document.createElement('div');
+    item.className = `command-item ${idx === selectedCommandIndex ? 'selected' : ''}`;
+    item.setAttribute('role', 'option');
+    item.setAttribute('aria-selected', idx === selectedCommandIndex ? 'true' : 'false');
+    
+    const iconSpan = `<span class="material-symbols-outlined text-slate-400 mr-3 text-lg">${cmd.icon || 'star'}</span>`;
+    
+    let rightBadge = '';
+    if (cmd.category === 'Settings') {
+      rightBadge = `<span class="text-[10px] text-slate-500 bg-white/5 px-2 py-0.5 rounded border border-white/5">Action</span>`;
+    } else if (cmd.category === 'Case Studies') {
+      rightBadge = `<span class="text-[10px] text-[#0ea5e9]/70 bg-[#0ea5e9]/5 px-2 py-0.5 rounded border border-[#0ea5e9]/10">Project</span>`;
+    } else {
+      rightBadge = `<span class="text-[10px] text-slate-500 select-none">&rarr;</span>`;
+    }
+    
+    item.innerHTML = `
+      <div class="flex items-center">
+        ${iconSpan}
+        <span class="font-manrope">${cmd.title}</span>
+      </div>
+      ${rightBadge}
+    `;
+    
+    item.addEventListener('click', () => {
+      selectedCommandIndex = idx;
+      executeSelectedCommand();
+    });
+    
+    item.addEventListener('mouseenter', () => {
+      selectedCommandIndex = idx;
+      const items = list.querySelectorAll('.command-item');
+      items.forEach((el, elIdx) => {
+        if (elIdx === idx) {
+          el.classList.add('selected');
+        } else {
+          el.classList.remove('selected');
+        }
+      });
+      if (typeof playSound === 'function') {
+        playSound('hover');
+      }
+    });
+    
+    list.appendChild(item);
+  });
+}
+
+function navigateCommands(direction) {
+  if (filteredCommands.length === 0) return;
+  
+  selectedCommandIndex += direction;
+  if (selectedCommandIndex < 0) {
+    selectedCommandIndex = filteredCommands.length - 1;
+  } else if (selectedCommandIndex >= filteredCommands.length) {
+    selectedCommandIndex = 0;
+  }
+  
+  const list = document.getElementById('command-palette-list');
+  if (!list) return;
+  
+  const items = list.querySelectorAll('.command-item');
+  items.forEach((el, idx) => {
+    if (idx === selectedCommandIndex) {
+      el.classList.add('selected');
+      el.scrollIntoView({ block: 'nearest' });
+    } else {
+      el.classList.remove('selected');
+    }
+  });
+  
+  if (typeof playSound === 'function') {
+    playSound('hover');
+  }
+}
+
+function executeSelectedCommand() {
+  if (selectedCommandIndex < 0 || selectedCommandIndex >= filteredCommands.length) return;
+  const cmd = filteredCommands[selectedCommandIndex];
+  
+  toggleCommandPalette(false);
+  
+  if (typeof playSound === 'function') {
+    playSound('click');
+  }
+  
+  if (cmd.action) {
+    if (cmd.action === 'toggleParticles' && typeof toggleParticles === 'function') {
+      toggleParticles();
+    } else if (cmd.action === 'toggleSounds' && typeof toggleSounds === 'function') {
+      toggleSounds();
+    } else if (cmd.action === 'copyEmail' && typeof copyEmail === 'function') {
+      copyEmail();
+    }
+  } else if (cmd.url) {
+    const targetUrl = resolveUrl(cmd.url);
+    if (targetUrl.includes('#') && (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/'))) {
+      const hash = targetUrl.split('#')[1];
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, null, `#${hash}`);
+        return;
+      }
+    }
+    window.location.href = targetUrl;
+  }
+}
+
+// Bind window keydown and input events
+window.addEventListener('keydown', (e) => {
+  const isK = e.key === 'k' || e.key === 'K';
+  if ((e.ctrlKey || e.metaKey) && isK) {
+    e.preventDefault();
+    toggleCommandPalette();
+  }
+  
+  const palette = document.getElementById('command-palette');
+  if (palette && palette.classList.contains('visible')) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      toggleCommandPalette(false);
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      navigateCommands(1);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      navigateCommands(-1);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      executeSelectedCommand();
+    }
+  }
+});
+
+function initCommandPaletteEvents() {
+  const cpInput = document.getElementById('command-palette-input');
+  if (cpInput) {
+    cpInput.addEventListener('input', (e) => {
+      selectedCommandIndex = 0;
+      renderCommands(e.target.value);
+    });
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCommandPaletteEvents);
+} else {
+  initCommandPaletteEvents();
+}
 </script>
+
+<!-- Command Palette Modal -->
+<div id="command-palette" class="fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-md flex items-start justify-center pt-[10vh] px-4" aria-hidden="true" role="dialog" aria-modal="true">
+  <!-- Click outside overlay to close -->
+  <div class="absolute inset-0 cursor-default" onclick="toggleCommandPalette(false)"></div>
+  
+  <div class="relative w-full max-w-2xl bg-[#090f1d]/95 border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[70vh]">
+    <!-- Search Input Header -->
+    <div class="flex items-center gap-3 px-4 py-3.5 border-b border-white/10">
+      <span class="material-symbols-outlined text-slate-400 text-xl select-none">search</span>
+      <input type="text" id="command-palette-input" class="w-full bg-transparent text-white border-0 outline-none placeholder-slate-500 text-sm font-manrope focus:ring-0 focus:outline-none" placeholder="Search pages, actions, settings..." autocomplete="off" spellcheck="false">
+      <kbd class="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[9px] font-sans font-medium text-slate-500 bg-white/5 border border-white/10 rounded select-none">ESC</kbd>
+    </div>
+    
+    <!-- Command List -->
+    <div id="command-palette-list" class="flex-1 overflow-y-auto py-2 pr-1" role="listbox">
+      <!-- Dynamically filled list -->
+    </div>
+    
+    <!-- Footer -->
+    <div class="flex items-center justify-between px-4 py-2 border-t border-white/5 bg-slate-950/40 text-[10px] text-slate-500 select-none">
+      <div class="flex items-center gap-2">
+        <span class="flex items-center gap-1"><kbd class="px-1 py-0.5 bg-white/5 border border-white/10 rounded">↑↓</kbd> Navigate</span>
+        <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 bg-white/5 border border-white/10 rounded">Enter</kbd> Select</span>
+      </div>
+      <div>
+        <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 bg-white/5 border border-white/10 rounded">Esc</kbd> Close</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Botpress Webchat -->
 <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
